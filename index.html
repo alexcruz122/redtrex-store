@@ -171,7 +171,7 @@
   <nav>
     <a href="#digital" class="g2g-btn">Digital Products</a>
     <a href="#physical" class="g2g-btn">Physical Products</a>
-    <button class="g2g-btn" onclick="window.location.href='https://redtrex.site'">Home Page</button>
+    <button class="g2g-btn" onclick="window.location.href='services.html'">Services</button>
 
     <div class="search-container">
       <input
@@ -918,15 +918,48 @@
     }
   </script>
 
-  <!-- WhatsApp Floating Button -->
-  <a
-    href="https://wa.me/94712622012"
-    target="_blank"
-    class="whatsapp-float"
-    aria-label="Chat on WhatsApp"
-    rel="noopener"
-  >
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
-  </a>
+
+  <script src="https://webchatagent.com/widget/web-chat-agent.js" async></script>
+
+  <web-chat-agent 
+    chatbot-id="47bbeac5-cfbe-4f1b-8c6b-c1a28bd9a895" 
+    theme-color="#f01111" 
+    title="Rina ( RedTrex ) Personal Assistant." 
+    avatar-src="https://i.imgur.com/2kHRAq5.jpeg" 
+    chat-bubble-image="https://i.imgur.com/2kHRAq5.jpeg" 
+    font-family="IBM Plex Sans" 
+    welcome-message="👋Hello Welcome To RedTrex How Can We Assist You Today? " 
+    bot-message-color="#f3f4f6" 
+    user-message-color="#2563eb" 
+    hide-branding="true"
+  ></web-chat-agent>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const chatAgent = document.querySelector("web-chat-agent");
+      if (!chatAgent) return;
+
+      const applyFix = () => {
+        const shadow = chatAgent.shadowRoot;
+        if (!shadow) return;
+
+        const input = shadow.querySelector("input, textarea");
+        if (input) {
+          input.style.color = "#000";
+          input.style.backgroundColor = "#fff";
+          input.style.caretColor = "#000";
+        }
+      };
+
+      const interval = setInterval(() => {
+        applyFix();
+        const shadow = chatAgent.shadowRoot;
+        if (shadow && shadow.querySelector("input, textarea")) {
+          clearInterval(interval);
+          new MutationObserver(applyFix).observe(shadow, { childList: true, subtree: true });
+        }
+      }, 300);
+    });
+  </script>
 </body>
 </html>
