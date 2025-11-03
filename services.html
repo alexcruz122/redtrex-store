@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RedTrex Technologies - Our Services</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind for custom aesthetics -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary-dark': '#1a1a2e',
+                        'primary-light': '#ffffff',
+                        'accent-blue': '#00d4ff',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for the Glassmorphism footer */
+        .glass-footer {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 -4px 40px rgba(0, 0, 0, 0.1);
+        }
+        /* Custom image placeholders to ensure icons are visible (in a real app, use SVGs) */
+        .footer-icon {
+            display: inline-block;
+            width: 1rem;
+            height: 1rem;
+            background-color: #00d4ff;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+        }
+        .footer-icon[alt="Location"] { background-color: #fca5a5; }
+        .footer-icon[alt="Phone"] { background-color: #818cf8; }
+        .footer-icon[alt="Email"] { background-color: #34d399; }
+
+        /* General Service Card Styling */
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans min-h-screen flex flex-col">
+
+    <!-- Header Section -->
+    <header class="bg-primary-dark shadow-lg p-4 sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto flex justify-center">
+            <!-- Company Logo -->
+            <img src="Assest/company.png" alt="RedTrex Logo" class="h-16 object-contain" />
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow max-w-7xl mx-auto w-full px-4 sm:px-6 py-12">
+        <div class="bg-white p-6 sm:p-12 rounded-2xl shadow-2xl">
+
+            <!-- Hero Header -->
+            <div class="text-center mb-12">
+                <h1 class="text-4xl sm:text-5xl font-extrabold text-primary-dark mb-4">
+                    Our Comprehensive Services
+                </h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Driving digital transformation and delivering high-impact solutions across web, cloud, and infrastructure.
+                </p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Service Card 1: PC Hardware & Services -->
+                <div class="service-card p-6 bg-white border border-gray-200 rounded-xl shadow-md">
+                    <img src="assetphy/services/computer.gif" alt="Design Icon" class="w-10 h-10 mb-4" />
+                    <h2 class="text-2xl font-bold text-primary-dark mb-3">PC Hardware & Services</h2>
+                    <p class="text-gray-600 mb-4">
+                        Custom PC builds, repairs, and upgrades — delivering performance, reliability, and expert support for all your computing needs.
+                    </p>
+                    
+                </div>
+
+                <!-- Service Card 2: Genuine Software Soultions -->
+                <div class="service-card p-6 bg-white border border-gray-200 rounded-xl shadow-md">
+                    <img src="assetphy/services/software-license.png" alt="Design Icon" class="w-10 h-10 mb-4" />
+                    <h2 class="text-2xl font-bold text-primary-dark mb-3">Genuine Software Solutions</h2>
+                    <p class="text-gray-600 mb-4">
+                        Official, licensed software for business and personal use — including Microsoft products and productivity tools at competitive prices.
+                    </p>
+                    <a href="index.html" class="text-accent-blue font-semibold hover:underline">Learn More →</a>
+                </div>
+
+                <!-- Service Card 3: Security -->
+                <div class="service-card p-6 bg-white border border-gray-200 rounded-xl shadow-md">
+                    <img src="assetphy/services/laptop.png" alt="Design Icon" class="w-10 h-10 mb-4" />
+                    <h2 class="text-2xl font-bold text-primary-dark mb-3">Device Security</h2>
+                    <p class="text-gray-600 mb-4">
+                        Advanced protection for your systems and networks with top-tier antivirus, endpoint, and data security solutions.
+                    </p>
+                    
+                </div>
+
+                <!-- Service Card 4: CCTV -->
+                <div class="service-card p-6 bg-white border border-gray-200 rounded-xl shadow-md">
+                    <img src="assetphy/services/cctv-camera.png" alt="Design Icon" class="w-10 h-10 mb-4" />
+                    <h2 class="text-2xl font-bold text-primary-dark mb-3">CCTV Solutions</h2>
+                    <p class="text-gray-600 mb-4">
+                        Professional CCTV installation and configuration for homes and businesses — ensuring complete surveillance and peace of mind.
+                    </p>
+                    
+                </div>
+
+                <!-- Service Card 5: Hosting -->
+                <div class="service-card p-6 bg-white border border-gray-200 rounded-xl shadow-md">
+                    <img src="assetphy/services/cloud-server.png" alt="Design Icon" class="w-10 h-10 mb-4" />
+                    <h2 class="text-2xl font-bold text-primary-dark mb-3">Hosting Services</h2>
+                    <p class="text-gray-600 mb-4">
+                        Reliable and secure web hosting with high uptime, fast load speeds, and full support for business or personal websites.
+                    </p>
+                    
+                </div>
+
+                <div class="service-card p-6 bg-white border border-gray-200 rounded-xl shadow-md">
+                    <!-- Placeholder Icon: Design -->
+                    <img src="https://placehold.co/40x40/00d4ff/1a1a2e?text=Design" alt="Design Icon" class="w-10 h-10 mb-4" />
+                    <h2 class="text-2xl font-bold text-primary-dark mb-3">Affordable Web Design</h2>
+                    <p class="text-gray-600 mb-4">
+                        Modern, responsive, and budget-friendly websites built to elevate your brand and help you grow online — without breaking the bank.
+                    </p>
+                    
+                </div>
+            </div>
+
+            <!-- Call to Action for Services (Customized) -->
+            <section class="mt-12 text-center bg-accent-blue/10 p-8 rounded-2xl shadow-inner">
+                <h2 class="text-3xl font-extrabold text-primary-dark mb-4">
+                    Ready to transform your business with our expertise?
+                </h2>
+                <p class="text-xl font-medium text-gray-700 mb-6">
+                    Let's discuss your specific needs and outline a roadmap for success.
+                </p>
+                <!-- Retains the WhatsApp link for immediate contact -->
+                <a href="https://wa.me/94712622012" target="_blank" rel="noopener noreferrer" class="inline-block px-10 py-4 bg-accent-blue text-primary-dark font-bold text-lg rounded-full shadow-xl hover:bg-opacity-80 transition duration-300 transform hover:scale-[1.02]">
+                    Start a Project Consultation
+                </a>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer Section with Glassmorphism Effect -->
+    <footer class="glass-footer mt-auto py-10 px-4 sm:px-6 lg:px-8 text-white bg-primary-dark/80">
+        <div class="max-w-7xl mx-auto">
+            <!-- Grid updated to 3 columns: md:grid-cols-3 -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Company Info Column (UPDATED with new numbers) -->
+                <div class="space-y-3">
+                    <h3 class="text-xl font-bold text-accent-blue mb-4">RedTrex Technologies</h3>
+                    <p class="text-sm flex items-start">
+                        <span class="footer-icon mt-1"></span>
+                        74, Katuwapitiya Road Negombo, Sri-Lanka, 11500.
+                    </p>
+                    <p class="text-sm flex items-center">
+                        <span class="footer-icon"></span>
+                        <a href="tel:+94712622012" class="hover:underline">+94 71 262 2012</a>
+                    </p>
+                    <p class="text-sm flex items-center">
+                        <span class="footer-icon"></span>
+                        <a href="tel:+94722692012" class="hover:underline">+94 72 269 2012</a>
+                    </p>
+                    <p class="text-sm flex items-center">
+                        <span class="footer-icon"></span>
+                        <a href="tel:+12055884201" class="hover:underline">+1 205 588 4201 (TOLL-FREE)</a>
+                    </p>
+                    <p class="text-sm flex items-center">
+                        <span class="footer-icon"></span>
+                        <a href="mailto:redtrex@technologist.com" class="hover:underline">redtrex@technologist.com</a>
+                    </p>
+                </div>
+
+                <!-- Quick Links Column (REMOVED Contact link) -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-gray-200">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-accent-blue transition-colors">Home</a></li>
+                        <li><a href="services.html" class="text-accent-blue font-bold">Services</a></li>
+                        <li><a href="about.html" class="hover:text-accent-blue transition-colors">About Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal Links Column -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-gray-200">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="terms.html" class="hover:text-accent-blue transition-colors">Terms & Conditions</a></li>
+                        <li><a href="privacy.html" class="hover:text-accent-blue transition-colors">Privacy Policy</a></li>
+                        <li><a href="refund.html" class="hover:text-accent-blue transition-colors">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Divider and Copyright -->
+            <div class="mt-8 pt-6 border-t border-gray-700 text-center">
+                <p class="text-sm text-gray-400">
+                    &copy; 2025 RedTrex Technologies. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,601 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  text-align: center;
+  background: url("Assest/2825704.gif") center/cover no-repeat fixed,
+    linear-gradient(180deg, #0f0f0f, #1a1a1a);
+  min-height: 100vh;
+}
+
+/* Header Logo */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+header .logo img {
+  height: 50px;
+}
+
+/* Sticky Navbar */
+nav {
+  position: sticky;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 20px;
+  z-index: 1000;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #ff4747;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff6b6b;
+}
+
+/* G2G Store Button and Navbar Buttons/Links */
+.g2g-btn {
+  background-color: #ff4747;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none; /* for links */
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.g2g-btn:hover {
+  background-color: #ffa3a3;
+}
+
+/* Remove default link styles on <a> with g2g-btn */
+.g2g-btn[href] {
+  border: none;
+}
+
+/* Optional: to ensure <a> acts like a button */
+.g2g-btn[href]:hover {
+  text-decoration: none;
+}
+
+/* Search Container */
+.search-container {
+  position: relative;
+  margin-left: auto;
+  max-width: 280px;
+  flex-grow: 1;
+  min-width: 220px;
+}
+
+/* Search input styling - glass effect */
+#productSearch {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1rem;
+  backdrop-filter: blur(15px) saturate(180%);
+  -webkit-backdrop-filter: blur(15px) saturate(180%);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  transition: border-color 0.3s ease, background 0.3s ease;
+  outline: none;
+}
+
+#productSearch::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#productSearch:focus {
+  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 10px #ff4747;
+  color: #fff;
+}
+
+/* Dropdown styling - glass effect */
+#searchResults {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(20, 20, 20, 0.8);
+  border-radius: 0 0 20px 20px;
+  backdrop-filter: blur(20px) saturate(200%);
+  -webkit-backdrop-filter: blur(20px) saturate(200%);
+  box-shadow: 0 8px 25px rgb(237, 237, 237, 0.3);
+  max-height: 240px;
+  overflow-y: auto;
+  z-index: 1100;
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#searchResults li {
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #ffdd57;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background 0.25s ease;
+}
+
+#searchResults li:hover {
+  background: rgba(255, 71, 71, 0.8);
+  color: #fff;
+}
+
+#searchResults li.no-results {
+  cursor: default;
+  color: #aaa;
+  font-style: italic;
+  border: none;
+}
+
+/* Highlight product on dropdown click */
+.product-card.highlight {
+  box-shadow: 0 0 20px 5px #ff4747;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Category Headers */
+.category h1 {
+  font-size: 1.8rem;
+  margin: 40px 0 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.category h2 {
+  font-size: 1.4rem;
+  margin: 20px 0 10px;
+  color: #fff;
+}
+
+/* Product Section */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Product Card */
+.product-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px) saturate(180%);
+  -webkit-backdrop-filter: blur(15px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(40px);
+  max-width: 300px;
+  margin: auto;
+  position: relative;
+  cursor: pointer;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.product-card h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.product-card p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #ffdd57;
+}
+
+.product-card button {
+  background: #ff4747;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.product-card button:hover {
+  background: #ff5f5f;
+}
+
+/* PayPal Button Styling */
+.product-card .paypal-btn {
+  background: #0070ba;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.product-card .paypal-btn:hover {
+  background: #005ea6;
+}
+
+/* Button container for better spacing */
+.product-card .button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+/* Product Description */
+.product-card .description {
+  font-size: 0.8rem;
+  color: #ccc;
+  margin: 5px 0 15px;
+  line-height: 1.2;
+  text-align: left;
+  list-style: none;
+}
+
+.product-card .description li {
+  margin: 3px 0;
+}
+
+/* Hover Effect */
+.product-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(255, 71, 71, 0.4);
+}
+
+/* Out of Stock Badge */
+.badge.out-of-stock {
+  background: red;
+  color: white;
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  border-radius: 15px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* Stock Labels */
+.stock-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 5px 12px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: white;
+  border-radius: 15px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.stock-label.limited {
+  background: orange;
+}
+
+.stock-label.out {
+  background: red;
+}
+
+
+/* Product Scroll Animation */
+.product-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #0cdfd1;
+  margin-top: 40px;
+}
+
+/* Notice Banner */
+.notice-banner {
+  background: rgba(255, 235, 59, 0.3);
+  color: #000;
+  padding: 12px 20px;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  border-radius: 0 0 12px 12px;
+  backdrop-filter: blur(10px) saturate(150%);
+  -webkit-backdrop-filter: blur(10px) saturate(150%);
+  user-select: none;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 600px) {
+  nav {
+    gap: 10px;
+    padding: 10px 10px;
+  }
+  .g2g-btn {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+  #productSearch {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+  .products {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 10px;
+  }
+  .product-card {
+    max-width: 100%;
+  }
+
+  /* Center search container on mobile */
+  .search-container {
+    margin-left: 0;
+    margin: 0 auto;
+    max-width: 280px;
+    min-width: 0;
+    flex-grow: 0;
+    width: 100%;
+  }
+}
+
+.whatsapp-float {
+  position: fixed;
+  right: 20px;
+  bottom: 40px;
+  width: 50px;
+  height: 50px;
+  background-color: #25d366;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  background-color: #1ebe57;
+}
+
+.whatsapp-float img {
+  width: 28px;
+  height: 28px;
+}
+
+.site-footer {
+  background: #111;
+  color: #fff;
+  padding: 40px 20px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-info h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.footer-info p {
+  margin: 6px 0;
+  display: flex;
+  align-items: center;
+}
+
+.footer-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+}
+
+.footer-links h4 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links ul li a:hover {
+  color: #1e90ff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  border-top: 1px solid #333;
+  padding-top: 10px;
+}
+
+/* Optional: make footer always at bottom if content is small */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1; /* your main content area */
+}
+
+/* Footer default layout (desktop) */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Mobile-friendly footer */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-info, .footer-links {
+    margin-bottom: 20px;
+  }
+
+  .footer-links ul {
+    padding-left: 0;
+  }
+
+  .footer-links ul li {
+    display: inline-block;
+    margin: 0 10px 8px 10px;
+  }
+
+  .footer-info p {
+    justify-content: center;
+  }
+}
+
+/* Basic styling for the rating section */
+.google-rating {
+    margin-top: 10px;
+    text-align: center; /* Center align rating info */
+}
+
+/* Style for the stars (using Unicode characters) */
+.google-rating .stars {
+    font-size: 1.2em; /* Make stars stand out */
+    color: gold; /* Essential for star ratings */
+    letter-spacing: 2px; /* Space out the stars a little */
+    display: block; /* Put stars on their own line */
+}
+
+/* Style for the review count link */
+.google-rating .review-count a {
+    color: #ccc; /* Match your footer text color */
+    font-size: 0.9em;
+    text-decoration: none;
+}
+
+.google-rating .rating-text {
+    display: block;
+    font-size: 0.95em;
+    margin-bottom: 5px;
+}
+
+/* Styling for the Microsoft Partner logo */
+.partner-logo {
+    max-width: 150px; /* Adjust this value as needed, e.g., 100px, 120px */
+    height: auto;    /* Maintain aspect ratio */
+    display: block;  /* Ensures it behaves like a block element for margins */
+    margin: 0 auto 10px auto; /* Centers the logo and adds some bottom margin */
+}
+
+/* You might want to adjust the width of the whole .footer-logo container too */
+.footer-logo {
+    text-align: center; /* Ensures the logo and text inside are centered */
+    /* If you want to limit its overall width: */
+    /* max-width: 200px; */
+    /* margin: 0 auto; */
+}
+
+.site-footer {
+    /* 1. Transparent Background */
+    /* This makes the footer slightly transparent so the background shows through */
+    background: rgba(0, 0, 0, 0.4); /* Dark transparency (adjust opacity '0.4' as needed) */
+
+    /* 2. The Glass Blur Effect (The most important part!) */
+    /* Blurs everything behind the footer (only works if there's a background image/pattern) */
+    backdrop-filter: blur(10px); /* Adjust blur intensity (e.g., 5px, 15px) */
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+
+    /* 3. Subtle Border & Shadow (For depth and definition) */
+    /* Gives the 'edge of the glass' look */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    /* 4. White/Light Text (Ensures readability over the dark glass) */
+    color: #ffffff; 
+
+    /* Optional: Round the corners like a sleek glass pane */
+    border-radius: 15px 15px 0 0; /* Rounds the top corners */
+
+    /* Ensure link colors are readable on a dark background */
+    /* You may already have this defined */
+    .site-footer a {
+        color: #b3d9ff; /* A bright, readable color for links */
+    }
+}

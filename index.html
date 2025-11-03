@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RedTrex Technologies</title>
+
+  <!-- Favicon & Icons -->
+  <link rel="icon" type="image/png" href="Assest/company.png" />
+  <link rel="apple-touch-icon" href="Assest/company.png" />
+  <meta name="msapplication-TileImage" content="Assest/company.png" />
+  <meta name="msapplication-TileColor" content="#000000" />
+
+  <!-- SEO & Social Preview -->
+  <meta
+    name="description"
+    content="RedTrex Technologies - Genuine Windows & Office Keys, Software, and Tech Products at the best prices."
+  />
+  <meta property="og:title" content="RedTrex Technologies" />
+  <meta
+    property="og:description"
+    content="Get genuine Windows & Office keys and tech products with Services."
+  />
+  <meta property="og:image" content="Assest/company.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://redtrex.site" />
+
+  <!-- Link to your external full style.css -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Inline popup styles (liquid glass) -->
+  <style>
+    /* Popup Background */
+    .popup-modal {
+      display: none; /* hidden until load */
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      z-index: 10000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+
+    /* Liquid Glass Effect Box */
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 20px;
+      padding: 25px 28px;
+      max-width: 460px;
+      width: 92%;
+      text-align: center;
+      color: #ffffff;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(18px) saturate(160%);
+      -webkit-backdrop-filter: blur(18px) saturate(160%);
+      animation: popupIn 0.36s cubic-bezier(.2,.9,.3,1);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    /* Slight inner gradient to mimic glass depth */
+    .glass-effect::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0) 40%);
+      pointer-events: none;
+    }
+
+    /* Shine / light bending overlay (animated) */
+    .glass-effect::before {
+      content: "";
+      position: absolute;
+      top: -40%;
+      left: -60%;
+      width: 220%;
+      height: 220%;
+      background: radial-gradient(
+        circle at 30% 20%,
+        rgba(255, 255, 255, 0.42),
+        rgba(255, 255, 255, 0) 45%
+      );
+      transform: rotate(25deg) translateX(-8%);
+      pointer-events: none;
+      filter: blur(10px);
+      opacity: 0.9;
+      animation: sheen 4.5s ease-in-out infinite;
+    }
+
+    @keyframes sheen {
+      0%   { transform: rotate(25deg) translateX(-12%); opacity:0.9; }
+      50%  { transform: rotate(25deg) translateX(12%); opacity:0.6; }
+      100% { transform: rotate(25deg) translateX(-12%); opacity:0.9; }
+    }
+
+    /* Close Button */
+    .close-btn {
+      position: absolute;
+      top: 12px;
+      right: 14px;
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      cursor: pointer;
+      z-index: 3;
+      transition: transform .12s ease, background .12s ease;
+    }
+
+    .close-btn:hover {
+      transform: scale(1.06);
+      background: rgba(255,255,255,0.08);
+      color: #ff6b6b;
+    }
+
+    .popup-title {
+      margin: 6px 0 6px;
+      font-size: 20px;
+      letter-spacing: -0.2px;
+    }
+
+    .popup-text {
+      margin: 8px 0 0;
+      font-size: 14px;
+      opacity: 0.95;
+      line-height: 1.45;
+    }
+
+    /* Smooth intro */
+    @keyframes popupIn {
+      from {
+        opacity: 0;
+        transform: translateY(-8px) scale(0.98);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 420px) {
+      .glass-effect { padding: 20px; border-radius: 16px; }
+      .popup-title { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">
+      <img src="Assest/company.png" alt="RedTrex Logo" style="height: 50px" />
+    </a>
+  </header>
+
+  <!-- Sticky Category Navbar with Search -->
+  <nav>
+    <a href="#digital" class="g2g-btn">Digital Products</a>
+    <a href="#physical" class="g2g-btn">Physical Products</a>
+    <button class="g2g-btn" onclick="window.location.href='https://redtrex.site'">Home Page</button>
+
+    <div class="search-container">
+      <input
+        type="text"
+        id="productSearch"
+        placeholder="Search products..."
+        autocomplete="off"
+      />
+      <ul id="searchResults" class="search-results"></ul>
+    </div>
+  </nav>
+
+  <!-- DIGITAL PRODUCTS -->
+  <section id="digital" class="category">
+    <h1>Digital Products</h1>
+
+    <!-- OS Product Keys -->
+    <h2>OS Product Keys</h2>
+    <div class="products">
+      <div class="product-card" data-name="Windows 11 Pro OEM Key">
+        <img src="https://uniq.software/images/com_hikashop/upload/11_pro-angle.png" alt="Windows 11 Pro OEM Key" />
+        <h2>Windows 11 Pro Product Key [OEM] [1PC]</h2>
+        <p>1,581.44 LKR </p>
+        <p>5.23 USD </p>
+        <div class="button-container">
+          <button onclick="redirectToWhatsApp('Windows 11 Pro OEM Key')">Buy on WhatsApp</button>
+        </div>
+        <ul class="description">
+          <li>💻 Official OEM Windows 11 Pro key</li>
+          <li>🔹 One-time activation for 1 PC</li>
+          <li>⛔ Non-transferable license</li>
+          <li>📞 24/7 Activation Support</li>
+          <li>✅ Genuine Update Support</li>
+          <li>🌍 Global Activation</li>
+        </ul>
+      </div>
+
+      <div class="product-card" data-name="Windows 11 Pro Retail Key">
+        <img src="https://uniq.software/images/com_hikashop/upload/11_pro-angle.png" alt="Windows 11 Pro Retail Key" />
+        <h2>Windows 11 Pro Product Key [RETAIL] [1PC]</h2>
+        <p>4,555.32 LKR</p>
+        <p>15.06 USD</p>
+        <div class="button-container">
+          <button onclick="redirectToWhatsApp('Windows 11 Pro Retail Key')">Buy on WhatsApp</button>
+        </div>
+        <ul class="description">
+          <li>💻 Official RETAIL Windows 11 Pro key</li>
+          <li>🔹 One-time activation for 1 PC</li>
+          <li>♻️ Transferable license</li>
+          <li>📞 24/7 Activation Support</li>
+          <li>✅ Genuine Update Support</li>
+          <li>🌍 Global Activation</li>
+        </ul>
+      </div>
+
+      <div class="product-card" data-name="Windows 11 Pro Product Key [OEM] [5PC]">
+        <img src="Assest/windows-11-pro-5pc.jpeg" alt="Windows 11 Pro Product Key [OEM] [5PC]" />
+        <h2>Windows 11 Pro Product Key [OEM] [5PC]</h2>
+        <p>6,962.07 LKR</p>
+        <p>23.02 USD </p>
+        <div class="button-container">
+          <button onclick="redirectToWhatsApp('Windows 11 Pro Product Key [OEM] [5PC]')">Buy on WhatsApp</button>
+        </div>
+        <ul class="description">
+          <li>💻 Official OEM Windows 11 Pro key</li>
+          <li>🔹 One-time activation for 5 PC</li>
+          <li>⛔ Non-transferable license</li>
+          <li>📞 24/7 Activation Support</li>
+          <li>✅ Genuine Update Support</li>
+          <li>🌍 Global Activation</li>
+        </ul>
+      </div>
+
+      <div class="product-card" data-name="Windows 10 Pro OEM Key">
+        <img src="Assest/10pro.png" alt="Windows 10 Pro OEM Key" />
+        <h2>Windows 10 Pro Product Key [OEM] [1PC]</h2>
+        <p>1,581.44 LKR</p>
+        <p>5.23 USD </p>
+        <div class="button-container">
+          <button onclick="redirectToWhatsApp('Windows 10 Pro OEM Key')">Buy on WhatsApp</button>
+        </div>
+        <ul class="description">
+          <li>💻 Official OEM Windows 10 Pro key</li>
+          <li>🔹 One-time activation for 1 PC</li>
+          <li>⛔ Non-transferable license</li>
+          <li>📞 24/7 Activation Support</li>
+          <li>✅ Genuine Update Support</li>
+          <li>🌍 Global Activation</li>
+        </ul>
+      </div>
+
+      <div class="product-card" data-name="Windows 10 Pro OEM Key [5PC]">
+        <img src="Assest/10pro.png" alt="Windows 10 Pro OEM Key [5PC]" />
+        <h2>Windows 10 Pro Product Key [OEM] [5PC]</h2>
+        <p>6,962.07 LKR</p>
+        <p>23.02 USD </p>
+        <div class="button-container">
+          <button onclick="redirectToWhatsApp('Windows 10 Pro OEM Key [5PC]')">Buy on WhatsApp</button>
+        </div>
+        <ul class="description">
+          <li>💻 Official OEM Windows 10 Pro key</li>
+          <li>🔹 One-time activation for 5 PC</li>
+          <li>⛔ Non-transferable license</li>
+          <li>📞 24/7 Activation Support</li>
+          <li>✅ Genuine Update Support</li>
+          <li>🌍 Global Activation</li>
+        </ul>
+      </div>
+
+      <div class="product-card" data-name="Windows 10 Pro Retail Key">
+        <img src="Assest/10pro.png" alt="Windows 10 Pro Retail Key" />
+        <h2>Windows 10 Pro Product Key [RETAIL] [1PC]</h2>
+        <p>4,555.32 LKR</p>
+        <p>15.06 USD </p>
+        <div class="button-container">
+          <button onclick="redirectToWhatsApp('Windows 10 Pro Retail Key')">Buy on WhatsApp</button>
+        </div>
+        <ul class="description">
+          <li>💻 Official RETAIL Windows 10 Pro key</li>
+          <li>🔹 One-time activation for 1 PC</li>
+          <li>♻️ Transferable license</li>
+          <li>📞 24/7 Activation Support</li>
+          <li>✅ Genuine Update Support</li>
+          <li>🌍 Global Activation</li>
+        </ul>
+      </div>
+
+      <div class="product-card" data-name="Windows Server 2022 Standard [2PC]">
+        <img src="Assest/microsoft-windows-server-2022-standard.png" alt="Windows Server 2022 Standard [2PC]" />
+        <h2>Windows Server 2022 Standard [2PC]</h2>
+        <p>1,707.34 LKR</p>
+        <p>5.64 USD </p>
+        <div class="button-container">
+          <button onclick="redirectToWhatsApp('Windows Server 2022 Standard 2PC')">Buy on WhatsApp</button>
+        </div>
+        <ul class="description">
+          <li>💻 You will receive 1x Windows Server 2022 Standard key that can activate 2PCs.</li>
+          <li>🔹 One-time activation for 1 PC</li>
+          <li>♻️ Transferable license</li>
+          <li>📞 24/7 Activation Support</li>
+          <li>✅ 100% Authentic Licenses.</li>
+          <li>🌍 Global Activation</li>
+        </ul>
+      </div>
+
+      <div class="product-card" data-name="Windows Server 2022 Datacenter [2PC]">
+        <img src="Assest/microsoft-windows-server-2025-datacenter.png" alt="Windows Server 2022 Datacenter [2PC]" />
+        <h2>Windows Server 2022 Datacenter [2PC]</h2>
+        <p>1,765.45 LKR</p>
+        <p>5.84 USD </p>
+        <div class="button-container">
+          <button onclick="redirectToWhatsApp('Windows Server 2022 Datacenter [2PC]')">Buy on WhatsApp</button>
+        </div>
+        <ul class="description">
+          <li>💻 You will receive 1x Windows Server 2022 Datacenter key that can activate 2PCs.</li>
+          <li>🔹 One-time activation for 1 PC</li>
+          <li>♻️ Transferable license</li>
+          <li>📞 24/7 Activation Support</li>
+          <li>✅ 100% Authentic Licenses.</li>
+          <li>🌍 Global Activation</li>
+        </ul>
+      </div>
+
+      <div class="product-card" data-name="Windows Server 2025 Standard [2PC]">
+        <img src="Assest/microsoft-windows-server-2025-standard.png" alt="Windows Server 2025 Standard [2PC]" />
+        <h2>Windows Server 2025 Standard [2PC]</h2>
+        <p>1,888.22 LKR</p>
+        <p>6.24 USD </p>
+        <div class="button-container">
+          <button onclick="redirectToWhatsApp('Windows Server 2025 Standard [2PC]')">Buy on WhatsApp</button>
+        </div>
+        <ul class="description">
+          <li>💻 You will receive 1x Windows Server 2025 Standard key that can activate 2PCs.</li>
+          <li>🔹 One-time activation for 1 PC</li>
+          <li>♻️ Transferable license</li>
+          <li>📞 24/7 Activation Support</li>
+          <li>✅ 100% Authentic Licenses.</li>
+          <li>🌍 Global Activation</li>
+        </ul>
+      </div>
+
+
+      <div class="product-card" data-name="Windows Server 2025 Datacenter [2PC]">
+        <img src="Assest/microsoft-windows-server-2025-datacenter.png" alt="Windows Server 2025 Datacenter [2PC]" />
+        <h2>Windows Server 2025 Datacenter [2PC]</h2>
+        <p>1,951.77 LKR</p>
+        <p>6.45 USD </p>
+        <div class="button-container">
+          <button onclick="redirectToWhatsApp('Windows Server 2025 Datacenter [2PC]')">Buy on WhatsApp</button>
+        </div>
+        <ul class="description">
+          <li>💻 You will receive 1x Windows Server 2025 Datacenter key that can activate 2PCs.</li>
+          <li>🔹 One-time activation for 1 PC</li>
+          <li>♻️ Transferable license</li>
+          <li>📞 24/7 Activation Support</li>
+          <li>✅ 100% Authentic Licenses.</li>
+          <li>🌍 Global Activation</li>
+        </ul>
+      </div>
+
+
+    </div>
+
+    <!-- Software Product Keys -->
+    <h2>Software Product Keys</h2>
+    <div class="products">
+      <div class="product-card" data-name="Microsoft Office 2024 Key">
+        <img src="Assest/office24.png" alt="Microsoft Office 2024" />
+        <h2>Microsoft Office Professional Plus [2024] [1PC]</h2>
+        <p>2,807.22 LKR</p>
+        <p>9.28 USD </p>
+        <div class="button-container">
+          <button onclick="redirectToWhatsApp('Microsoft Office 2024 Key')">Buy on WhatsApp</button>
+        </div>
+        <ul class="description">
+          <li>📦 Official MS Office 2024 Pro Plus</li>
+          <li>🔹 One-time activation for 1 PC</li>
+          <li>⛔ Non-transferable license</li>
+          <li>📞 24/7 Activation Support</li>
+          <li>✅ Genuine Update Support</li>
+          <li>🌍 Global Activation</li>
+        </ul>
+      </div>
+
+      <div class="product-card" data-name="Microsoft Office 2021">
+        <img src="Assest/officepro21.png" alt="Microsoft Office 2021" />
+        <h2>Microsoft Office Professional Plus [2021] [1PC]</h2>
+        <p>1,982.40 LKR</p>
+        <p>6.55 USD </p>
+        <div class="button-container">
+          <button onclick="redirectToWhatsApp('Microsoft Office 2021')">Buy on WhatsApp</button>
+        </div>
+        <ul class="description">
+          <li>📦 Official MS Office 2021 Pro Plus</li>
+          <li>🔹 One-time activation for 1 PC</li>
+          <li>⛔ Non-transferable license</li>
+          <li>📞 24/7 Activation Support</li>
+          <li>✅ Genuine Update Support</li>
+          <li>🌍 Global Activation</li>
+        </ul>
+      </div>
+
+      <div class="product-card" data-name="Visio 2021 Professional [1PC]">
+        <img src="Assest/visio_2021_professional.png" alt="Visio 2021 Professional [1PC]" />
+        <h2>Visio 2021 Professional [1PC]</h2>
+        <p>1,113.37 LKR</p>
+        <p>3.66 USD </p>
+        <div class="button-container">
+          <button onclick="redirectToWhatsApp('Visio 2021 Professional [1PC]')">Buy on WhatsApp</button>
+        </div>
+        <ul class="description">
+          <li>📦 Visio 2021 Professional [1PC]</li>
+          <li>🔹 One-time activation for 1 PC</li>
+          <li>⛔ Non-transferable license</li>
+          <li>📞 24/7 Activation Support</li>
+          <li>✅ Genuine Update Support</li>
+          <li>🌍 Global Activation</li>
+        </ul>
+      </div>
+
+      <div class="product-card" data-name="Microsoft Office 2021 [5PC]">
+        <img src="Assest/officepro21.png" alt="Microsoft Office 2021 [5PC]" />
+        <h2>Microsoft Office Professional Plus [2021] [5PC]</h2>
+        <p>11,696.16 LKR</p>
+        <p>38.67 USD </p>
+        <div class="button-container">
+          <button onclick="redirectToWhatsApp('Microsoft Office 2021 [5PC]')">Buy on WhatsApp</button>
+        </div>
+        <ul class="description">
+          <li>📦 Official MS Office 2021 Pro Plus</li>
+          <li>🔹 One-time activation for 5 PC</li>
+          <li>⛔ Non-transferable license</li>
+          <li>📞 24/7 Activation Support</li>
+          <li>✅ Genuine Update Support</li>
+          <li>🌍 Global Activation</li>
+        </ul>
+      </div>
+
+      <div class="product-card" data-name="SQL Server 2019 Standard [1PC]">
+        <img src="Assest/SQL-Server-2019-Standard.png" alt="SQL Server 2019 Standard [1PC]" />
+        <h2>SQL Server 2019 Standard [1PC]</h2>
+        <p>2,889.83 LKR</p>
+        <p>9.55 USD</p>
+        <div class="button-container">
+          <button onclick="redirectToWhatsApp('SQL Server 2019 Standard [1PC]')">Buy on WhatsApp</button>
+        </div>
+        <ul class="description">
+          <li>📦 You will receive 1x SQL Server 2019 Standard key that can activate 1PC.</li>
+          <li>🔹 One-time activation for 1 PC</li>
+          <li>⛔ Non-transferable license</li>
+          <li>📞 24/7 Activation Support</li>
+          <li>✅ Genuine Software Support</li>
+          <li>🌍 Global Activation</li>
+        </ul>
+      </div>
+
+      <div class="product-card" data-name="Outlook 2016 [5PC]">
+        <img src="Assest/outlook-2016-product-key.jpg" alt="Outlook 2016 [5PC]" />
+        <h2>Outlook 2016 [5PC]</h2>
+        <p>1,319.34 LKR</p>
+        <p>4.36 USD</p>
+        <div class="button-container">
+          <button onclick="redirectToWhatsApp('Outlook 2016 [5PC]')">Buy on WhatsApp</button>
+        </div>
+        <ul class="description">
+          <li>📦 Official Outlook 2016 License Key</li>
+          <li>🔹 One-time activation for 5 PC</li>
+          <li>⛔ Non-transferable license</li>
+          <li>📞 24/7 Activation Support</li>
+          <li>✅ Genuine Software Support</li>
+          <li>🌍 Global Activation</li>
+        </ul>
+      </div>
+
+      <div class="product-card" data-name="Visual Studio 2022 Enterprise [2PC]">
+        <img src="Assest/microsoft-visual-studio-enterprise-2022-1.png" alt="Visual Studio 2022 Enterprise [2PC]" />
+        <h2>Visual Studio 2022 Enterprise [2PC]</h2>
+        <p>874.51 LKR</p>
+        <p>2.89 USD</p>
+        <div class="button-container">
+          <button onclick="redirectToWhatsApp('Visual Studio 2022 Enterprise [2PC]')">Buy on WhatsApp</button>
+        </div>
+        <ul class="description">
+          <li>📦 Official Visual Studio 2022 License Key</li>
+          <li>🔹 One-time activation for 2 PC</li>
+          <li>⛔ Non-transferable license</li>
+          <li>📞 24/7 Activation Support</li>
+          <li>✅ Genuine Software Support</li>
+          <li>🌍 Global Activation</li>
+        </ul>
+      </div>
+
+
+
+      <div class="product-card" data-name="Visual Studio 2022 Professional [5PC]">
+        <img src="Assest/visual_studio_2022_professional.png" alt="Visual Studio 2022 Professional [5PC]" />
+        <h2>Visual Studio 2022 Professional [5PC]</h2>
+        <p>3,646.33 LKR</p>
+        <p>12.05 USD</p>
+        <div class="button-container">
+          <button onclick="redirectToWhatsApp('Visual Studio 2022 Professional [5PC]')">Buy on WhatsApp</button>
+        </div>
+        <ul class="description">
+          <li>📦 Official Visual Studio 2025 Pro License Key</li>
+          <li>🔹 One-time activation for 5 PC</li>
+          <li>⛔ Non-transferable license</li>
+          <li>📞 24/7 Activation Support</li>
+          <li>✅ Genuine Software Support</li>
+          <li>🌍 Global Activation</li>
+        </ul>
+      </div>
+
+
+
+      <div class="product-card" data-name="Eset Home Security Essential [3PC/1Year]">
+        <img src="Assest/eset3u1y.png" alt="Eset Home Security Essential" />
+        <h2>Eset Home Security Essential [3PC/1Year]</h2>
+        <p>6,386.16 LKR</p>
+        <p>21.11 USD </p>
+        <div class="button-container">
+          <button onclick="redirectToWhatsApp('Eset Home Security Essential [3PC/1Year]')">Buy on WhatsApp</button>
+        </div>
+        <ul class="description">
+          <li>🖥️ Compatibility: Mac OS; Windows; Android; iOS</li>
+          <li>📱 Supported Handheld Devices: Android, iOS</li>
+          <li>🔠Media Type: Download Only</li>
+          <li>🔠 Supported Windows Operating Systems: Microsoft Window, 10, 11</li>
+          <li>👨‍💻 1 Year Technical Support/Warranty</li>
+        </ul>
+      </div>
+
+      <div class="product-card" data-name="CorelDraw Standard 2021 [1PC]">
+        <img src="Assest/CorelDrawStandard2021_.webp" alt="CorelDraw Standard 2021 [1PC]" />
+        <h2>CorelDraw Standard 2021 [1PC]</h2>
+        <p>787.58 LKR</p>
+        <p>2.60 USD </p>
+        <div class="button-container">
+          <button onclick="redirectToWhatsApp('CorelDraw Standard 2021 [1PC]')">Buy on WhatsApp</button>
+        </div>
+        <ul class="description">
+          <li>🖥️ Windows</li>
+          <li>🌍 Global Activation</li>
+          <li>👨‍💻 30 Day Technical Support/Warranty</li>
+        </ul>
+      </div>
+
+      <div class="product-card" data-name="Canva Education Pro 12 Months">
+        <img src="Assest/canva-edu-icon.png" alt="Canva Education Pro 12 Months" />
+        <h2>Canva Education Pro 12 Months</h2>
+        <p>1,190.00 LKR</p>
+        <p>3.93 USD </p>
+        <p>Free for students</p>
+        <div class="button-container">
+          <button onclick="redirectToWhatsApp('Canva Education Pro 12 Months')">Buy on WhatsApp</button>
+        </div>
+        <ul class="description">
+          <li>🖥️ MacOS/Windows/Android/iOS</li>
+          <li>🌍 Global Activation</li>
+          <li>👨‍💻 1 Year Technical Support/Warranty</li>
+        </ul>
+      </div>
+
+      <div class="product-card" data-name="Spotify Premium 12 Months">
+        <img src="Assest/sptpre1.jpg" alt="Spotify Premium 12 Months" />
+        <h2>Spotify Premium 12 Months/Private</h2>
+        <p>5,886.50 LKR</p>
+        <p>19.46 USD </p>
+        <div class="button-container">
+          <button onclick="redirectToWhatsApp('Spotify Premium 12 Months')">Buy on WhatsApp</button>
+        </div>
+        <ul class="description">
+          <li>🖥️ MacOS/Windows/Android/iOS</li>
+          <li>🌍 Global Activation</li>
+          <li>👨‍💻 1 Year Technical Support/Warranty</li>
+        </ul>
+      </div>
+
+      <div class="product-card" data-name="Amazon Prime Video 1 Month">
+        <img src="Assest/primevideo.jpg" alt="Amazon Prime Video 1 Month" />
+        <h2>Amazon Prime Video [1Month]/[Private]</h2>
+        <p>1,463.20 LKR</p>
+        <p>4.84 USD </p>
+        <div class="button-container">
+          <button onclick="redirectToWhatsApp('Amazon Prime Video 1 Month')">Buy on WhatsApp</button>
+        </div>
+        <ul class="description">
+          <li>🖥️ MacOS/Windows/Android/iOS</li>
+          <li>🌍 Global Activation</li>
+          <li>👨‍💻 30 Day Technical Support/Warranty</li>
+        </ul>
+      </div>
+
+      <div class="product-card" data-name="Netflix 4K UHD [1Month]">
+        <img src="Assest/netflix.jpg" alt="Netflix 4K UHD [1Month]" />
+        <h2>Netflix 4K UHD [1Month]/[Private]</h2>
+        <p>2,171.20 LKR</p>
+        <p>7.18 USD </p>
+        <div class="button-container">
+          <button onclick="redirectToWhatsApp('Netflix 4K UHD [1Month]')">Buy on WhatsApp</button>
+        </div>
+        <ul class="description">
+          <li>🖥️ MacOS/Windows/Android/iOS</li>
+          <li>🌍 Global Activation</li>
+          <li>👨‍💻 30 Day Technical Support/Warranty</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="physical" class="category">
+    <h1>Physical Products</h1>
+    <div class="products">
+      <div class="product-card" data-name="H81 ATX Motherboard 4th Gen [USED]">
+        <img src="assetphy/h81.png" alt="H81 ATX Motherboard 4th Gen [USED]" />
+        <h2>H81 ATX Motherboard 4th Gen [USED]</h2>
+        <p>7,650 LKR</p>
+        <p>25.29 USD </p>
+        <div class="button-container">
+          <button onclick="redirectToWhatsApp('H81 ATX Motherboard 4th Gen [USED]')">Buy on WhatsApp</button>
+        </div>
+        <ul class="description">
+          <li>⭐ Brand may vary</li>
+          <li>⭐ Fully Tested</li>
+          <li>⭐ 4th Gen Intel CPU Support</li>
+          <li>⭐ 3 Month Replacement Warranty (TOS Apply)</li>
+          <li>⭐ IslandWide Delivery</li>
+        </ul>
+      </div>
+
+      <div class="product-card" data-name="HY510 Thermal Paste">
+        <div class="stock-label limited">Limited Stock</div>
+        <img src="Assest/hy510.png" alt="HY510 Thermal Paste" />
+        <h2>HY510 Thermal Paste</h2>
+        <p>360.00 LKR</p>
+        <p>1.19 USD </p>
+        <div class="button-container">
+          <button onclick="redirectToWhatsApp('HY510 Thermal Paste')">Buy on WhatsApp</button>
+        </div>
+        <ul class="description">
+          <li>⭐ 1.93W/m-k Thermal Conductivity</li>
+          <li>⭐ 0.225C-in/W Thermal Resistance</li>
+          <li>⭐ For GPU,CPU,LED,ChipSet.etc</li>
+          <li>⭐ IslandWide Delivery</li>
+        </ul>
+      </div>
+
+      <div class="product-card" data-name="4th Gen Intel Core i5 [USED]">
+        <img src="assetphy/81scYFwjo1L._AC_SL1500_.png" alt="4th Gen Intel® Core™ i5" />
+        <h2>Intel Core i5 4th Gen CPU [USED]</h2>
+        <p>6,990 LKR</p>
+        <p>23.11 USD </p>
+        <div class="button-container">
+          <button onclick="redirectToWhatsApp('4th Gen Intel Core i5 [USED]')">Buy on WhatsApp</button>
+        </div>
+        <ul class="description">
+          <li>⭐ Model may vary (4460+)</li>
+          <li>⭐ Fully Tested</li>
+          <li>⭐ H81/B85/Z87 Series Motherboard Support</li>
+          <li>⭐ 3 Month Replacement Warranty (TOS Apply)</li>
+          <li>⭐ IslandWide Delivery</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-info">
+        <h3>RedTrex Technologies</h3>
+        <p><img src="Assest/location-icon.png" alt="Location" class="footer-icon">74,Katuwapitiya Road Negombo, Sri-Lanka , 11500.</p>
+
+        <p><img src="Assest/phone-icon.png" alt="Phone" class="footer-icon"> <a href="tel:+94712622012">+94 71 262 2012</a></p>
+
+        <p><img src="Assest/phone-icon.png" alt="Phone" class="footer-icon"> <a href="tel:+94722692012">+94 72 269 2012</a></p>
+
+        <p><img src="Assest/phone-icon.png" alt="Phone" class="footer-icon"> <a href="tel:+94112345678">+1 205 588 4201 (TOLL-FREE)</a></p>
+
+        <p><img src="Assest/mail-icon.png" alt="Email" class="footer-icon"> <a href="mailto:redtrex@technologist.com">redtrex@technologist.com</a></p>
+      </div>
+
+        <div class="footer-logo">
+          <h4>Partners & Reviews</h4>
+
+          <a href="https://microsoft.na3.adobesign.com/verifier?tx=CBJCHBCAABAAauszPdDOshbJePrkX7hheXImt4sGfbZj" target="_blank" rel="noopener noreferrer">
+            <img src="Assest/m-csp.png" alt="Microsoft Partner Logo" class="partner-logo">
+          </a>
+          
+        <div class="google-rating">
+          <span class="stars">★★★★★</span> <span class="rating-text">5.0 / 5.0</span>
+          <p class="review-count">
+            <a href="https://g.page/r/CUoC5lP8xkydEBM/review" target="_blank" rel="noopener noreferrer">
+              (4 Google Reviews)
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4>Legal & Policies</h4>
+        <ul>
+          <li><a href="terms.html">Terms & Conditions</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="refund.html">Refund Policy</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 RedTrex Technologies. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Popup Modal -->
+  <div id="popupModal" class="popup-modal" aria-hidden="true" role="dialog" aria-label="Welcome popup">
+    <div class="popup-content glass-effect" role="document">
+      <button class="close-btn" onclick="closePopup()" aria-label="Close popup">&times;</button>
+      <h2 class="popup-title">⚠️ VAT Alert</h2>
+      <p class="popup-text">An 18% VAT on digital services by foreign companies starts Oct 1,
+      2025. Registration and tax collection required in Sri Lanka.</p>
+
+      <h2 class="popup-title">💳 Payment Infomation</h2>
+      <p class="popup-text">To purchase a product, simply click the “Buy on WhatsApp” button. Our team will help you with the best payment method that suits you , whether local or international.</p>
+
+      <h2 class="popup-title"> 🧑‍🎓 Student Discount</h2>
+      <p class="popup-text">Students are eligible for discounts on all our products (valid student ID required).</p>
+
+    </div>
+  </div>
+
+  <script>
+    // WhatsApp redirect helper
+    function redirectToWhatsApp(product) {
+      const phoneNumber = "94712622012";
+      const message = encodeURIComponent(`Hi, I'm interested in ${product}!`);
+      window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
+    }
+
+    // Individual PayPal functions for each product (kept from original)
+    function paypalWindows11ProOEM() {
+      window.open("https://www.paypal.com/ncp/payment/3Q8BBXB4MPGT6", "_blank");
+    }
+
+    function paypalWindows11ProRetail() {
+      window.open("https://www.paypal.com/ncp/payment/3Q8BBXB4MPGT6", "_blank");
+    }
+
+    function paypalWindows11ProOEM5PC() {
+      window.open("https://www.paypal.com/ncp/payment/3Q8BBXB4MPGT6", "_blank");
+    }
+
+    function paypalWindows10ProOEM() {
+      window.open("https://www.paypal.com/ncp/payment/3Q8BBXB4MPGT6", "_blank");
+    }
+
+    function paypalWindows10ProOEM5PC() {
+      window.open("https://www.paypal.com/ncp/payment/3Q8BBXB4MPGT6", "_blank");
+    }
+
+    function paypalWindows10ProRetail() {
+      window.open("https://www.paypal.com/ncp/payment/3Q8BBXB4MPGT6", "_blank");
+    }
+
+    function paypalOffice2024() {
+      window.open("https://www.paypal.com/ncp/payment/7N99RGLU373V6", "_blank");
+    }
+
+    function paypalOffice2021() {
+      window.open("https://www.paypal.com/ncp/payment/7N99RGLU373V6", "_blank");
+    }
+
+    function paypalOffice2024_5PC() {
+      window.open("https://www.paypal.com/ncp/payment/7N99RGLU373V6", "_blank");
+    }
+
+    function paypalOffice2021_5PC() {
+      window.open("https://www.paypal.com/ncp/payment/7N99RGLU373V6", "_blank");
+    }
+
+    function paypalEset() {
+      window.open("https://www.paypal.com/ncp/payment/XG5JAWQNNDAGU", "_blank");
+    }
+
+    function paypalCorelDraw() {
+      window.open("https://www.paypal.com/ncp/payment/YVN957X2SMMPQ", "_blank");
+    }
+
+    function paypalCanva() {
+      window.open("https://www.paypal.com/ncp/payment/2XCB4JWFX8TL4", "_blank");
+    }
+
+    function paypalSpotify() {
+      window.open("https://www.paypal.com/ncp/payment/Z9DH3YMWE7Y4Y", "_blank");
+    }
+
+    function paypalPrimeVideo() {
+      window.open("https://www.paypal.com/ncp/payment/7U6WMERC7KNPA", "_blank");
+    }
+
+    function paypalNetflix() {
+      window.open("https://www.paypal.com/ncp/payment/XZACHDJXWUFMQ", "_blank");
+    }
+
+    function paypalH81Motherboard() {
+      window.open("https://www.paypal.com/ncp/payment/HNVXZ63C67W98", "_blank");
+    }
+
+    function paypalThermalPaste() {
+      window.open("https://www.paypal.com/ncp/payment/D8PFX2JP27WA6", "_blank");
+    }
+
+    function paypalIntelCore() {
+      window.open("https://www.paypal.com/ncp/payment/H3TPM2WZJC4FJ", "_blank");
+    }
+
+    function openG2GStore() {
+      window.open("https://www.g2g.com/redtrextech", "_blank");
+    }
+
+    // Animate products on scroll
+    const products = document.querySelectorAll(".product-card");
+    if (products && products.length) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+      products.forEach((product) => observer.observe(product));
+    }
+
+    // Search Dropdown
+    const searchInput = document.getElementById("productSearch");
+    const searchResults = document.getElementById("searchResults");
+    const allProducts = Array.from(document.querySelectorAll(".product-card"));
+
+    if (searchInput) {
+      searchInput.addEventListener("input", () => {
+        const query = searchInput.value.trim().toLowerCase();
+        searchResults.innerHTML = "";
+
+        if (!query) {
+          searchResults.style.display = "none";
+          return;
+        }
+
+        const matches = allProducts.filter((card) =>
+          card.dataset.name.toLowerCase().includes(query)
+        );
+
+        if (matches.length === 0) {
+          const li = document.createElement("li");
+          li.textContent = "No results found";
+          li.classList.add("no-results");
+          searchResults.appendChild(li);
+          searchResults.style.display = "block";
+          return;
+        }
+
+        matches.forEach((match) => {
+          const li = document.createElement("li");
+          li.textContent = match.dataset.name;
+          li.addEventListener("click", () => {
+            match.scrollIntoView({ behavior: "smooth", block: "center" });
+            match.classList.add("highlight");
+            setTimeout(() => match.classList.remove("highlight"), 2000);
+            searchResults.innerHTML = "";
+            searchResults.style.display = "none";
+            searchInput.value = "";
+          });
+          searchResults.appendChild(li);
+        });
+        searchResults.style.display = "block";
+      });
+    }
+
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest(".search-container")) {
+        searchResults.innerHTML = "";
+        searchResults.style.display = "none";
+      }
+    });
+
+    // Show popup on page load
+    window.addEventListener("load", function () {
+      const modal = document.getElementById("popupModal");
+      if (modal) {
+        modal.style.display = "flex";
+        modal.setAttribute("aria-hidden", "false");
+      }
+    });
+
+    // Close popup
+    function closePopup() {
+      const modal = document.getElementById("popupModal");
+      if (modal) {
+        modal.style.display = "none";
+        modal.setAttribute("aria-hidden", "true");
+      }
+    }
+  </script>
+
+  <!-- WhatsApp Floating Button -->
+  <a
+    href="https://wa.me/94712622012"
+    target="_blank"
+    class="whatsapp-float"
+    aria-label="Chat on WhatsApp"
+    rel="noopener"
+  >
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+  </a>
+</body>
+</html>
