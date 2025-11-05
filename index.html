@@ -46,6 +46,7 @@
       -webkit-backdrop-filter: blur(6px);
     }
 
+
     /* Liquid Glass Effect Box */
     .glass-effect {
       background: rgba(255, 255, 255, 0.12);
@@ -89,7 +90,7 @@
       );
       transform: rotate(25deg) translateX(-8%);
       pointer-events: none;
-      filter: blur(10px);
+      filter: blur(1px);
       opacity: 0.9;
       animation: sheen 4.5s ease-in-out infinite;
     }
@@ -161,6 +162,7 @@
 </head>
 <body>
 
+  
   <header>
     <a href="index.html" class="logo">
       <img src="Assest/company.png" alt="RedTrex Logo" style="height: 50px" />
@@ -184,6 +186,40 @@
     </div>
   </nav>
 
+  <!-- Video Background -->
+  <video autoplay muted loop id="bg-video" playsinline>
+    <source src="assetphy/hatsune-miku.1920x1080.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <style>
+    /* Full-screen background video */
+    #bg-video {
+      position: fixed;       /* Stay in place */
+      top: 0;                /* Align to top */
+      left: 0;               /* Align to left */
+      width: 100vw;          /* Full viewport width */
+      height: 100vh;         /* Full viewport height */
+      object-fit: cover;     /* Cover the whole area, keep aspect ratio */
+      z-index: -1;           /* Behind all content */
+    }
+
+    /* Optional: prevent scrolling when video is fixed */
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      font-family: sans-serif;
+    }
+
+    /* Example content styling */
+    .content {
+      position: relative;
+      z-index: 1;            /* Above video */
+      color: white;
+      padding: 50px;
+    }
+  </style>
+  
   <!-- DIGITAL PRODUCTS -->
   <section id="digital" class="category">
     <h1>Digital Products</h1>
@@ -728,7 +764,7 @@
   <!-- Popup Modal -->
   <div id="popupModal" class="popup-modal" aria-hidden="true" role="dialog" aria-label="Welcome popup">
     <div class="popup-content glass-effect" role="document">
-      <button class="close-btn" onclick="closePopup()" aria-label="Close popup">&times;</button>
+      <button class="close-btn" aria-label="Close popup">✕</button>
       <h2 class="popup-title">⚠️ VAT Alert</h2>
       <p class="popup-text">An 18% VAT on digital services by foreign companies starts Oct 1,
       2025. Registration and tax collection required in Sri Lanka.</p>
@@ -743,88 +779,34 @@
   </div>
 
   <script>
+    const popup = document.getElementById('popupModal');
+    const closeBtn = popup.querySelector('.close-btn');
+
+    // Duration to hide popup after closing (ms)
+    const hideDuration = 1000 * 60 * 5; // 5 minutes
+    const lastClosed = localStorage.getItem('popupClosed');
+    const now = new Date().getTime();
+
+    // Show popup only if last closed was more than 5 min ago
+    if (!lastClosed || now - lastClosed > hideDuration) {
+      popup.style.display = 'flex';
+    }
+
+    function closePopup() {
+      popup.style.display = 'none';
+      localStorage.setItem('popupClosed', new Date().getTime());
+    }
+
+    closeBtn.addEventListener('click', closePopup);
+  </script>
+
+
+  <script>
     // WhatsApp redirect helper
     function redirectToWhatsApp(product) {
       const phoneNumber = "94712622012";
       const message = encodeURIComponent(`Hi, I'm interested in ${product}!`);
       window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
-    }
-
-    // Individual PayPal functions for each product (kept from original)
-    function paypalWindows11ProOEM() {
-      window.open("https://www.paypal.com/ncp/payment/3Q8BBXB4MPGT6", "_blank");
-    }
-
-    function paypalWindows11ProRetail() {
-      window.open("https://www.paypal.com/ncp/payment/3Q8BBXB4MPGT6", "_blank");
-    }
-
-    function paypalWindows11ProOEM5PC() {
-      window.open("https://www.paypal.com/ncp/payment/3Q8BBXB4MPGT6", "_blank");
-    }
-
-    function paypalWindows10ProOEM() {
-      window.open("https://www.paypal.com/ncp/payment/3Q8BBXB4MPGT6", "_blank");
-    }
-
-    function paypalWindows10ProOEM5PC() {
-      window.open("https://www.paypal.com/ncp/payment/3Q8BBXB4MPGT6", "_blank");
-    }
-
-    function paypalWindows10ProRetail() {
-      window.open("https://www.paypal.com/ncp/payment/3Q8BBXB4MPGT6", "_blank");
-    }
-
-    function paypalOffice2024() {
-      window.open("https://www.paypal.com/ncp/payment/7N99RGLU373V6", "_blank");
-    }
-
-    function paypalOffice2021() {
-      window.open("https://www.paypal.com/ncp/payment/7N99RGLU373V6", "_blank");
-    }
-
-    function paypalOffice2024_5PC() {
-      window.open("https://www.paypal.com/ncp/payment/7N99RGLU373V6", "_blank");
-    }
-
-    function paypalOffice2021_5PC() {
-      window.open("https://www.paypal.com/ncp/payment/7N99RGLU373V6", "_blank");
-    }
-
-    function paypalEset() {
-      window.open("https://www.paypal.com/ncp/payment/XG5JAWQNNDAGU", "_blank");
-    }
-
-    function paypalCorelDraw() {
-      window.open("https://www.paypal.com/ncp/payment/YVN957X2SMMPQ", "_blank");
-    }
-
-    function paypalCanva() {
-      window.open("https://www.paypal.com/ncp/payment/2XCB4JWFX8TL4", "_blank");
-    }
-
-    function paypalSpotify() {
-      window.open("https://www.paypal.com/ncp/payment/Z9DH3YMWE7Y4Y", "_blank");
-    }
-
-    function paypalPrimeVideo() {
-      window.open("https://www.paypal.com/ncp/payment/7U6WMERC7KNPA", "_blank");
-    }
-
-    function paypalNetflix() {
-      window.open("https://www.paypal.com/ncp/payment/XZACHDJXWUFMQ", "_blank");
-    }
-
-    function paypalH81Motherboard() {
-      window.open("https://www.paypal.com/ncp/payment/HNVXZ63C67W98", "_blank");
-    }
-
-    function paypalThermalPaste() {
-      window.open("https://www.paypal.com/ncp/payment/D8PFX2JP27WA6", "_blank");
-    }
-
-    function paypalIntelCore() {
-      window.open("https://www.paypal.com/ncp/payment/H3TPM2WZJC4FJ", "_blank");
     }
 
     function openG2GStore() {
