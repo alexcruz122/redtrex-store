@@ -127,8 +127,8 @@ nav a:hover {
   right: 0;
   background: rgba(20, 20, 20, 0.8);
   border-radius: 0 0 20px 20px;
-  backdrop-filter: blur(20px) saturate(200%);
-  -webkit-backdrop-filter: blur(20px) saturate(200%);
+  backdrop-filter: blur(2px) saturate(200%);
+  -webkit-backdrop-filter: blur(2px) saturate(200%);
   box-shadow: 0 8px 25px rgb(237, 237, 237, 0.3);
   max-height: 240px;
   overflow-y: auto;
@@ -193,22 +193,52 @@ nav a:hover {
 
 /* Product Card */
 .product-card {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(2px) saturate(280%);
-  -webkit-backdrop-filter: blur(13px) saturate(180%);
+  /* Basic Glassmorphism Structure */
+  background: transparent; /* Changed to transparent to rely on ::after for the effect */
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
-  opacity: 4;
-  transform: translateY(80px);
+  /* Other styles you had */
+  opacity: 1; /* Changed opacity to 1 (or desired value) for visibility */
+  transform: translateY(0); /* Removed initial transform to make it visible */
   max-width: 300px;
   margin: auto;
   position: relative;
   cursor: pointer;
+  /* Key for liquid glass: isolation */
+  isolation: isolate; 
+  overflow: hidden; /* Helps contain the pseudo-element */
 }
 
+/* The actual 'liquid glass' effect on a pseudo-element */
+.product-card::after {
+  content: '';
+  position: absolute;
+  z-index: -1; /* Place it behind the card content */
+  inset: 0;
+  border-radius: 20px;
+
+  /* Standard Glassmorphism: Transparency and Blur */
+  background: rgba(255, 255, 255, 0.08); 
+  backdrop-filter: blur(3px); /* Adjust blur as needed */
+  -webkit-backdrop-filter: blur(3.4px);
+
+  /* KEY: Apply the liquid effect using the SVG filter */
+  filter: url(#liquid-glass-effect);
+  -webkit-filter: url(#liquid-glass-effect); /* For better browser support */
+
+  /* Optional: Inner shadow for highlights */
+  box-shadow: inset 0 0 3px 1px rgba(255, 255, 255, 0.5);
+}
+
+/* Optional: For hover effect */
+.product-card:hover::after {
+    /* Subtle change to the effect on hover */
+    filter: url(#liquid-glass-effect-hover);
+    -webkit-filter: url(#liquid-glass-effect-hover);
+}
 .product-card img {
   width: 100%;
   border-radius: 15px;
@@ -600,3 +630,68 @@ main {
     }
 }
 
+    /* Popup Background (unchanged) */
+    .popup-modal {
+      display: none; 
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      z-index: 10000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+
+    /* Liquid Glass Effect Box */
+    .glass-effect {
+      /* Structural Changes for the filter */
+      background: transparent; /* Must be transparent for ::before/::after to apply effects */
+      position: relative;
+      overflow: hidden; 
+      isolation: isolate; /* Crucial for controlling backdrop-filter scope */
+      z-index: 10; /* Ensures content is above the liquid layer */
+
+      /* Keep your visual styles */
+      border-radius: 20px;
+      padding: 25px 28px;
+      max-width: 460px;
+      width: 92%;
+      text-align: center;
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
+      animation: popupIn 0.36s cubic-bezier(.2,.9,.3,1);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    /* The Layer that holds the Animated Liquid Glass Effect */
+    .glass-effect::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1; /* Placed behind the content */
+      border-radius: 20px;
+
+      /* Standard Glassmorphism */
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(18px) saturate(160%);
+      -webkit-backdrop-filter: blur(18px) saturate(160%);
+
+      /* Apply the ANIMATED SVG Filter! */
+      filter: url(#container-glass-animated);
+      -webkit-filter: url(#container-glass-animated);
+    }
+
+
+    /* Slight inner gradient to mimic glass depth (now ::after) */
+    .glass-effect::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0) 40%);
+      pointer-events: none;
+    }
