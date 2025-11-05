@@ -9,7 +9,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #fff;
   text-align: center;
-  background: url("Assest/2825704.gif") center/cover no-repeat fixed,
+  background: url("") center/cover no-repeat fixed,
     linear-gradient(180deg, #0f0f0f, #1a1a1a);
   min-height: 100vh;
 }
@@ -58,8 +58,8 @@ nav a:hover {
 .g2g-btn {
   background-color: #ff4747;
   color: white;
-  padding: 10px 20px;
-  border-radius: 25px;
+  padding: 10px 12px;
+  border-radius: 40px;
   border: none;
   cursor: pointer;
   font-weight: 600;
@@ -70,7 +70,7 @@ nav a:hover {
 }
 
 .g2g-btn:hover {
-  background-color: #ffa3a3;
+  background-color: #f396bb;
 }
 
 /* Remove default link styles on <a> with g2g-btn */
@@ -194,15 +194,15 @@ nav a:hover {
 /* Product Card */
 .product-card {
   background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(15px) saturate(180%);
-  -webkit-backdrop-filter: blur(15px) saturate(180%);
+  backdrop-filter: blur(2px) saturate(280%);
+  -webkit-backdrop-filter: blur(13px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
-  opacity: 0;
-  transform: translateY(40px);
+  opacity: 4;
+  transform: translateY(80px);
   max-width: 300px;
   margin: auto;
   position: relative;
@@ -241,7 +241,7 @@ nav a:hover {
 }
 
 .product-card button:hover {
-  background: #ff5f5f;
+  background: #0045e6;
 }
 
 /* PayPal Button Styling */
@@ -289,7 +289,7 @@ nav a:hover {
 /* Hover Effect */
 .product-card:hover {
   transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 10px 25px rgba(255, 71, 71, 0.4);
+  box-shadow: 0 10px 25px rgb(11, 37, 234, 0.4);
 }
 
 /* Out of Stock Badge */
@@ -472,7 +472,7 @@ footer {
 }
 
 .footer-links ul li a:hover {
-  color: #1e90ff;
+  color: #f01fff;
 }
 
 .footer-bottom {
@@ -599,3 +599,4 @@ main {
         color: #b3d9ff; /* A bright, readable color for links */
     }
 }
+
