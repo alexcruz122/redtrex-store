@@ -1,234 +1,226 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="transition-colors duration-500 ease-in-out">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RedTrex Technologies - Our Services</title>
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Configure Tailwind for custom aesthetics -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        'primary-dark': '#1a1a2e',
-                        'primary-light': '#ffffff',
-                        'accent-blue': '#00d4ff',
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        /* Custom styles for the Glassmorphism footer */
-        .glass-footer {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 -4px 40px rgba(0, 0, 0, 0.1);
-        }
-        /* Custom image placeholders to ensure icons are visible (in a real app, use SVGs) */
-        .footer-icon {
-            display: inline-block;
-            width: 1rem;
-            height: 1rem;
-            background-color: #00d4ff;
-            border-radius: 50%;
-            margin-right: 0.5rem;
-        }
-        .footer-icon[alt="Location"] { background-color: #fca5a5; }
-        .footer-icon[alt="Phone"] { background-color: #818cf8; }
-        .footer-icon[alt="Email"] { background-color: #34d399; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RedTrex Technologies - Our Services</title>
 
-        /* General Service Card Styling */
-        .service-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        }
-    </style>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            'primary-dark': '#1a1a2e',
+            'primary-light': '#ffffff',
+            'accent-blue': '#00d4ff',
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    /* Smooth fade effect on theme change */
+    * {
+      transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+    }
+
+    .glass-footer {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 -4px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Toggle button positioning */
+    #theme-toggle {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 9999px;
+      padding: 0.6rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    #theme-toggle:hover {
+      transform: scale(1.05);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    #theme-icon {
+      width: 28px;
+      height: 28px;
+      display: block;
+    }
+  </style>
 </head>
-<body class="bg-gray-100 font-sans min-h-screen flex flex-col">
+  
+<body class="bg-gray-100 text-gray-900 dark:bg-primary-dark dark:text-primary-light font-sans min-h-screen flex flex-col transition-colors duration-500 ease-in-out">
 
-    <!-- Header Section -->
-    <header class="bg-primary-dark shadow-lg p-4 sticky top-0 z-10">
-        <div class="max-w-7xl mx-auto flex justify-center">
-            <!-- Company Logo -->
-            <img src="Assest/company.png" alt="RedTrex Logo" class="h-16 object-contain" />
+
+  <!-- Header -->
+  <header class="bg-primary-dark dark:bg-gray-900 shadow-lg p-4 sticky top-0 z-10 transition-colors duration-500">
+    <div class="max-w-7xl mx-auto flex justify-center">
+      <img src="Assest/company.png" alt="RedTrex Logo" class="h-16 object-contain" />
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-7xl mx-auto w-full px-4 sm:px-6 py-12 transition-colors duration-500">
+    <div class="bg-white dark:bg-gray-800 p-6 sm:p-12 rounded-2xl shadow-2xl transition-colors duration-500">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-primary-dark dark:text-primary-light mb-4">
+          Our Comprehensive Services
+        </h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          Driving digital transformation and delivering high-impact solutions across web, cloud, and infrastructure.
+        </p>
+      </div>
+
+      <!-- Service Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Example Service -->
+        <div class="service-card p-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl shadow-md">
+          <img src="assetphy/services/computer.gif" alt="Design Icon" class="w-10 h-10 mb-4" />
+          <h2 class="text-2xl font-bold mb-3 text-primary-dark dark:text-primary-light">PC Hardware & Services</h2>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Custom PC builds, repairs, and upgrades — delivering performance, reliability, and expert support for all your computing needs.
+          </p>
         </div>
-    </header>
 
-    <!-- Main Content Area -->
-    <main class="flex-grow max-w-7xl mx-auto w-full px-4 sm:px-6 py-12">
-        <div class="bg-white p-6 sm:p-12 rounded-2xl shadow-2xl">
-
-            <!-- Hero Header -->
-            <div class="text-center mb-12">
-                <h1 class="text-4xl sm:text-5xl font-extrabold text-primary-dark mb-4">
-                    Our Comprehensive Services
-                </h1>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Driving digital transformation and delivering high-impact solutions across web, cloud, and infrastructure.
+        <!-- Service Card 1: Electronics Repair Services -->
+              <div class="service-card p-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl shadow-md">
+                  <img src="assetphy/services/icons8-repair.gif" alt="Design Icon" class="w-10 h-10 mb-4" />
+                  <h2 class="text-2xl font-bold mb-3 text-primary-dark dark:text-primary-light">Electronics Repair Services</h2>
+                  <p class="text-gray-600 dark:text-gray-300 mb-4">
+                    Expert repair and maintenance for TVs, amplifiers, SMPS units, and other electronic devices — ensuring reliable performance, extended lifespan, and cost-effective restoration.
                 </p>
+
             </div>
 
-            <!-- Services Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-                <!-- Service Card 1: PC Hardware & Services -->
-                <div class="service-card p-6 bg-white border border-gray-200 rounded-xl shadow-md">
-                    <img src="assetphy/services/computer.gif" alt="Design Icon" class="w-10 h-10 mb-4" />
-                    <h2 class="text-2xl font-bold text-primary-dark mb-3">PC Hardware & Services</h2>
-                    <p class="text-gray-600 mb-4">
-                        Custom PC builds, repairs, and upgrades — delivering performance, reliability, and expert support for all your computing needs.
-                    </p>
-                    
-                </div>
-
-                <!-- Service Card 1: Electronics Repair Services -->
-                <div class="service-card p-6 bg-white border border-gray-200 rounded-xl shadow-md">
-                    <img src="assetphy/services/icons8-repair.gif" alt="Design Icon" class="w-10 h-10 mb-4" />
-                    <h2 class="text-2xl font-bold text-primary-dark mb-3">Electronics Repair Services</h2>
-                    <p class="text-gray-600 mb-4">
-                        Expert repair and maintenance for TVs, amplifiers, SMPS units, and other electronic devices — ensuring reliable performance, extended lifespan, and cost-effective restoration.
-                    </p>
-
-                </div>
-
-                <!-- Service Card 2: Genuine Software Soultions -->
-                <div class="service-card p-6 bg-white border border-gray-200 rounded-xl shadow-md">
-                    <img src="assetphy/services/software-license.png" alt="Design Icon" class="w-10 h-10 mb-4" />
-                    <h2 class="text-2xl font-bold text-primary-dark mb-3">Genuine Software Solutions</h2>
-                    <p class="text-gray-600 mb-4">
-                        Official, licensed software for business and personal use — including Microsoft products and productivity tools at competitive prices.
-                    </p>
-                    <a href="index.html" class="text-accent-blue font-semibold hover:underline">Learn More →</a>
-                </div>
-
-                <!-- Service Card 3: Security -->
-                <div class="service-card p-6 bg-white border border-gray-200 rounded-xl shadow-md">
-                    <img src="assetphy/services/icons8-protect.gif" alt="Design Icon" class="w-10 h-10 mb-4" />
-                    <h2 class="text-2xl font-bold text-primary-dark mb-3">Device Security</h2>
-                    <p class="text-gray-600 mb-4">
-                        Advanced protection for your systems and networks with top-tier antivirus, endpoint, and data security solutions.
-                    </p>
-                    
-                </div>
-
-                <!-- Service Card 4: CCTV -->
-                <div class="service-card p-6 bg-white border border-gray-200 rounded-xl shadow-md">
-                    <img src="assetphy/services/icons8-cctv.gif" alt="Design Icon" class="w-10 h-10 mb-4" />
-                    <h2 class="text-2xl font-bold text-primary-dark mb-3">CCTV Solutions</h2>
-                    <p class="text-gray-600 mb-4">
-                        Professional CCTV installation and configuration for homes and businesses — ensuring complete surveillance and peace of mind.
-                    </p>
-                    
-                </div>
-
-                <!-- Service Card 5: Hosting -->
-                <div class="service-card p-6 bg-white border border-gray-200 rounded-xl shadow-md">
-                    <img src="assetphy/services/big-data.gif" alt="Design Icon" class="w-10 h-10 mb-4" />
-                    <h2 class="text-2xl font-bold text-primary-dark mb-3">Hosting Services</h2>
-                    <p class="text-gray-600 mb-4">
-                        Reliable and secure web hosting with high uptime, fast load speeds, and full support for business or personal websites.
-                    </p>
-                    
-                </div>
-
-            <div class="service-card p-6 bg-white border border-gray-200 rounded-xl shadow-md">
-                <!-- Placeholder Icon: Design --><img src="assetphy/services/recovery.gif" alt="Design Icon" class="w-10 h-10 mb-4" />
-                <h2 class="text-2xl font-bold text-primary-dark mb-3">Data Recovery</h2>
-                <p class="text-gray-600 mb-4">
-                    Secure and professional data recovery services to restore lost or corrupted files from hard drives, SSDs, USBs, and other storage devices — fast, safe, and reliable.
+            <!-- Service Card 2: Genuine Software Soultions -->
+        <div class="service-card p-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl shadow-md">
+                <img src="assetphy/services/software-license.png" alt="Design Icon" class="w-10 h-10 mb-4" />
+                  <h2 class="text-2xl font-bold mb-3 text-primary-dark dark:text-primary-light">Genuine Software Solutions</h2>
+                  <p class="text-gray-600 dark:text-gray-300 mb-4">
+                    Official, licensed software for business and personal use — including Microsoft products and productivity tools at competitive prices.
                 </p>
-                <p class="text-red-500 text-sm mt-2">
-                    <strong class="font-semibold">Important:</strong> Data recovery success is not guaranteed. Please contact us for a detailed assessment.
-                </p>
+                <a href="index.html" class="text-accent-blue font-semibold hover:underline">Learn More →</a>
             </div>
-                </div>
-            
-            <!-- Call to Action for Services (Customized) -->
-            <section class="mt-12 text-center bg-accent-blue/10 p-8 rounded-2xl shadow-inner">
-                <h2 class="text-3xl font-extrabold text-primary-dark mb-4">
-                    Ready to transform your business with our expertise?
-                </h2>
-                <p class="text-xl font-medium text-gray-700 mb-6">
-                    Let's discuss your specific needs and outline a roadmap for success.
+
+            <!-- Service Card 3: Security -->
+              <div class="service-card p-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl shadow-md">
+                <img src="assetphy/services/icons8-protect.gif" alt="Design Icon" class="w-10 h-10 mb-4" />
+                  <h2 class="text-2xl font-bold mb-3 text-primary-dark dark:text-primary-light">Device Security</h2>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">
+                    Advanced protection for your systems and networks with top-tier antivirus, endpoint, and data security solutions.
                 </p>
-                <!-- Retains the WhatsApp link for immediate contact -->
-                <a href="https://wa.me/94712622012" target="_blank" rel="noopener noreferrer" class="inline-block px-10 py-4 bg-accent-blue text-primary-dark font-bold text-lg rounded-full shadow-xl hover:bg-opacity-80 transition duration-300 transform hover:scale-[1.02]">
-                    Start a Project Consultation
-                </a>
-            </section>
+
+            </div>
+
+            <!-- Service Card 4: CCTV -->
+              <div class="service-card p-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl shadow-md">
+                <img src="assetphy/services/icons8-cctv.gif" alt="Design Icon" class="w-10 h-10 mb-4" />
+                  <h2 class="text-2xl font-bold mb-3 text-primary-dark dark:text-primary-light">CCTV Solutions</h2>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">
+                    Professional CCTV installation and configuration for homes and businesses — ensuring complete surveillance and peace of mind.
+                </p>
+
+            </div>
+
+            <!-- Service Card 5: Hosting -->
+              <div class="service-card p-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl shadow-md">
+                <img src="assetphy/services/big-data.gif" alt="Design Icon" class="w-10 h-10 mb-4" />
+                  <h2 class="text-2xl font-bold mb-3 text-primary-dark dark:text-primary-light">Hosting Services</h2>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">
+                    Reliable and secure web hosting with high uptime, fast load speeds, and full support for business or personal websites.
+                </p>
+
+            </div>
+
+          <div class="service-card p-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl shadow-md">
+            <!-- Placeholder Icon: Design --><img src="assetphy/services/recovery.gif" alt="Design Icon" class="w-10 h-10 mb-4" />
+              <h2 class="text-2xl font-bold mb-3 text-primary-dark dark:text-primary-light">Data Recovery</h2>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+                Secure and professional data recovery services to restore lost or corrupted files from hard drives, SSDs, USBs, and other storage devices — fast, safe, and reliable.
+            </p>
+            <p class="text-red-500 text-sm mt-2">
+                <strong class="font-semibold">Important:</strong> Data recovery success is not guaranteed. Please contact us for a detailed assessment.
+            </p>
         </div>
-    </main>
-
-    <!-- Footer Section with Glassmorphism Effect -->
-    <footer class="glass-footer mt-auto py-10 px-4 sm:px-6 lg:px-8 text-white bg-primary-dark/80">
-        <div class="max-w-7xl mx-auto">
-            <!-- Grid updated to 3 columns: md:grid-cols-3 -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-                <!-- Company Info Column (UPDATED with new numbers) -->
-                <div class="space-y-3">
-                    <h3 class="text-xl font-bold text-accent-blue mb-4">RedTrex Technologies</h3>
-                    <p class="text-sm flex items-start">
-                        <span class="footer-icon mt-1"></span>
-                        74, Katuwapitiya Road Negombo, Sri-Lanka, 11500.
-                    </p>
-                    <p class="text-sm flex items-center">
-                        <span class="footer-icon"></span>
-                        <a href="tel:+94712622012" class="hover:underline">+94 71 262 2012</a>
-                    </p>
-                    <p class="text-sm flex items-center">
-                        <span class="footer-icon"></span>
-                        <a href="tel:+94722692012" class="hover:underline">+94 72 269 2012</a>
-                    </p>
-                    <p class="text-sm flex items-center">
-                        <span class="footer-icon"></span>
-                        <a href="tel:+12055884201" class="hover:underline">+1 205 588 4201 (TOLL-FREE)</a>
-                    </p>
-                    <p class="text-sm flex items-center">
-                        <span class="footer-icon"></span>
-                        <a href="mailto:redtrex@technologist.com" class="hover:underline">redtrex@technologist.com</a>
-                    </p>
-                </div>
-
-                <!-- Quick Links Column (REMOVED Contact link) -->
-                <div>
-                    <h4 class="text-lg font-semibold mb-4 text-gray-200">Quick Links</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="index.html" class="hover:text-accent-blue transition-colors">Home</a></li>
-                        <li><a href="services.html" class="text-accent-blue font-bold">Services</a></li>
-                        <li><a href="about.html" class="hover:text-accent-blue transition-colors">About Us</a></li>
-                    </ul>
-                </div>
-
-                <!-- Legal Links Column -->
-                <div>
-                    <h4 class="text-lg font-semibold mb-4 text-gray-200">Legal</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="terms.html" class="hover:text-accent-blue transition-colors">Terms & Conditions</a></li>
-                        <li><a href="privacy.html" class="hover:text-accent-blue transition-colors">Privacy Policy</a></li>
-                        <li><a href="refund.html" class="hover:text-accent-blue transition-colors">Refund Policy</a></li>
-                    </ul>
-                </div>
             </div>
 
-            <!-- Divider and Copyright -->
-            <div class="mt-8 pt-6 border-t border-gray-700 text-center">
-                <p class="text-sm text-gray-400">
-                    &copy; 2025 RedTrex Technologies. All Rights Reserved.
-                </p>
-            </div>
-        </div>
-    </footer>
+        
+        <!-- Add other cards... (same pattern, dark:text / dark:bg used) -->
+
+      </div>
+
+      <!-- CTA Section -->
+      <section class="mt-12 text-center bg-accent-blue/10 dark:bg-accent-blue/20 p-8 rounded-2xl shadow-inner transition-colors duration-500">
+        <h2 class="text-3xl font-extrabold mb-4 text-primary-dark dark:text-primary-light">
+          Ready to transform your business with our expertise?
+        </h2>
+        <p class="text-xl font-medium text-gray-700 dark:text-gray-300 mb-6">
+          Let's discuss your specific needs and outline a roadmap for success.
+        </p>
+        <a href="https://wa.me/94712622012" target="_blank" rel="noopener noreferrer"
+           class="inline-block px-10 py-4 bg-accent-blue text-primary-dark font-bold text-lg rounded-full shadow-xl hover:bg-opacity-80 transition duration-300 transform hover:scale-[1.02]">
+          Start a Project Consultation
+        </a>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="glass-footer mt-auto py-10 px-4 sm:px-6 lg:px-8 text-white bg-primary-dark/80 dark:bg-gray-900/80 transition-colors duration-500">
+    <div class="max-w-7xl mx-auto text-center border-t border-gray-700 pt-6 text-sm text-gray-400">
+      &copy; 2025 RedTrex Technologies. All Rights Reserved.
+    </div>
+  </footer>
+
+  <!-- Theme Toggle Script -->
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const icon = document.getElementById('theme-icon');
+    const html = document.documentElement;
+
+    // Load saved theme
+    if (localStorage.theme === 'dark') {
+      html.classList.add('dark');
+      icon.src = 'assetphy/icons/dark.png';
+      icon.alt = 'Dark Mode';
+    } else {
+      icon.src = 'assetphy/icons/light.png';
+      icon.alt = 'Light Mode';
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      html.classList.add('transition-colors', 'duration-500');
+      html.classList.toggle('dark');
+      const isDark = html.classList.contains('dark');
+      icon.src = isDark ? 'assetphy/icons/dark.png' : 'assetphy/icons/light.png';
+      icon.alt = isDark ? 'Dark Mode' : 'Light Mode';
+      localStorage.theme = isDark ? 'dark' : 'light';
+    });
+  </script>
 </body>
 </html>
