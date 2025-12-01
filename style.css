@@ -101,8 +101,8 @@ nav a:hover {
   background: rgba(255, 255, 255, 0.1);
   color: #fff;
   font-size: 1rem;
-  backdrop-filter: blur(15px) saturate(180%);
-  -webkit-backdrop-filter: blur(15px) saturate(180%);
+  backdrop-filter: blur(15px) saturate(280%);
+  -webkit-backdrop-filter: blur(10px) saturate(280%);
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
   transition: border-color 0.3s ease, background 0.3s ease;
   outline: none;
@@ -254,13 +254,13 @@ nav a:hover {
 .product-card p {
   font-size: 1rem;
   margin-bottom: 10px;
-  color: #ffdd57;
+  color: #e1dfe1;
 }
 
 .product-card button {
-  background: #ff4747;
+  background: #5e63f3;
   border: none;
-  color: white;
+  color: #73e8bb;
   padding: 10px 20px;
   border-radius: 25px;
   cursor: pointer;
@@ -271,7 +271,7 @@ nav a:hover {
 }
 
 .product-card button:hover {
-  background: #0045e6;
+  background: #f5ee24;
 }
 
 /* PayPal Button Styling */
@@ -695,3 +695,185 @@ main {
       background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0) 40%);
       pointer-events: none;
     }
+
+/* Floating Social Bubble Styles (FAB) */
+
+/* Container fixed position (Bottom Left) */
+.social-fab-container {
+    position: fixed;
+    bottom: 25px;
+    left: 25px; /* Positioned to the Left */
+    z-index: 9999; 
+}
+
+/* Toggle Button (The main bubble) */
+.social-fab-toggle {
+    background-color: #4CAF50;
+    color: white;
+    width: 55px;
+    height: 55px;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background-color 0.2s;
+    outline: none;
+}
+
+.social-fab-toggle:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Links Container (Aligned for Left side) */
+.social-fab-links {
+    position: absolute;
+    bottom: 65px; /* Position above the toggle button */
+    left: 0; /* Links align to the Left side of the container */
+    display: flex;
+    flex-direction: column-reverse; /* Display links upwards */
+    align-items: flex-start; /* Links stack starting from the left */
+}
+
+/* Individual Social Links */
+/* Individual Social Links - Ensures the link acts as a container */
+.social-link {
+    /* Existing styles... */
+    display: flex; /* <-- ADDED: Use flexbox for easy centering */
+    justify-content: center; /* <-- ADDED: Center horizontally */
+    align-items: center; /* <-- ADDED: Center vertically */
+    /* ... existing styles ... */
+}
+
+/* New CSS to target the PNG image directly inside the link */
+.social-link img {
+    /* Enforce maximum size relative to the 45px link bubble */
+    max-width: 60%; /* Or 25px max, depending on your image size */
+    max-height: 60%; /* Prevents images from distorting or overflowing */
+    width: auto;
+    height: auto;
+    object-fit: contain; /* Ensures the whole image is visible */
+    padding: 0; /* Remove any default padding */
+    margin: 0; /* Remove any default margin */
+}
+
+/* Target the main toggle button's image */
+.social-fab-toggle img {
+    max-width: 50%; /* Adjust as needed for the 55px toggle button */
+    max-height: 50%;
+}
+
+/* Slider container */
+.slider-wrapper {
+  max-width: 1000px; /* Adjust to your site's width */
+  margin: 20px auto;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.slider {
+  display: flex;
+  /* Allows scrolling horizontally */
+  overflow-x: auto; 
+  /* Hides the scrollbar */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+
+  /* This is the magic! */
+  scroll-snap-type: x mandatory; 
+  scroll-behavior: smooth;
+}
+
+.slider {
+  display: flex;
+
+  /* REMOVE these lines */
+  /* overflow-x: auto; 
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
+  scroll-snap-type: x mandatory; 
+  scroll-behavior: smooth; */
+
+  /* ADD these lines */
+  /* 12s total duration (4s per slide) */
+  animation: autoplay 12s infinite; 
+}
+
+.slide {
+  /* Each slide takes up 100% of the slider's width */
+  flex: 0 0 100%;
+  width: 100%;
+  scroll-snap-align: start; /* Snaps to the start of the slide */
+  position: relative; /* For positioning content inside */
+}
+
+.slide img {
+  width: 100%;
+  display: block; /* Removes bottom space under images */
+}
+
+/* Optional: Centered text content */
+.slide-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Optional: Navigation dots */
+.slider-nav {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.slider-nav a {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+.slider-nav a:hover {
+  background-color: #fff;
+}
+
+@keyframes autoplay {
+  /* --- Slide 1 --- */
+  /* Start on slide 1 and stay for 30% of the time */
+  0% { transform: translateX(0); }
+  30% { transform: translateX(0); }
+
+  /* --- Slide 2 --- */
+  /* Move to slide 2 and stay */
+  33% { transform: translateX(-100%); }
+  63% { transform: translateX(-100%); }
+
+  /* --- Slide 3 --- */
+  /* Move to slide 3 and stay */
+  66% { transform: translateX(-200%); }
+  97% { transform: translateX(-200%); }
+
+  /* --- Reset --- */
+  /* Go back to slide 1 to loop */
+  100% { transform: translateX(0); }
+}
+
+.partner-logo {
+  display: inline-block;
+  margin: 0 10px;
+  height: 40px; /* adjust as needed */
+}
