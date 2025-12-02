@@ -271,7 +271,7 @@ nav a:hover {
 }
 
 .product-card button:hover {
-  background: #f5ee24;
+  background: #b0ab1c;
 }
 
 /* PayPal Button Styling */
@@ -364,115 +364,46 @@ nav a:hover {
   transform: translateY(0);
 }
 
-/* Footer */
-footer {
-  padding: 20px;
-  font-size: 0.9rem;
-  color: #0cdfd1;
-  margin-top: 40px;
-}
-
-/* Notice Banner */
-.notice-banner {
-  background: rgba(255, 235, 59, 0.3);
-  color: #000;
-  padding: 12px 20px;
-  font-size: 1rem;
-  text-align: center;
-  font-weight: 600;
-  position: sticky;
-  top: 0;
-  z-index: 2000;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  border-radius: 0 0 12px 12px;
-  backdrop-filter: blur(10px) saturate(150%);
-  -webkit-backdrop-filter: blur(10px) saturate(150%);
-  user-select: none;
-}
-
-/* Responsive for Mobile */
-@media (max-width: 600px) {
-  nav {
-    gap: 10px;
-    padding: 10px 10px;
-  }
-  .g2g-btn {
-    padding: 8px 12px;
-    font-size: 0.9rem;
-  }
-  #productSearch {
-    font-size: 0.9rem;
-    padding: 8px 12px;
-  }
-  .products {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    padding: 10px;
-  }
-  .product-card {
-    max-width: 100%;
-  }
-
-  /* Center search container on mobile */
-  .search-container {
-    margin-left: 0;
-    margin: 0 auto;
-    max-width: 280px;
-    min-width: 0;
-    flex-grow: 0;
-    width: 100%;
-  }
-}
-
-.whatsapp-float {
-  position: fixed;
-  right: 20px;
-  bottom: 40px;
-  width: 50px;
-  height: 50px;
-  background-color: #25d366;
-  border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.whatsapp-float:hover {
-  background-color: #1ebe57;
-}
-
-.whatsapp-float img {
-  width: 28px;
-  height: 28px;
-}
-
+/* Footer Base */
 .site-footer {
-  background: #111;
+  background: rgba(0, 0, 0, 0.4); /* dark glass effect */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   color: #fff;
-  padding: 40px 20px 20px 20px;
+  padding: 30px 20px;
   font-family: Arial, sans-serif;
+  border-radius: 15px 15px 0 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Footer Container */
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 20px; /* smaller gap to reduce height */
+  align-items: flex-start;
 }
 
+/* Footer Columns */
+.footer-info, .footer-logo, .footer-links {
+  flex: 1 1 250px; /* responsive width */
+  min-width: 220px;
+}
+
+/* Footer Info */
 .footer-info h3 {
-  margin-bottom: 15px;
   font-size: 20px;
+  margin-bottom: 12px;
 }
 
 .footer-info p {
-  margin: 6px 0;
+  margin: 4px 0;
   display: flex;
   align-items: center;
+  font-size: 0.9rem;
 }
 
 .footer-icon {
@@ -481,9 +412,10 @@ footer {
   margin-right: 8px;
 }
 
+/* Footer Links */
 .footer-links h4 {
-  margin-bottom: 15px;
   font-size: 18px;
+  margin-bottom: 12px;
 }
 
 .footer-links ul {
@@ -492,11 +424,11 @@ footer {
 }
 
 .footer-links ul li {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .footer-links ul li a {
-  color: #fff;
+  color: #b3d9ff;
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -505,6 +437,87 @@ footer {
   color: #f01fff;
 }
 
+/* Footer Social Icons */
+.footer-social {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.footer-social img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+}
+
+.footer-social img:hover {
+  opacity: 1;
+}
+
+/* Footer Logo & Partners */
+.footer-logo {
+  text-align: center;
+}
+
+.partner-logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.partner-logos img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Payment Logos */
+.payment-logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.payment-logos img {
+  height: 28px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Google Rating */
+.google-rating {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.google-rating .stars {
+  font-size: 1.2em;
+  color: gold;
+  display: block;
+  letter-spacing: 2px;
+}
+
+.google-rating .rating-text {
+  display: block;
+  font-size: 0.95em;
+  margin-bottom: 4px;
+}
+
+.google-rating .review-count a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+/* Footer Bottom */
 .footer-bottom {
   text-align: center;
   margin-top: 20px;
@@ -513,27 +526,7 @@ footer {
   padding-top: 10px;
 }
 
-/* Optional: make footer always at bottom if content is small */
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-main {
-  flex: 1; /* your main content area */
-}
-
-/* Footer default layout (desktop) */
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-/* Mobile-friendly footer */
+/* Responsive Footer */
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
@@ -541,376 +534,23 @@ main {
     text-align: center;
   }
 
-  .footer-info, .footer-links {
-    margin-bottom: 20px;
-  }
-
-  .footer-links ul {
-    padding-left: 0;
+  .footer-info, .footer-logo, .footer-links {
+    width: 100%;
+    margin-bottom: 15px;
   }
 
   .footer-links ul li {
     display: inline-block;
-    margin: 0 10px 8px 10px;
+    margin: 0 8px 6px 8px;
   }
 
   .footer-info p {
     justify-content: center;
   }
-}
 
-/* Basic styling for the rating section */
-.google-rating {
-    margin-top: 10px;
-    text-align: center; /* Center align rating info */
-}
-
-/* Style for the stars (using Unicode characters) */
-.google-rating .stars {
-    font-size: 1.2em; /* Make stars stand out */
-    color: gold; /* Essential for star ratings */
-    letter-spacing: 2px; /* Space out the stars a little */
-    display: block; /* Put stars on their own line */
-}
-
-/* Style for the review count link */
-.google-rating .review-count a {
-    color: #ccc; /* Match your footer text color */
-    font-size: 0.9em;
-    text-decoration: none;
-}
-
-.google-rating .rating-text {
-    display: block;
-    font-size: 0.95em;
-    margin-bottom: 5px;
-}
-
-/* Styling for the Microsoft Partner logo */
-.partner-logo {
-    max-width: 150px; /* Adjust this value as needed, e.g., 100px, 120px */
-    height: auto;    /* Maintain aspect ratio */
-    display: block;  /* Ensures it behaves like a block element for margins */
-    margin: 0 auto 10px auto; /* Centers the logo and adds some bottom margin */
-}
-
-/* You might want to adjust the width of the whole .footer-logo container too */
-.footer-logo {
-    text-align: center; /* Ensures the logo and text inside are centered */
-    /* If you want to limit its overall width: */
-    /* max-width: 200px; */
-    /* margin: 0 auto; */
-}
-
-.site-footer {
-    /* 1. Transparent Background */
-    /* This makes the footer slightly transparent so the background shows through */
-    background: rgba(0, 0, 0, 0.4); /* Dark transparency (adjust opacity '0.4' as needed) */
-
-    /* 2. The Glass Blur Effect (The most important part!) */
-    /* Blurs everything behind the footer (only works if there's a background image/pattern) */
-    backdrop-filter: blur(10px); /* Adjust blur intensity (e.g., 5px, 15px) */
-    -webkit-backdrop-filter: blur(10px); /* For Safari support */
-
-    /* 3. Subtle Border & Shadow (For depth and definition) */
-    /* Gives the 'edge of the glass' look */
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-    /* 4. White/Light Text (Ensures readability over the dark glass) */
-    color: #ffffff; 
-
-    /* Optional: Round the corners like a sleek glass pane */
-    border-radius: 15px 15px 0 0; /* Rounds the top corners */
-
-    /* Ensure link colors are readable on a dark background */
-    /* You may already have this defined */
-    .site-footer a {
-        color: #b3d9ff; /* A bright, readable color for links */
-    }
-}
-
-    /* Popup Background (unchanged) */
-    .popup-modal {
-      display: none; 
-      justify-content: center;
-      align-items: center;
-      position: fixed;
-      z-index: 10000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.55);
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
-    }
-
-    /* Liquid Glass Effect Box */
-    .glass-effect {
-      /* Structural Changes for the filter */
-      background: transparent; /* Must be transparent for ::before/::after to apply effects */
-      position: relative;
-      overflow: hidden; 
-      isolation: isolate; /* Crucial for controlling backdrop-filter scope */
-      z-index: 10; /* Ensures content is above the liquid layer */
-
-      /* Keep your visual styles */
-      border-radius: 20px;
-      padding: 25px 28px;
-      max-width: 460px;
-      width: 92%;
-      text-align: center;
-      color: #ffffff;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
-      animation: popupIn 0.36s cubic-bezier(.2,.9,.3,1);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    }
-
-    /* The Layer that holds the Animated Liquid Glass Effect */
-    .glass-effect::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: -1; /* Placed behind the content */
-      border-radius: 20px;
-
-      /* Standard Glassmorphism */
-      background: rgba(255, 255, 255, 0.12);
-      backdrop-filter: blur(18px) saturate(160%);
-      -webkit-backdrop-filter: blur(18px) saturate(160%);
-
-      /* Apply the ANIMATED SVG Filter! */
-      filter: url(#container-glass-animated);
-      -webkit-filter: url(#container-glass-animated);
-    }
-
-
-    /* Slight inner gradient to mimic glass depth (now ::after) */
-    .glass-effect::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0) 40%);
-      pointer-events: none;
-    }
-
-/* Floating Social Bubble Styles (FAB) */
-
-/* Container fixed position (Bottom Left) */
-.social-fab-container {
-    position: fixed;
-    bottom: 25px;
-    left: 25px; /* Positioned to the Left */
-    z-index: 9999; 
-}
-
-/* Toggle Button (The main bubble) */
-.social-fab-toggle {
-    background-color: #4CAF50;
-    color: white;
-    width: 55px;
-    height: 55px;
-    border: none;
-    border-radius: 50%;
-    font-size: 24px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out, background-color 0.2s;
-    outline: none;
-}
-
-.social-fab-toggle:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
-}
-
-/* Links Container (Aligned for Left side) */
-.social-fab-links {
-    position: absolute;
-    bottom: 65px; /* Position above the toggle button */
-    left: 0; /* Links align to the Left side of the container */
-    display: flex;
-    flex-direction: column-reverse; /* Display links upwards */
-    align-items: flex-start; /* Links stack starting from the left */
-}
-
-/* Individual Social Links */
-/* Individual Social Links - Ensures the link acts as a container */
-.social-link {
-    /* Existing styles... */
-    display: flex; /* <-- ADDED: Use flexbox for easy centering */
-    justify-content: center; /* <-- ADDED: Center horizontally */
-    align-items: center; /* <-- ADDED: Center vertically */
-    /* ... existing styles ... */
-}
-
-/* New CSS to target the PNG image directly inside the link */
-.social-link img {
-    /* Enforce maximum size relative to the 45px link bubble */
-    max-width: 60%; /* Or 25px max, depending on your image size */
-    max-height: 60%; /* Prevents images from distorting or overflowing */
-    width: auto;
-    height: auto;
-    object-fit: contain; /* Ensures the whole image is visible */
-    padding: 0; /* Remove any default padding */
-    margin: 0; /* Remove any default margin */
-}
-
-/* Target the main toggle button's image */
-.social-fab-toggle img {
-    max-width: 50%; /* Adjust as needed for the 55px toggle button */
-    max-height: 50%;
-}
-
-/* Slider container */
-.slider-wrapper {
-  max-width: 1000px; /* Adjust to your site's width */
-  margin: 20px auto;
-  position: relative;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.slider {
-  display: flex;
-  /* Allows scrolling horizontally */
-  overflow-x: auto; 
-  /* Hides the scrollbar */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-
-  /* This is the magic! */
-  scroll-snap-type: x mandatory; 
-  scroll-behavior: smooth;
-}
-
-.slider {
-  display: flex;
-
-  /* REMOVE these lines */
-  /* overflow-x: auto; 
-  scrollbar-width: none; 
-  -ms-overflow-style: none;
-  scroll-snap-type: x mandatory; 
-  scroll-behavior: smooth; */
-
-  /* ADD these lines */
-  /* 12s total duration (4s per slide) */
-  animation: autoplay 12s infinite; 
-}
-
-.slide {
-  /* Each slide takes up 100% of the slider's width */
-  flex: 0 0 100%;
-  width: 100%;
-  scroll-snap-align: start; /* Snaps to the start of the slide */
-  position: relative; /* For positioning content inside */
-}
-
-.slide img {
-  width: 100%;
-  display: block; /* Removes bottom space under images */
-}
-
-/* Optional: Centered text content */
-.slide-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 20px;
-  border-radius: 5px;
-}
-
-/* Optional: Navigation dots */
-.slider-nav {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-}
-
-.slider-nav a {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s;
-}
-
-.slider-nav a:hover {
-  background-color: #fff;
-}
-
-@keyframes autoplay {
-  /* --- Slide 1 --- */
-  /* Start on slide 1 and stay for 30% of the time */
-  0% { transform: translateX(0); }
-  30% { transform: translateX(0); }
-
-  /* --- Slide 2 --- */
-  /* Move to slide 2 and stay */
-  33% { transform: translateX(-100%); }
-  63% { transform: translateX(-100%); }
-
-  /* --- Slide 3 --- */
-  /* Move to slide 3 and stay */
-  66% { transform: translateX(-200%); }
-  97% { transform: translateX(-200%); }
-
-  /* --- Reset --- */
-  /* Go back to slide 1 to loop */
-  100% { transform: translateX(0); }
-}
-
-.partner-logo {
-  display: inline-block;
-  margin: 0 10px;
-  height: 40px; /* adjust as needed */
-}
-
-.footer-logo {
-  text-align: center;
-}
-
-/* Partner logos row */
-.partner-logos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;              /* spacing between partner logos */
-  flex-wrap: wrap;
-}
-
-.partner-logos img {
-  height: 50px;           /* size of partner logos */
-  width: auto;
-  object-fit: contain;
-}
-
-/* Payment logos row */
-.payment-logos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;              /* reduce spacing */
-  flex-wrap: wrap;
-  margin-top: 10px;
-}
-
-.payment-logos img {
-  height: 28px;           /* smaller so they don't stretch */
-  width: auto;
-  object-fit: contain;
+  .footer-social {
+    justify-content: center;
+  }
 }
 
 .purchase-wrapper {
@@ -924,6 +564,5 @@ main {
   margin-top: 4px;
   font-size: 11px;
   opacity: 0.7;
-  color: #f2baba;
+  color: #edbfbf;
 }
-
