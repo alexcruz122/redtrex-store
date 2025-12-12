@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Downloads</title>
+    <link rel="icon" type="image/svg+xml" href="Assest/company.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: 
+                linear-gradient(10deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%),
+                url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop') center/cover fixed;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .home-btn {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+        }
+
+        .home-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .software-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .software-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .software-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .software-card h2 {
+            color: #ffffff;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .software-card p {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+            margin-bottom: 15px;
+            font-size: 0.95em;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .download-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .support-note {
+            background: rgba(34, 197, 94, 0.15);
+            backdrop-filter: blur(10px);
+            border-left: 4px solid rgba(34, 197, 94, 0.8);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 6px;
+            font-size: 0.9em;
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .support-note strong {
+            color: #ffffff;
+        }
+
+        .last-update {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.85em;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 30px 20px;
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer .disclaimer {
+            font-size: 0.85em;
+            opacity: 0.8;
+            max-width: 800px;
+            margin: 15px auto 0;
+        }
+
+        @media (max-width: 768px) {
+            .software-grid {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" class="home-btn">← Home</a>
+            <h1>Software Downloads</h1>
+            <p>Download the latest versions</p>
+        </header>
+
+        <div class="software-grid">
+            <div class="software-card">
+                <h2>Microsoft Windows 11</h2>
+                <p>Download Official Version of Windows 11 25H2</p>
+                <p>Activation Required</p>
+                <a href="https://www.microsoft.com/en-us/software-download/windows11?msockid=102f958cae9167160f0a832daf696607" class="download-btn">Download Now</a>
+                <div class="last-update">Last Updated: December 10, 2025</div>
+            </div>
+
+            <div class="software-card">
+                <h2>Microsoft Office Professional Plus 2021 (RETAIL)</h2>
+                <p>Download Microsoft Office Professional Plus 2021 Installer (Microsoft 365 Online)</p>
+                <p>WINDOWS (64BIT) / Activation Required.</p>
+                <a href="https://c2rsetup.officeapps.live.com/c2r/download.aspx?ProductreleaseID=ProPlus2021Retail&platform=x64&language=en-us&version=O16GA" class="download-btn">Download Now</a>
+                <div class="last-update">Last Updated: December 8, 2025</div>
+            </div>
+
+            <div class="software-card">
+                <h2>Microsoft Office Professional Plus 2024 LTSC</h2>
+                <p>Download Microsoft Office Professional Plus 2024 LTSC Installer (Microsoft Online)</p>
+                <p>WINDOWS (64BIT) / Activation Required.</p>
+                <a href="https://microsoft.bitnet.lk/?file=Office/2024/LTSC/English/Office_2024_EN_ProPlus_64Bits.exe" class="download-btn">Download Now</a>
+                <div class="last-update">Last Updated: December 5, 2025</div>
+            </div>
+
+            <div class="software-card">
+                <h2>Display Driver Uninstaller (DDU)</h2>
+                <p>Uninstall GPU Drivers For Clean Reinstallation</p>
+                <a href="https://www.guru3d.com/download/display-driver-uninstaller-download/" class="download-btn">Download Now</a>
+                <div class="last-update">Last Updated: November 30, 2025</div>
+            </div>
+
+            <div class="software-card">
+                <h2>MSI Afterburner</h2>
+                <p>Monitoring/Overclocking Your GPU</p>
+                <a href="https://www.msi.com/Landing/afterburner/graphics-cards" class="download-btn">Download Now</a>
+                <div class="last-update">Last Updated: November 30, 2025</div>
+            </div>
+
+            <div class="software-card">
+                <h2>Remote Support Tools</h2>
+                <p>For seamless assistance with software activation or technical issues, we recommend the following free and secure remote desktop applications.</p>
+
+                <div class="support-note">
+                    <strong>Complimentary Support:</strong> We provide free remote assistance for all our products. We will <em>never</em> ask for additional payment for support related to your purchase.
+                </div>
+
+                <div class="button-group">
+                    <a href="https://anydesk.com/en/downloads" class="download-btn">Download AnyDesk</a>
+                    <a href="https://rustdesk.com/" class="download-btn">Download RustDesk</a>
+                </div>
+
+                <div class="last-update">Last Updated: November 30, 2025</div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 REDTREX. All rights reserved.</p>
+            <p class="disclaimer">All trademarks, logos, and brand names are the property of their respective owners. All company, product and service names used in this website are for identification purposes only. Use of these names, trademarks and brands does not imply endorsement.</p>
+        </footer>
+    </div>
+</body>
+</html>
