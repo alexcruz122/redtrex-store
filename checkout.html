@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>REDTREX Checkout</title>
+</head>
+<body>
+
+<h2>Secure Payment – LKR 100</h2>
+<button id="payBtn">Pay Now</button>
+
+<script>
+document.getElementById("payBtn").onclick = async () => {
+  document.getElementById("payBtn").disabled = true;
+  document.getElementById("payBtn").innerText = "Redirecting...";
+
+  const payload = {
+    order_id: "ORDER-" + Date.now(),
+    amount: "100",
+    currency: "LKR",
+    first_name: "Dilanka",
+    last_name: "Fernando",
+    email: "customer@example.com",
+    contact_number: "0771234567",
+    address_line_one: "Sri Lanka"
+  };
+
+  const res = await fetch(
+    "https://YOUR-RENDER-SERVICE.onrender.com/create-payment",
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    }
+  );
+
+  const html = await res.text();
+  document.open();
+  document.write(html);
+  document.close();
+};
+</script>
+
+</body>
+</html>
