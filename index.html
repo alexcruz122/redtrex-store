@@ -807,38 +807,41 @@
     }
 
     // Payment Creation Function
-    function createPayment(productName, unitPrice, btn) {
-      const card = btn.closest('.product-card');
-      const qty = parseInt(card.querySelector('.qty-input').value) || 1;
-      const amount = unitPrice * qty;
-      
-      fetch('https://webxpayipg.onrender.com/create-payment', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          order_id: 'ORD-' + Date.now(),
-          product_name: productName,
-          amount: amount,
-          currency: 'LKR',
-          qty: qty,
-          first_name: '',
-          last_name: '',
-          email: '',
-          contact_number: '',
-          address_line_one: ''
-        })
-      })
-      .then(res => res.text())
-      .then(html => {
-        const win = window.open('', '_blank');
-        win.document.write(html);
-        win.document.close();
-      })
-      .catch(err => {
-        console.error('Payment error:', err);
-        alert('Payment processing failed. Please try again.');
-      });
-    }
+  function createPayment(productName, unitPrice, btn) {
+  const card = btn.closest('.product-card');
+  const qty = parseInt(card.querySelector('.qty-input').value) || 1;
+  const amount = (unitPrice * qty).toFixed(2);
+
+  // 👇 Read customer inputs
+  const first_name = document.getElementById('fname')?.value.trim() || 'Customer';
+  const last_name  = document.getElementById('lname')?.value.trim() || 'RedTrex';
+  const email      = document.getElementById('email')?.value.trim() || 'customer@redtrex.store';
+  const contact    = document.getElementById('phone')?.value.trim() || '0770000000';
+
+  fetch('https://webxpayipg.onrender.com/create-payment', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      order_id: 'RTX-' + Date.now(),
+      amount,
+      currency: 'LKR',
+
+      // ✅ ALWAYS non-empty
+      first_name,
+      last_name,
+      email,
+      contact_number: contact,
+      address_line_one: 'Sri Lanka'
+    })
+  })
+  .then(res => res.text())
+  .then(html => {
+    const win = window.open('', '_self');
+    win.document.write(html);
+    win.document.close();
+  })
+  .catch(() => alert('Payment failed. Please try again.'));
+}
 
     // Popup Management
     function closePopup() {
