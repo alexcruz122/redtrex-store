@@ -4,35 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>RedTrex Technologies</title>
-
-  <!-- Favicon & Icons -->
   <link rel="icon" type="image/png" href="Assest/company.png" />
-  <link rel="apple-touch-icon" href="Assest/company.png" />
-  <meta name="msapplication-TileImage" content="Assest/company.png" />
-  <meta name="msapplication-TileColor" content="#000000" />
-
-  <!-- SEO & Social Preview -->
-  <meta
-    name="description"
-    content="RedTrex Technologies - Genuine Windows & Office Keys, Software, and Tech Products at the best prices."
-  />
-  <meta property="og:title" content="RedTrex Technologies" />
-  <meta
-    property="og:description"
-    content="Get genuine Windows & Office keys and tech products with Services."
-  />
-  <meta property="og:image" content="Assest/company.png" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://redtrex.site" />
-
-  <!-- Link to your external full style.css -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Inline popup styles (liquid glass) -->
   <style>
-    /* Popup Background */
+    /* Popup styles */
     .popup-modal {
-      display: none; /* hidden until load */
+      display: none;
       justify-content: center;
       align-items: center;
       position: fixed;
@@ -43,11 +21,8 @@
       height: 100%;
       background: rgba(0, 0, 0, 0.55);
       backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
     }
 
-
-    /* Liquid Glass Effect Box */
     .glass-effect {
       background: rgba(255, 255, 255, 0.12);
       border-radius: 20px;
@@ -61,47 +36,9 @@
       border: 1px solid rgba(255, 255, 255, 0.18);
       box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
       backdrop-filter: blur(18px) saturate(160%);
-      -webkit-backdrop-filter: blur(18px) saturate(160%);
       animation: popupIn 0.36s cubic-bezier(.2,.9,.3,1);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     }
 
-    /* Slight inner gradient to mimic glass depth */
-    .glass-effect::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0) 40%);
-      pointer-events: none;
-    }
-
-    /* Shine / light bending overlay (animated) */
-    .glass-effect::before {
-      content: "";
-      position: absolute;
-      top: -40%;
-      left: -60%;
-      width: 220%;
-      height: 220%;
-      background: radial-gradient(
-        circle at 30% 20%,
-        rgba(255, 255, 255, 0.42),
-        rgba(255, 255, 255, 0) 45%
-      );
-      transform: rotate(25deg) translateX(-8%);
-      pointer-events: none;
-      filter: blur(1px);
-      opacity: 0.9;
-      animation: sheen 4.5s ease-in-out infinite;
-    }
-
-    @keyframes sheen {
-      0%   { transform: rotate(25deg) translateX(-12%); opacity:0.9; }
-      50%  { transform: rotate(25deg) translateX(12%); opacity:0.6; }
-      100% { transform: rotate(25deg) translateX(-12%); opacity:0.9; }
-    }
-
-    /* Close Button */
     .close-btn {
       position: absolute;
       top: 12px;
@@ -118,50 +55,116 @@
       background: rgba(255,255,255,0.04);
       border: 1px solid rgba(255,255,255,0.08);
       cursor: pointer;
-      z-index: 3;
-      transition: transform .12s ease, background .12s ease;
+      transition: transform .12s ease;
     }
 
     .close-btn:hover {
       transform: scale(1.06);
       background: rgba(255,255,255,0.08);
-      color: #ff6b6b;
     }
 
-    .popup-title {
-      margin: 6px 0 6px;
-      font-size: 20px;
-      letter-spacing: -0.2px;
-    }
-
-    .popup-text {
-      margin: 8px 0 0;
-      font-size: 14px;
-      opacity: 0.95;
-      line-height: 1.45;
-    }
-
-    /* Smooth intro */
     @keyframes popupIn {
-      from {
-        opacity: 0;
-        transform: translateY(-8px) scale(0.98);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
+      from { opacity: 0; transform: translateY(-8px) scale(0.98); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
     }
 
-    /* Responsive adjustments */
-    @media (max-width: 420px) {
-      .glass-effect { padding: 20px; border-radius: 16px; }
-      .popup-title { font-size: 18px; }
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    /* Quantity Controls */
+    .qty-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 15px 0;
+    }
+
+    .qty-btn {
+      width: 36px;
+      height: 36px;
+      border: 2px solid #007bff;
+      background: #fff;
+      color: #007bff;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .qty-btn:hover {
+      background: #007bff;
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    .qty-btn:active {
+      transform: scale(0.95);
+    }
+
+    .qty-input {
+      width: 60px;
+      height: 36px;
+      text-align: center;
+      font-size: 16px;
+      font-weight: bold;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      background: #f8f9fa;
+    }
+
+    /* Updated Purchase Button */
+    .purchase-wrapper {
+      display: block;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+
+    .purchase-btn {
+      width: 100%;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, #007bff, #0056b3);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+    }
+
+    .purchase-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+      background: linear-gradient(135deg, #0056b3, #003d82);
+    }
+
+    .purchase-btn:active {
+      transform: translateY(0);
+    }
+
+    .purchase-note {
+      display: block;
+      font-size: 11px;
+      color: #666;
+      margin-top: 6px;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-
 
   <header>
     <a href="index.html" class="logo">
@@ -169,78 +172,48 @@
     </a>
   </header>
 
-  <!-- Sticky Category Navbar with Search -->
   <nav>
     <a href="#digital" class="g2g-btn">Digital Products</a>
     <a href="#physical" class="g2g-btn">Physical Products</a>
     <a href="https://www.redtrex.store/services" class="g2g-btn">Our Services</a>
     <a href="https://www.redtrex.store/payment" class="g2g-btn">Supported Payment Options</a>
     <a href="https://www.redtrex.store/downloads" class="g2g-btn">Software Downloads</a>
-    <a href="https://www.redtrex.store/checkout" class="g2g-btn">REDTREX PAY (TEST)</a>
-
+    
     <div class="search-container">
-      <input
-        type="text"
-        id="productSearch"
-        placeholder="Search products..."
-        autocomplete="off"
-      />
+      <input type="text" id="productSearch" placeholder="Search products..." autocomplete="off" />
       <ul id="searchResults" class="search-results"></ul>
     </div>
   </nav>
 
-  <!-- Video Background -->
   <video autoplay muted loop id="bg-video" playsinline>
     <source src="assetphy/white-lines-on-blue-background.1920x1080.mp4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 
-  <style>
-    /* Full-screen background video */
-    #bg-video {
-      position: fixed;       /* Stay in place */
-      top: 0;                /* Align to top */
-      left: 0;               /* Align to left */
-      width: 100vw;          /* Full viewport width */
-      height: 100vh;         /* Full viewport height */
-      object-fit: cover;     /* Cover the whole area, keep aspect ratio */
-      z-index: -1;           /* Behind all content */
-    }
-
-    /* Optional: prevent scrolling when video is fixed */
-    body {
-      margin: 0;
-      overflow-x: hidden;
-      font-family: sans-serif;
-    }
-
-    /* Example content styling */
-    .content {
-      position: relative;
-      z-index: 1;            /* Above video */
-      color: white;
-      padding: 50px;
-    }
-  </style>
-
-  <!-- DIGITAL PRODUCTS -->
   <section id="digital" class="category">
     <h1>Digital Products</h1>
 
-    <!-- OS Product Keys -->
+    <!-- ================= OS PRODUCT KEYS ================= -->
     <h2>OS Product Keys</h2>
     <div class="products">
-      <div class="product-card" data-name="Windows 11 Pro OEM Key">
-        <img src="https://uniq.software/images/com_hikashop/upload/11_pro-angle.png" alt="Windows 11 Pro OEM Key" />
+
+      <div class="product-card" data-name="Windows 11 Pro OEM Key" data-unit-price="1581.44">
+        <img src="https://uniq.software/images/com_hikashop/upload/11_pro-angle.png" />
         <h2>Windows 11 Pro Product Key [OEM] [1PC]</h2>
-        <p>1,581.44 LKR </p>
-        <p>5.23 USD </p>
-          <a href="https://merchantapi.webxpay.com/r/ZdIuttW" target="_blank" class="purchase-wrapper">
-            <button class="purchase-btn">Purchase</button>
-            <small class="purchase-note">Safe Checkout – T&C Apply</small>
-          </a>
-        
-          <ul class="description">
+        <p class="price-lkr">1,581.44 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+          onclick="createPayment('Windows 11 Pro Product Key [OEM] [1PC]', 1581.44, this)">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+
+        <ul class="description">
           <li>💻 Official OEM Windows 11 Pro key</li>
           <li>🔹 One-time activation for 1 PC</li>
           <li>⛔ Non-transferable license</li>
@@ -250,15 +223,23 @@
         </ul>
       </div>
 
-      <div class="product-card" data-name="Windows 11 Pro Retail Key">
-        <img src="https://uniq.software/images/com_hikashop/upload/11_pro-angle.png" alt="Windows 11 Pro Retail Key" />
+      <div class="product-card" data-name="Windows 11 Pro Retail Key" data-unit-price="4555.32">
+        <img src="https://uniq.software/images/com_hikashop/upload/11_pro-angle.png" />
         <h2>Windows 11 Pro Product Key [RETAIL] [1PC]</h2>
-        <p>4,555.32 LKR</p>
-        <p>15.06 USD</p>
-        <a href="https://merchantapi.webxpay.com/r/oTmsC3y" target="_blank" class="purchase-wrapper">
-  <button class="purchase-btn">Purchase</button>
-          <small class="purchase-note">Safe Checkout – T&C Apply</small>
-</a>
+        <p class="price-lkr">4,555.32 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+          onclick="createPayment('Windows 11 Pro Product Key [RETAIL] [1PC]', 4555.32, this)">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+
         <ul class="description">
           <li>💻 Official RETAIL Windows 11 Pro key</li>
           <li>🔹 One-time activation for 1 PC</li>
@@ -269,53 +250,23 @@
         </ul>
       </div>
 
-      <div class="product-card" data-name="Windows 11 Pro Product Key [OEM] [5PC]">
-        <img src="Assest/windows-11-pro-5pc.jpeg" alt="Windows 11 Pro Product Key [OEM] [5PC]" />
+      <div class="product-card" data-name="Windows 11 Pro Product Key [OEM] [5PC]" data-unit-price="6962.07">
+        <img src="Assest/windows-11-pro-5pc.jpeg" />
         <h2>Windows 11 Pro Product Key [OEM] [5PC]</h2>
-        <p>6,962.07 LKR</p>
-        <p>23.02 USD </p>
-        <a href="https://merchantapi.webxpay.com/r/SjX5jU5" target="_blank" class="purchase-wrapper">
-          <button class="purchase-btn">Purchase</button>
-          <small class="purchase-note">Safe Checkout – T&C Apply</small>
-</a>
-        <ul class="description">
-          <li>💻 Official OEM Windows 11 Pro key</li>
-          <li>🔹 One-time activation for 5 PC</li>
-          <li>⛔ Non-transferable license</li>
-          <li>📞 24/7 Activation Support</li>
-          <li>✅ Genuine Update Support</li>
-          <li>🌍 Global Activation</li>
-        </ul>
-      </div>
+        <p class="price-lkr">6,962.07 LKR</p>
 
-      <div class="product-card" data-name="Windows 10 Pro OEM Key">
-        <img src="Assest/10pro.png" alt="Windows 10 Pro OEM Key" />
-        <h2>Windows 10 Pro Product Key [OEM] [1PC]</h2>
-        <p>1,581.44 LKR</p>
-        <p>5.23 USD </p>
-        <a href="https://merchantapi.webxpay.com/r/ZdIuttW" target="_blank" class="purchase-wrapper">
-  <button class="purchase-btn">Purchase</button>
-          <small class="purchase-note">Safe Checkout – T&C Apply</small>
-</a>
-        <ul class="description">
-          <li>💻 Official OEM Windows 10 Pro key</li>
-          <li>🔹 One-time activation for 1 PC</li>
-          <li>⛔ Non-transferable license</li>
-          <li>📞 24/7 Activation Support</li>
-          <li>✅ Genuine Update Support</li>
-          <li>🌍 Global Activation</li>
-        </ul>
-      </div>
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
 
-      <div class="product-card" data-name="Windows 10 Pro OEM Key [5PC]">
-        <img src="Assest/10pro.png" alt="Windows 10 Pro OEM Key [5PC]" />
-        <h2>Windows 10 Pro Product Key [OEM] [5PC]</h2>
-        <p>6,962.07 LKR</p>
-        <p>23.02 USD </p>
-        <a href="https://merchantapi.webxpay.com/r/SjX5jU5" target="_blank" class="purchase-wrapper">
-  <button class="purchase-btn">Purchase</button>
-          <small class="purchase-note">Safe Checkout – T&C Apply</small>
-</a>
+        <button class="purchase-btn"
+          onclick="createPayment('Windows 11 Pro Product Key [OEM] [5PC]', 6962.07, this)">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+
         <ul class="description">
           <li>💻 Official OEM Windows 10 Pro key</li>
           <li>🔹 One-time activation for 5 PC</li>
@@ -326,34 +277,24 @@
         </ul>
       </div>
 
-      <div class="product-card" data-name="Windows 10 Pro Retail Key">
-        <img src="Assest/10pro.png" alt="Windows 10 Pro Retail Key" />
-        <h2>Windows 10 Pro Product Key [RETAIL] [1PC]</h2>
-        <p>4,555.32 LKR</p>
-        <p>15.06 USD </p>
-        <a href="https://merchantapi.webxpay.com/r/oTmsC3y" target="_blank" class="purchase-wrapper">
-  <button class="purchase-btn">Purchase</button>
-          <small class="purchase-note">Safe Checkout – T&C Apply</small>
-</a>
-        <ul class="description">
-          <li>💻 Official RETAIL Windows 10 Pro key</li>
-          <li>🔹 One-time activation for 1 PC</li>
-          <li>♻️ Transferable license</li>
-          <li>📞 24/7 Activation Support</li>
-          <li>✅ Genuine Update Support</li>
-          <li>🌍 Global Activation</li>
-        </ul>
-      </div>
 
-      <div class="product-card" data-name="Windows Server 2022 Standard [2PC]">
-        <img src="Assest/microsoft-windows-server-2022-standard.png" alt="Windows Server 2022 Standard [2PC]" />
+      <div class="product-card" data-name="Windows Server 2022 Standard [2PC]" data-unit-price="1707.34">
+        <img src="Assest/microsoft-windows-server-2022-standard.png" />
         <h2>Windows Server 2022 Standard [2PC]</h2>
-        <p>1,707.34 LKR</p>
-        <p>5.64 USD </p>
-        <a href="https://merchantapi.webxpay.com/r/MluAG9u" target="_blank" class="purchase-wrapper">
-  <button class="purchase-btn">Purchase</button>
-          <small class="purchase-note">Safe Checkout – T&C Apply</small>
-</a>
+        <p class="price-lkr">1,707.34 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+          onclick="createPayment('Windows Server 2022 Standard [2PC]', 1707.34, this)">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+
         <ul class="description">
           <li>💻 You will receive 1x Windows Server 2022 Standard key that can activate 2PCs.</li>
           <li>🔹 One-time activation for 2 PC</li>
@@ -364,15 +305,23 @@
         </ul>
       </div>
 
-      <div class="product-card" data-name="Windows Server 2022 Datacenter [2PC]">
-        <img src="Assest/microsoft-windows-server-2022-datacenter.png" alt="Windows Server 2022 Datacenter [2PC]" />
+      <div class="product-card" data-name="Windows Server 2022 Datacenter [2PC]" data-unit-price="1765.45">
+        <img src="Assest/microsoft-windows-server-2022-datacenter.png" />
         <h2>Windows Server 2022 Datacenter [2PC]</h2>
-        <p>1,765.45 LKR</p>
-        <p>5.84 USD </p>
-        <a href="https://merchantapi.webxpay.com/r/8by4YZ9" target="_blank" class="purchase-wrapper">
-  <button class="purchase-btn">Purchase</button>
-          <small class="purchase-note">Safe Checkout – T&C Apply</small>
-</a>
+        <p class="price-lkr">1,765.45 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+          onclick="createPayment('Windows Server 2022 Datacenter [2PC]', 1765.45, this)">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+
         <ul class="description">
           <li>💻 You will receive 1x Windows Server 2022 Datacenter key that can activate 2PCs.</li>
           <li>🔹 One-time activation for 2 PC</li>
@@ -383,15 +332,23 @@
         </ul>
       </div>
 
-      <div class="product-card" data-name="Windows Server 2025 Standard [2PC]">
-        <img src="Assest/microsoft-windows-server-2025-standard.png" alt="Windows Server 2025 Standard [2PC]" />
+      <div class="product-card" data-name="Windows Server 2025 Standard [2PC]" data-unit-price="1888.22">
+        <img src="Assest/microsoft-windows-server-2025-standard.png" />
         <h2>Windows Server 2025 Standard [2PC]</h2>
-        <p>1,888.22 LKR</p>
-        <p>6.24 USD </p>
-        <a href="https://merchantapi.webxpay.com/r/glA1gR6" target="_blank" class="purchase-wrapper">
-  <button class="purchase-btn">Purchase</button>
-          <small class="purchase-note">Safe Checkout – T&C Apply</small>
-</a>
+        <p class="price-lkr">1,888.22 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+          onclick="createPayment('Windows Server 2025 Datacenter [2PC]', 1888.22, this)">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+
         <ul class="description">
           <li>💻 You will receive 1x Windows Server 2025 Standard key that can activate 2PCs.</li>
           <li>🔹 One-time activation for 2 PC</li>
@@ -402,16 +359,23 @@
         </ul>
       </div>
 
-
-      <div class="product-card" data-name="Windows Server 2025 Datacenter [2PC]">
-        <img src="Assest/microsoft-windows-server-2025-datacenter.png" alt="Windows Server 2025 Datacenter [2PC]" />
+      <div class="product-card" data-name="Windows Server 2025 Datacenter [2PC]" data-unit-price="1951.77">
+        <img src="Assest/microsoft-windows-server-2025-datacenter.png" />
         <h2>Windows Server 2025 Datacenter [2PC]</h2>
-        <p>1,951.77 LKR</p>
-        <p>6.45 USD </p>
-        <a href="https://merchantapi.webxpay.com/r/53m80jD" target="_blank" class="purchase-wrapper">
-  <button class="purchase-btn">Purchase</button>
-          <small class="purchase-note">Safe Checkout – T&C Apply</small>
-</a>
+        <p class="price-lkr">1,951.77 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+          onclick="createPayment('Windows Server 2025 Datacenter [2PC]', 1951.77, this)">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+
         <ul class="description">
           <li>💻 You will receive 1x Windows Server 2025 Datacenter key that can activate 2PCs.</li>
           <li>🔹 One-time activation for 2 PC</li>
@@ -421,22 +385,31 @@
           <li>🌍 Global Activation</li>
         </ul>
       </div>
-
+      
 
     </div>
 
-    <!-- Software Product Keys -->
+    <!-- ================= SOFTWARE PRODUCT KEYS ================= -->
     <h2>Software Product Keys</h2>
     <div class="products">
-      <div class="product-card" data-name="Microsoft Office 2024 Key">
-        <img src="Assest/office24.png" alt="Microsoft Office 2024" />
+
+      <div class="product-card" data-name="Microsoft Office 2024" data-unit-price="2807.22">
+        <img src="Assest/office24.png" />
         <h2>Microsoft Office Professional Plus [2024] [1PC]</h2>
-        <p>2,807.22 LKR</p>
-        <p>9.28 USD </p>
-        <a href="https://merchantapi.webxpay.com/r/xtZJmNU" target="_blank" class="purchase-wrapper">
-  <button class="purchase-btn">Purchase</button>
-          <small class="purchase-note">Safe Checkout – T&C Apply</small>
-</a>
+        <p class="price-lkr">2,807.22 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+          onclick="createPayment('Microsoft Office Professional Plus [2024] [1PC]', 2807.22, this)">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+
         <ul class="description">
           <li>📦 Official MS Office 2024 Pro Plus</li>
           <li>🔹 One-time activation for 1 PC</li>
@@ -447,15 +420,23 @@
         </ul>
       </div>
 
-      <div class="product-card" data-name="Microsoft Office 2021">
-        <img src="Assest/officepro21.png" alt="Microsoft Office 2021" />
+      <div class="product-card" data-name="Microsoft Office Professional Plus [2021] [1PC]" data-unit-price="1982.40">
+        <img src="Assest/officepro21.png" />
         <h2>Microsoft Office Professional Plus [2021] [1PC]</h2>
-        <p>1,982.40 LKR</p>
-        <p>6.55 USD </p>
-        <a href="https://merchantapi.webxpay.com/r/1kj4IQj" target="_blank" class="purchase-wrapper">
-  <button class="purchase-btn">Purchase</button>
-          <small class="purchase-note">Safe Checkout – T&C Apply</small>
-</a>
+        <p class="price-lkr">1,982.40 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+          onclick="createPayment('Microsoft Office Professional Plus [2021] [1PC]', 1982.40, this)">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+
         <ul class="description">
           <li>📦 Official MS Office 2021 Pro Plus</li>
           <li>🔹 One-time activation for 1 PC</li>
@@ -466,15 +447,24 @@
         </ul>
       </div>
 
-      <div class="product-card" data-name="Visio 2021 Professional [1PC]">
-        <img src="Assest/visio_2021_professional.png" alt="Visio 2021 Professional [1PC]" />
+
+      <div class="product-card" data-name="Visio 2021 Professional [1PC]" data-unit-price="1113.37">
+        <img src="Assest/visio_2021_professional.png" />
         <h2>Visio 2021 Professional [1PC]</h2>
-        <p>1,113.37 LKR</p>
-        <p>3.66 USD </p>
-        <a href="https://merchantapi.webxpay.com/r/B6uPT80" target="_blank" class="purchase-wrapper">
-  <button class="purchase-btn">Purchase</button>
-          <small class="purchase-note">Safe Checkout – T&C Apply</small>
-</a>
+        <p class="price-lkr">1,113.37 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+          onclick="createPayment('Visio 2021 Professional [1PC]', 1113.37, this)">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+
         <ul class="description">
           <li>📦 Visio 2021 Professional [1PC]</li>
           <li>🔹 One-time activation for 1 PC</li>
@@ -483,37 +473,53 @@
           <li>✅ Genuine Update Support</li>
           <li>🌍 Global Activation</li>
         </ul>
-      </div>
 
-      <div class="product-card" data-name="Microsoft Office 2021 [5PC]">
-        <img src="Assest/officepro21.png" alt="Microsoft Office 2021 [5PC]" />
-        <h2>Microsoft Office Professional Plus [2021] [5PC]</h2>
-        <p>11,696.16 LKR</p>
-        <p>38.67 USD </p>
-        <a href="https://merchantapi.webxpay.com/r/AJKcYtb" target="_blank" class="purchase-wrapper">
-  <button class="purchase-btn">Purchase</button>
+        </div>
+        <div class="product-card" data-name="Microsoft Office Professional Plus [2021] [5PC]" data-unit-price="11696.16">
+          <img src="Assest/officepro21.png" />
+          <h2>Microsoft Office Professional Plus [2021] [5PC]</h2>
+          <p class="price-lkr">11,696.16 LKR</p>
+
+          <div class="qty-controls">
+            <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+            <input type="number" class="qty-input" value="1" readonly />
+            <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+          </div>
+
+          <button class="purchase-btn"
+            onclick="createPayment('Microsoft Office Professional Plus [2021] [5PC]', 11696.16, this)">
+            Purchase Now
+          </button>
           <small class="purchase-note">Safe Checkout – T&C Apply</small>
-</a>
-        <ul class="description">
-          <li>📦 Official MS Office 2021 Pro Plus</li>
-          <li>🔹 One-time activation for 5 PC</li>
-          <li>⛔ Non-transferable license</li>
-          <li>📞 24/7 Activation Support</li>
-          <li>✅ Genuine Update Support</li>
-          <li>🌍 Global Activation</li>
-        </ul>
-      </div>
 
+          <ul class="description">
+            <li>📦 Official MS Office 2021 Pro Plus</li>
+            <li>🔹 One-time activation for 5 PC</li>
+            <li>⛔ Non-transferable license</li>
+            <li>📞 24/7 Activation Support</li>
+            <li>✅ Genuine Update Support</li>
+            <li>🌍 Global Activation</li>
+          </ul>
+      
+    </div>
 
-      <div class="product-card" data-name="Microsoft Office 2021 [5PC]">
-        <img src="Assest/microsoft-office-2021-home-business-mac-1.png" alt="Microsoft Office 2021 Home and Business For MAC" />
+    <div class="product-card" data-name="Microsoft Office 2021 Home and Business For MAC (1MAC)" data-unit-price="13380.57">
+        <img src="Assest/microsoft-office-2021-home-business-mac-1.png" />
         <h2>Microsoft Office 2021 Home & Business For MAC (1MAC)</h2>
-        <p>13,380.57 LKR</p>
-        <p>43.36 USD</p>
-        <a href="https://merchantapi.webxpay.com/r/KOhWKmt" target="_blank" class="purchase-wrapper">
-      <button class="purchase-btn">Purchase</button>
-          <small class="purchase-note">Safe Checkout – T&C Apply</small>
-      </a>
+        <p class="price-lkr">13,380.57 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+          onclick="createPayment('Microsoft Office 2021 Home & Business For MAC (1MAC)', 13380.57, this)">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+
         <ul class="description">
           <li>📦 Official MS Office 2021 Home & Business Key For Redeem</li>
           <li>🔹 One-time activation for 1 MAC Device/Account</li>
@@ -522,20 +528,27 @@
           <li>✅ Genuine Update Support</li>
           <li>🌍 Global Activation</li>
         </ul>
-      </div>
-      
-
-      <div class="product-card" data-name="SQL Server 2019 Standard [1PC]">
-        <img src="Assest/SQL-Server-2019-Standard.png" alt="SQL Server 2019 Standard [1PC]" />
+    
+    </div>
+    <div class="product-card" data-name="SQL Server 2019 Standard [1PC]" data-unit-price="2889.83">
+        <img src="Assest/SQL-Server-2019-Standard.png" />
         <h2>SQL Server 2019 Standard [1PC]</h2>
-        <p>2,889.83 LKR</p>
-        <p>9.55 USD</p>
-        <a href="https://merchantapi.webxpay.com/r/TEFGt5K" target="_blank" class="purchase-wrapper">
-  <button class="purchase-btn">Purchase</button>
-          <small class="purchase-note">Safe Checkout – T&C Apply</small>
-</a>
+        <p class="price-lkr">2,889.83 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+          onclick="createPayment('SQL Server 2019 Standard [1PC]', 2889.83, this)">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+
         <ul class="description">
-          <li>📦 You will receive 1x SQL Server 2019 Standard key that can activate 1PC.</li>
+          li>📦 You will receive 1x SQL Server 2019 Standard key that can activate 1PC.</li>
           <li>🔹 One-time activation for 1 PC</li>
           <li>⛔ Non-transferable license</li>
           <li>📞 24/7 Activation Support</li>
@@ -544,34 +557,51 @@
         </ul>
       </div>
 
-      <div class="product-card" data-name="Outlook 2016 [5PC]">
-        <img src="Assest/outlook-2016-product-key.jpg" alt="Outlook 2016 [5PC]" />
-        <h2>Outlook 2016 [5PC]</h2>
-        <p>1,319.34 LKR</p>
-        <p>4.36 USD</p>
-        <a href="https://merchantapi.webxpay.com/r/exyrLRu" target="_blank" class="purchase-wrapper">
-  <button class="purchase-btn">Purchase</button>
-          <small class="purchase-note">Safe Checkout – T&C Apply</small>
-</a>
-        <ul class="description">
-          <li>📦 Official Outlook 2016 License Key</li>
-          <li>🔹 One-time activation for 5 PC</li>
-          <li>⛔ Non-transferable license</li>
-          <li>📞 24/7 Activation Support</li>
-          <li>✅ Genuine Software Support</li>
-          <li>🌍 Global Activation</li>
-        </ul>
-      </div>
+      
+        <div class="product-card" data-name="Outlook 2016 [5PC]" data-unit-price="1319.34">
+            <img src="Assest/outlook-2016-product-key.jpg" />
+            <h2>Outlook 2016 [5PC]</h2>
+            <p class="price-lkr">1,319.34 LKR</p>
 
-      <div class="product-card" data-name="Visual Studio 2022 Enterprise [2PC]">
-        <img src="Assest/microsoft-visual-studio-enterprise-2022-1.png" alt="Visual Studio 2022 Enterprise [2PC]" />
+            <div class="qty-controls">
+              <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+              <input type="number" class="qty-input" value="1" readonly />
+              <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+            </div>
+
+            <button class="purchase-btn"
+              onclick="createPayment('Outlook 2016 [5PC]', 1319.34, this)">
+              Purchase Now
+            </button>
+            <small class="purchase-note">Safe Checkout – T&C Apply</small>
+
+            <ul class="description">
+              <li>📦 Official Outlook 2016 License Key</li>
+              <li>🔹 One-time activation for 5 PC</li>
+              <li>⛔ Non-transferable license</li>
+              <li>📞 24/7 Activation Support</li>
+              <li>✅ Genuine Software Support</li>
+              <li>🌍 Global Activation</li>
+            </ul>
+          </div>
+
+      <div class="product-card" data-name="Visual Studio 2022 Enterprise [2PC]" data-unit-price="874.51">
+        <img src="Assest/microsoft-visual-studio-enterprise-2022-1.png" />
         <h2>Visual Studio 2022 Enterprise [2PC]</h2>
-        <p>874.51 LKR</p>
-        <p>2.89 USD</p>
-        <a href="https://merchantapi.webxpay.com/r/rNoB6yc" target="_blank" class="purchase-wrapper">
-  <button class="purchase-btn">Purchase</button>
-          <small class="purchase-note">Safe Checkout – T&C Apply</small>
-</a>
+        <p class="price-lkr">874.51 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+          onclick="createPayment('Visual Studio 2022 Enterprise [2PC]', 874.51, this)">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+
         <ul class="description">
           <li>📦 Official Visual Studio 2022 License Key</li>
           <li>🔹 One-time activation for 2 PC</li>
@@ -582,17 +612,23 @@
         </ul>
       </div>
 
-
-
-      <div class="product-card" data-name="Visual Studio 2022 Professional [5PC]">
-        <img src="Assest/visual_studio_2022_professional.png" alt="Visual Studio 2022 Professional [5PC]" />
+      <div class="product-card" data-name="Visual Studio 2022 Professional [5PC]" data-unit-price="3646.33">
+        <img src="Assest/visual_studio_2022_professional.png" />
         <h2>Visual Studio 2022 Professional [5PC]</h2>
-        <p>3,646.33 LKR</p>
-        <p>12.05 USD</p>
-        <a href="https://merchantapi.webxpay.com/r/ymk5s0T" target="_blank" class="purchase-wrapper">
-  <button class="purchase-btn">Purchase</button>
-          <small class="purchase-note">Safe Checkout – T&C Apply</small>
-</a>
+        <p class="price-lkr">3,646.33 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+          onclick="createPayment('Visual Studio 2022 Professional [5PC]', 3646.33, this)">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+
         <ul class="description">
           <li>📦 Official Visual Studio 2025 Pro License Key</li>
           <li>🔹 One-time activation for 5 PC</li>
@@ -603,42 +639,57 @@
         </ul>
       </div>
 
-      <div class="product-card" data-name="Eset Home Security Essential [3PC/1Year]">
-        <img src="Assest/eset3u1y.png" alt="Eset Home Security Essential" />
-        <h2>Eset Home Security Essential [3PC/1Year]</h2>
-        <p>6,386.16 LKR</p>
-        <p>21.11 USD </p>
-        <a href="https://merchantapi.webxpay.com/r/py8jrqz" target="_blank" class="purchase-wrapper">
-  <button class="purchase-btn">Purchase</button>
-          <small class="purchase-note">Safe Checkout – T&C Apply</small>
-</a>
-        <ul class="description">
-          <li>🖥️ Compatibility: Mac OS; Windows; Android; iOS</li>
-          <li>📱 Supported Handheld Devices: Android, iOS</li>
-          <li>🔠Media Type: Download Only</li>
-          <li>🔠 Supported Windows Operating Systems: Microsoft Window, 10, 11</li>
-          <li>👨‍💻 1 Year Technical Support/Warranty</li>
-        </ul>
-      </div>
-
-      <div class="product-card" data-name="CorelDraw Standard 2021 [1PC]">
-        <img src="Assest/CorelDrawStandard2021_.webp" alt="CorelDraw Standard 2021 [1PC]" />
+      <div class="product-card" data-name="CorelDraw Standard 2021 [1PC]" data-unit-price="1880.14">
+        <img src="Assest/CorelDrawStandard2021_.webp" />
         <h2>CorelDraw Standard 2021 [1PC]</h2>
-        <p>1,880.14 LKR</p>
-        <p>6.17 USD </p>
-        <a href="https://merchantapi.webxpay.com/r/cCAO9ZZ" target="_blank" class="purchase-wrapper">
-  <button class="purchase-btn">Purchase</button>
-          <small class="purchase-note">Safe Checkout – T&C Apply</small>
-</a>
+        <p class="price-lkr">1,880.14 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+          onclick="createPayment('CorelDraw Standard 2021 [1PC]', 1880.14, this)">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+
         <ul class="description">
           <li>🖥️ Windows</li>
           <li>🌍 Global Activation</li>
           <li>👨‍💻 30 Day Technical Support/Warranty</li>
         </ul>
-      </div>
+      </div>     
 
-       
+      <div class="product-card" data-name="PAYTEST" data-unit-price="10.20">
+        <img src="https://tstng.co/images/testing.png" />
+        <h2>PAYTEST</h2>
+        <p class="price-lkr">10.20 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+          onclick="createPayment('PAYTEST', 10.20, this)">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+
+        <ul class="description">
+          <li>PAYTEST</li>
+          <li>PAYTEST</li>
+          <li>PAYTEST</li>
+        </ul>
+      </div>     
+      
+    </div>
   </section>
+
 
   <section id="physical" class="category">
     <h1>PHYSICAL PRODCUTS CURRENTLY UNAVAILABLE</h1>
@@ -725,148 +776,124 @@
     </div>
   </footer>
 
-
-  <!-- Popup Modal -->
-  <div id="popupModal" class="popup-modal" aria-hidden="true" role="dialog" aria-label="Welcome popup">
-    <div class="popup-content glass-effect" role="document">
-      <button class="close-btn" aria-label="Close popup">✕</button>
-
+  <div id="popupModal" class="popup-modal">
+    <div class="popup-content glass-effect">
+      <button class="close-btn" onclick="closePopup()">✕</button>
       <h2 class="popup-title">💳 Payment Information</h2>
       <p class="popup-text">
-        You can now purchase products online—no account required. We do not store your payment details, ensuring complete protection of your sensitive information.
+        You can now purchase products online—no account required. When making a payment, 
+        please ensure all personal details are accurate.
       </p>
-      <p class="popup-text">
-        When making a payment, please ensure all personal details are accurate. Once the transaction is successful, your digital or physical item will be delivered to your email or shipping address.
-      </p>
-
-      <h2 class="popup-title">🧑‍🎓 Student Discounts</h2>
-      <p class="popup-text">
-        Students are eligible for exclusive discounts on all products. A valid student ID is required to claim this offer.
-      </p>
-
     </div>
   </div>
 
-
   <script>
-    const popup = document.getElementById('popupModal');
-    const closeBtn = popup.querySelector('.close-btn');
-
-    // Duration to hide popup after closing (ms)
-    const hideDuration = 1000 * 60 * 5; // 5 minutes
-    const lastClosed = localStorage.getItem('popupClosed');
-    const now = new Date().getTime();
-
-    // Show popup only if last closed was more than 5 min ago
-    if (!lastClosed || now - lastClosed > hideDuration) {
-      popup.style.display = 'flex';
+    // Quantity Update Function
+    function updateQty(btn, change) {
+      const input = btn.parentElement.querySelector('.qty-input');
+      let currentVal = parseInt(input.value) || 1;
+      let newVal = currentVal + change;
+      if (newVal < 1) newVal = 1;
+      input.value = newVal;
+      
+      // Update displayed price
+      const card = btn.closest('.product-card');
+      const unitPrice = parseFloat(card.dataset.unitPrice);
+      const priceLkr = card.querySelector('.price-lkr');
+      if (priceLkr) {
+        const totalPrice = (unitPrice * newVal).toFixed(2);
+        priceLkr.textContent = totalPrice.toLocaleString() + ' LKR';
+      }
     }
 
+    // Payment Creation Function
+    function createPayment(productName, unitPrice, btn) {
+      const card = btn.closest('.product-card');
+      const qty = parseInt(card.querySelector('.qty-input').value) || 1;
+      const amount = unitPrice * qty;
+      
+      fetch('https://webxpayipg.onrender.com/create-payment', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          order_id: 'ORD-' + Date.now(),
+          product_name: productName,
+          amount: amount,
+          currency: 'LKR',
+          qty: qty,
+          first_name: '',
+          last_name: '',
+          email: '',
+          contact_number: '',
+          address_line_one: ''
+        })
+      })
+      .then(res => res.text())
+      .then(html => {
+        const win = window.open('', '_blank');
+        win.document.write(html);
+        win.document.close();
+      })
+      .catch(err => {
+        console.error('Payment error:', err);
+        alert('Payment processing failed. Please try again.');
+      });
+    }
+
+    // Popup Management
     function closePopup() {
-      popup.style.display = 'none';
+      const modal = document.getElementById('popupModal');
+      modal.style.display = 'none';
       localStorage.setItem('popupClosed', new Date().getTime());
     }
 
-    closeBtn.addEventListener('click', closePopup);
-  </script>
+    window.addEventListener('load', function() {
+      const hideDuration = 1000 * 60 * 5;
+      const lastClosed = localStorage.getItem('popupClosed');
+      const now = new Date().getTime();
+      
+      if (!lastClosed || now - lastClosed > hideDuration) {
+        document.getElementById('popupModal').style.display = 'flex';
+      }
+    });
 
-
-  <script>
-    // WhatsApp redirect helper
-    function redirectToWhatsApp(product) {
-      const phoneNumber = "94712622012";
-      const message = encodeURIComponent(`Hi, I'm interested in ${product}!`);
-      window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
-    }
-
-    function openG2GStore() {
-      window.open("https://www.g2g.com/redtrextech", "_blank");
-    }
-
-    // Animate products on scroll
-    const products = document.querySelectorAll(".product-card");
-    if (products && products.length) {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("show");
-            }
-          });
-        },
-        { threshold: 0.2 }
-      );
-      products.forEach((product) => observer.observe(product));
-    }
-
-    // Search Dropdown
-    const searchInput = document.getElementById("productSearch");
-    const searchResults = document.getElementById("searchResults");
-    const allProducts = Array.from(document.querySelectorAll(".product-card"));
+    // Search Functionality
+    const searchInput = document.getElementById('productSearch');
+    const searchResults = document.getElementById('searchResults');
+    const allProducts = Array.from(document.querySelectorAll('.product-card'));
 
     if (searchInput) {
-      searchInput.addEventListener("input", () => {
+      searchInput.addEventListener('input', () => {
         const query = searchInput.value.trim().toLowerCase();
-        searchResults.innerHTML = "";
-
+        searchResults.innerHTML = '';
+        
         if (!query) {
-          searchResults.style.display = "none";
+          searchResults.style.display = 'none';
           return;
         }
 
-        const matches = allProducts.filter((card) =>
+        const matches = allProducts.filter(card => 
           card.dataset.name.toLowerCase().includes(query)
         );
 
         if (matches.length === 0) {
-          const li = document.createElement("li");
-          li.textContent = "No results found";
-          li.classList.add("no-results");
+          const li = document.createElement('li');
+          li.textContent = 'No results found';
           searchResults.appendChild(li);
-          searchResults.style.display = "block";
-          return;
-        }
-
-        matches.forEach((match) => {
-          const li = document.createElement("li");
-          li.textContent = match.dataset.name;
-          li.addEventListener("click", () => {
-            match.scrollIntoView({ behavior: "smooth", block: "center" });
-            match.classList.add("highlight");
-            setTimeout(() => match.classList.remove("highlight"), 2000);
-            searchResults.innerHTML = "";
-            searchResults.style.display = "none";
-            searchInput.value = "";
+        } else {
+          matches.forEach(match => {
+            const li = document.createElement('li');
+            li.textContent = match.dataset.name;
+            li.addEventListener('click', () => {
+              match.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              searchResults.style.display = 'none';
+              searchInput.value = '';
+            });
+            searchResults.appendChild(li);
           });
-          searchResults.appendChild(li);
-        });
-        searchResults.style.display = "block";
+        }
+        searchResults.style.display = 'block';
       });
-    }
-
-    document.addEventListener("click", (e) => {
-      if (!e.target.closest(".search-container")) {
-        searchResults.innerHTML = "";
-        searchResults.style.display = "none";
-      }
-    });
-
-    // Show popup on page load
-    window.addEventListener("load", function () {
-      const modal = document.getElementById("popupModal");
-      if (modal) {
-        modal.style.display = "flex";
-        modal.setAttribute("aria-hidden", "false");
-      }
-    });
-
-    // Close popup
-    function closePopup() {
-      const modal = document.getElementById("popupModal");
-      if (modal) {
-        modal.style.display = "none";
-        modal.setAttribute("aria-hidden", "true");
-      }
     }
   </script>
 
@@ -913,5 +940,6 @@
       }, 300);
     });
   </script>
+  
 </body>
 </html>
