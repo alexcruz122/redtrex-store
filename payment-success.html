@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment Successful</title>
+    <link rel="icon" type="image/png" href="Assest/company.png">
     <style>
         * { margin:0; padding:0; box-sizing:border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #ffd700 0%, #ff4500 100%);
             min-height: 100vh;
             display:flex;
             flex-direction:column;
@@ -21,12 +22,18 @@
             background:white; border-radius:50%;
             display:inline-flex; align-items:center; justify-content:center;
             box-shadow:0 4px 20px rgba(0,0,0,0.1);
+            overflow:hidden;
+        }
+        .logo-img {
+            width:60px; height:60px;
+            object-fit:contain;
         }
         .logo-text {
             font-size:32px; font-weight:bold;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            display:none;
         }
         .container {
             background:white; border-radius:20px; padding:60px 40px;
@@ -37,14 +44,30 @@
         @keyframes slideUp { from {opacity:0; transform:translateY(30px);} to {opacity:1; transform:translateY(0);} }
         .success-icon {
             width:100px; height:100px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8787 100%);
             border-radius:50%;
             display:flex; align-items:center; justify-content:center;
             margin:0 auto 30px;
+            position:relative;
             animation: scaleIn 0.5s ease-out 0.2s both;
         }
         @keyframes scaleIn { from {transform:scale(0);} to {transform:scale(1);} }
-        .checkmark { width:50px; height:50px; border:4px solid white; border-top:none; border-right:none; transform:rotate(-45deg); margin-top:-10px; }
+        .checkmark {
+            width:60px; height:30px;
+            border:5px solid white;
+            border-top:none;
+            border-right:none;
+            transform:rotate(-45deg);
+            position:absolute;
+            top:30px;
+            left:20px;
+            animation: drawCheck 0.8s ease-out 0.5s both;
+        }
+        @keyframes drawCheck {
+            0% { width:0; height:0; }
+            50% { width:0; height:30px; }
+            100% { width:60px; height:30px; }
+        }
         h1 { color:#2d3748; font-size:32px; margin-bottom:15px; }
         .message { color:#718096; font-size:16px; line-height:1.6; margin-bottom:30px; }
         .details { background:#f7fafc; border-radius:12px; padding:25px; margin:30px 0; text-align:left; }
@@ -52,7 +75,6 @@
         .detail-row:last-child { border-bottom:none; }
         .detail-label { color:#718096; font-size:14px; }
         .detail-value { color:#2d3748; font-weight:600; font-size:14px; }
-        .amount { font-size:20px; color:#667eea; }
         .button {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color:white; border:none; padding:16px 40px; border-radius:10px;
@@ -68,7 +90,10 @@
 </head>
 <body>
     <div class="logo">
-        <div class="logo-circle"><span class="logo-text">P</span></div>
+        <div class="logo-circle">
+            <img src="Assest/company.png" alt="Logo" class="logo-img">
+            <span class="logo-text">P</span>
+        </div>
     </div>
 
     <div class="container">
@@ -90,18 +115,14 @@
                 <span class="detail-label">Payment Method</span>
                 <span class="detail-value" id="txn-method">--</span>
             </div>
-            <div class="detail-row">
-                <span class="detail-label">Amount Paid</span>
-                <span class="detail-value amount" id="txn-amount">0.00 LKR</span>
-            </div>
         </div>
 
-        <button class="button" onclick="window.print()">Download Receipt</button>
+        <button class="button" onclick="window.print()">Print Receipt</button>
         <button class="button button-secondary" onclick="window.location.href='/'">Back to Home</button>
     </div>
 
     <div class="footer">
-        <p>A confirmation email has been sent to your inbox</p>
+        <p>RedTrex will be in contact with you soon</p>
     </div>
 
     <script>
@@ -119,7 +140,6 @@
         const params = getQueryParams();
 
         if (params.order_id) document.getElementById("txn-id").innerText = params.order_id;
-        if (params.amount) document.getElementById("txn-amount").innerText = params.amount + " LKR";
         if (params.date) document.getElementById("txn-date").innerText = params.date;
         if (params.method) document.getElementById("txn-method").innerText = params.method;
     </script>
