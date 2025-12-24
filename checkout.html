@@ -3,12 +3,7 @@
 <head>
   <title>REDTREX Checkout</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -18,11 +13,10 @@
       justify-content: center;
       padding: 20px;
     }
-    
     .checkout-container {
       background: white;
       border-radius: 20px;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
       padding: 40px;
       max-width: 500px;
       width: 100%;
@@ -30,389 +24,159 @@
       max-height: 90vh;
       overflow-y: auto;
     }
-    
-    @keyframes slideIn {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    
-    h2 {
-      color: #333;
-      margin-bottom: 10px;
-      font-size: 28px;
-      text-align: center;
-    }
-    
-    .subtitle {
-      color: #666;
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 14px;
-    }
-    
-    .form-group {
-      margin-bottom: 20px;
-    }
-    
-    label {
-      display: block;
-      color: #555;
-      font-weight: 600;
-      margin-bottom: 8px;
-      font-size: 14px;
-    }
-    
-    .required {
-      color: #e74c3c;
-    }
-    
-    .input-wrapper {
-      position: relative;
-    }
-    
-    .currency-prefix {
-      position: absolute;
-      left: 15px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: #667eea;
-      font-weight: 700;
-      font-size: 16px;
-    }
-    
-    input, select {
-      width: 100%;
-      padding: 12px 15px;
-      border: 2px solid #e0e0e0;
-      border-radius: 10px;
-      font-size: 15px;
-      transition: all 0.3s ease;
-      font-family: inherit;
-    }
-    
-    input[type="number"].amount-input {
-      padding-left: 55px;
-      font-weight: 600;
-      font-size: 18px;
-    }
-    
-    input:focus, select:focus {
-      outline: none;
-      border-color: #667eea;
-      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-    }
-    
-    input:disabled, select:disabled {
-      background: #f5f5f5;
-      cursor: not-allowed;
-    }
-    
-    .amount-suggestions {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 8px;
-      margin-top: 8px;
-    }
-    
-    .amount-btn {
-      padding: 8px;
-      border: 2px solid #e0e0e0;
-      background: white;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: 600;
-      color: #555;
-      transition: all 0.2s ease;
-      font-size: 13px;
-    }
-    
-    .amount-btn:hover {
-      border-color: #667eea;
-      color: #667eea;
-      transform: translateY(-2px);
-    }
-    
-    .name-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
-    }
-    
+    @keyframes slideIn { from {opacity:0; transform:translateY(30px);} to {opacity:1; transform:translateY(0);} }
+    h2 { color:#333; margin-bottom:10px; font-size:28px; text-align:center; }
+    .subtitle { color:#666; text-align:center; margin-bottom:30px; font-size:14px; }
+    .form-group { margin-bottom:20px; }
+    label { display:block; color:#555; font-weight:600; margin-bottom:8px; font-size:14px; }
+    .required { color:#e74c3c; }
+    .input-wrapper { position: relative; }
+    .currency-prefix { position:absolute; left:15px; top:50%; transform:translateY(-50%); color:#667eea; font-weight:700; font-size:16px; }
+    input, select { width:100%; padding:12px 15px; border:2px solid #e0e0e0; border-radius:10px; font-size:15px; transition:all 0.3s ease; font-family:inherit; }
+    input:focus, select:focus { outline:none; border-color:#667eea; box-shadow:0 0 0 3px rgba(102,126,234,0.1); }
+    input:disabled { background:#f5f5f5; cursor:not-allowed; }
+    .name-row { display:grid; grid-template-columns:1fr 1fr; gap:15px; }
     .pay-btn {
-      width: 100%;
-      padding: 16px;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      border: none;
-      border-radius: 10px;
-      font-size: 18px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      margin-top: 10px;
-      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+      width:100%; padding:16px; background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+      color:white; border:none; border-radius:10px; font-size:18px; font-weight:700;
+      cursor:pointer; transition:all 0.3s ease; margin-top:10px; box-shadow:0 4px 15px rgba(102,126,234,0.4);
     }
-    
-    .pay-btn:hover:not(:disabled) {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
-    }
-    
-    .pay-btn:disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
-      transform: none;
-    }
-    
-    .secure-badge {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      margin-top: 20px;
-      color: #888;
-      font-size: 13px;
-    }
-    
-    .secure-badge::before {
-      content: "🔒";
-    }
-    
-    .error {
-      color: #e74c3c;
-      font-size: 13px;
-      margin-top: 5px;
-      display: none;
-    }
-    
-    .error.show {
-      display: block;
-    }
-    
-    .divider {
-      height: 1px;
-      background: #e0e0e0;
-      margin: 25px 0;
-    }
-    
-    .section-title {
-      color: #667eea;
-      font-weight: 700;
-      font-size: 16px;
-      margin-bottom: 15px;
-    }
+    .pay-btn:hover:not(:disabled) { transform:translateY(-2px); box-shadow:0 6px 20px rgba(102,126,234,0.6); }
+    .pay-btn:disabled { opacity:0.6; cursor:not-allowed; transform:none; }
+    .secure-badge { display:flex; align-items:center; justify-content:center; gap:8px; margin-top:20px; color:#888; font-size:13px; }
+    .secure-badge::before { content:"🔒"; }
+    .error { color:#e74c3c; font-size:13px; margin-top:5px; display:none; }
+    .error.show { display:block; }
+    .divider { height:1px; background:#e0e0e0; margin:25px 0; }
+    .section-title { color:#667eea; font-weight:700; font-size:16px; margin-bottom:15px; }
+    .product-info { font-weight:600; font-size:16px; margin-bottom:15px; text-align:center; }
   </style>
 </head>
 <body>
   <div class="checkout-container">
     <h2>REDTREX Payment</h2>
     <p class="subtitle">Complete your payment details</p>
-    
+
+    <div class="product-info" id="productInfo">Loading product...</div>
+
     <div class="section-title">Payment Amount</div>
     <div class="form-group">
-      <label for="amount">Amount <span class="required">*</span></label>
+      <label for="amount">Amount (LKR) <span class="required">*</span></label>
       <div class="input-wrapper">
         <span class="currency-prefix">LKR</span>
-        <input 
-          type="number" 
-          id="amount" 
-          class="amount-input"
-          placeholder="0.00" 
-          min="10" 
-          step="0.01"
-          required
-        >
+        <input type="number" id="amount" class="amount-input" placeholder="0.00" min="10" step="0.01" readonly>
       </div>
       <div class="error" id="amountError">Minimum amount is LKR 10</div>
-      
-      <div class="amount-suggestions">
-        <button class="amount-btn" onclick="setAmount(100)">LKR 100</button>
-        <button class="amount-btn" onclick="setAmount(500)">LKR 500</button>
-        <button class="amount-btn" onclick="setAmount(1000)">LKR 1000</button>
-      </div>
     </div>
-    
-    <div class="form-group">
-      <label for="currency">Currency <span class="required">*</span></label>
-      <select id="currency" required>
-        <option value="LKR">LKR - Sri Lankan Rupee</option>
-      </select>
-    </div>
-    
+
     <div class="divider"></div>
-    
+
     <div class="section-title">Personal Information</div>
-    
     <div class="name-row">
       <div class="form-group">
         <label for="firstName">First Name <span class="required">*</span></label>
-        <input 
-          type="text" 
-          id="firstName" 
-          placeholder="John"
-          required
-        >
+        <input type="text" id="firstName" placeholder="John" required>
       </div>
-      
       <div class="form-group">
         <label for="lastName">Last Name <span class="required">*</span></label>
-        <input 
-          type="text" 
-          id="lastName" 
-          placeholder="Doe"
-          required
-        >
+        <input type="text" id="lastName" placeholder="Doe" required>
       </div>
     </div>
-    
+
     <div class="form-group">
       <label for="email">Email <span class="required">*</span></label>
-      <input 
-        type="email" 
-        id="email" 
-        placeholder="john@example.com"
-        required
-      >
+      <input type="email" id="email" placeholder="john@example.com" required>
       <div class="error" id="emailError">Please enter a valid email address</div>
     </div>
-    
+
     <div class="form-group">
       <label for="contact">Contact Number <span class="required">*</span></label>
-      <input 
-        type="tel" 
-        id="contact" 
-        placeholder="0771234567"
-        required
-      >
+      <input type="tel" id="contact" placeholder="0771234567" required>
       <div class="error" id="contactError">Please enter a valid contact number</div>
     </div>
-    
+
     <div class="form-group">
       <label for="address">Address <span class="required">*</span></label>
-      <input 
-        type="text" 
-        id="address" 
-        placeholder="123 Main Street, City"
-        required
-      >
+      <input type="text" id="address" placeholder="123 Main Street, City" required>
     </div>
-    
+
     <button class="pay-btn" id="payBtn">Pay Now</button>
-    
-    <div class="secure-badge">
-      Secure Payment Gateway
-    </div>
+    <div class="secure-badge">Secure Payment Gateway</div>
   </div>
 
   <script>
-    function setAmount(value) {
-      document.getElementById("amount").value = value;
-      document.getElementById("amountError").classList.remove("show");
-    }
-    
-    function validateEmail(email) {
-      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    }
-    
+    // Prefill product info from URL
+    const params = new URLSearchParams(window.location.search);
+    const productName = params.get('product') || 'Product';
+    const unitPrice = parseFloat(params.get('price') || 0);
+    const qty = parseInt(params.get('qty') || 1);
+    const totalAmount = (unitPrice * qty).toFixed(2);
+
+    document.getElementById('productInfo').innerText = `${productName} × ${qty}`;
+    document.getElementById('amount').value = totalAmount;
+
+    // Validation
+    function validateEmail(email) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email); }
     function validateForm() {
       let isValid = true;
-      
       const amount = parseFloat(document.getElementById("amount").value);
       const amountError = document.getElementById("amountError");
       const email = document.getElementById("email").value;
       const emailError = document.getElementById("emailError");
       const contact = document.getElementById("contact").value;
       const contactError = document.getElementById("contactError");
-      
+
       amountError.classList.remove("show");
       emailError.classList.remove("show");
       contactError.classList.remove("show");
-      
-      if (!amount || amount < 10) {
-        amountError.classList.add("show");
-        isValid = false;
-      }
-      
-      if (!validateEmail(email)) {
-        emailError.classList.add("show");
-        isValid = false;
-      }
-      
-      if (!contact || contact.length < 10) {
-        contactError.innerText = "Please enter a valid contact number";
-        contactError.classList.add("show");
-        isValid = false;
-      }
-      
-      if (!document.getElementById("firstName").value || 
-          !document.getElementById("lastName").value || 
-          !document.getElementById("address").value) {
-        isValid = false;
-      }
-      
+
+      if (!amount || amount < 10) { amountError.classList.add("show"); isValid = false; }
+      if (!validateEmail(email)) { emailError.classList.add("show"); isValid = false; }
+      if (!contact || contact.length < 10) { contactError.innerText = "Please enter a valid contact number"; contactError.classList.add("show"); isValid = false; }
+      if (!document.getElementById("firstName").value || !document.getElementById("lastName").value || !document.getElementById("address").value) { isValid = false; }
+
       return isValid;
     }
-    
+
+    // Payment submission
     document.getElementById("payBtn").onclick = async () => {
-      if (!validateForm()) {
-        return;
-      }
-      
+      if (!validateForm()) return;
+
       const payBtn = document.getElementById("payBtn");
       payBtn.disabled = true;
       payBtn.innerText = "Processing...";
-      
+
       try {
         const payload = {
           order_id: "ORDER-" + Date.now(),
-          amount: parseFloat(document.getElementById("amount").value).toFixed(2),
-          currency: document.getElementById("currency").value,
+          product_name: productName,
+          amount: totalAmount,
+          currency: "LKR",
+          qty: qty,
           first_name: document.getElementById("firstName").value,
           last_name: document.getElementById("lastName").value,
           email: document.getElementById("email").value,
           contact_number: document.getElementById("contact").value,
           address_line_one: document.getElementById("address").value
         };
-        
-        const res = await fetch(
-          "https://webxpayipg.onrender.com/create-payment",
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(payload)
-          }
-        );
-        
+
+        const res = await fetch("https://webxpayipg.onrender.com/create-payment", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+
         const html = await res.text();
         document.open();
         document.write(html);
         document.close();
       } catch (error) {
-        const amountError = document.getElementById("amountError");
-        amountError.innerText = "Payment failed. Please try again.";
-        amountError.classList.add("show");
+        document.getElementById("amountError").innerText = "Payment failed. Please try again.";
+        document.getElementById("amountError").classList.add("show");
         payBtn.disabled = false;
         payBtn.innerText = "Pay Now";
       }
     };
-    
-    document.getElementById("amount").addEventListener("input", () => {
-      document.getElementById("amountError").classList.remove("show");
-    });
-    
-    document.getElementById("email").addEventListener("input", () => {
-      document.getElementById("emailError").classList.remove("show");
-    });
-    
-    document.getElementById("contact").addEventListener("input", () => {
-      document.getElementById("contactError").classList.remove("show");
-    });
   </script>
 </body>
 </html>
