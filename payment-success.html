@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Successful</title>
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            padding:20px;
+        }
+        .logo { margin:40px 0; text-align:center; }
+        .logo-circle {
+            width:80px; height:80px;
+            background:white; border-radius:50%;
+            display:inline-flex; align-items:center; justify-content:center;
+            box-shadow:0 4px 20px rgba(0,0,0,0.1);
+        }
+        .logo-text {
+            font-size:32px; font-weight:bold;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .container {
+            background:white; border-radius:20px; padding:60px 40px;
+            max-width:500px; width:100%; text-align:center;
+            box-shadow:0 20px 60px rgba(0,0,0,0.3);
+            animation: slideUp 0.5s ease-out;
+        }
+        @keyframes slideUp { from {opacity:0; transform:translateY(30px);} to {opacity:1; transform:translateY(0);} }
+        .success-icon {
+            width:100px; height:100px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius:50%;
+            display:flex; align-items:center; justify-content:center;
+            margin:0 auto 30px;
+            animation: scaleIn 0.5s ease-out 0.2s both;
+        }
+        @keyframes scaleIn { from {transform:scale(0);} to {transform:scale(1);} }
+        .checkmark { width:50px; height:50px; border:4px solid white; border-top:none; border-right:none; transform:rotate(-45deg); margin-top:-10px; }
+        h1 { color:#2d3748; font-size:32px; margin-bottom:15px; }
+        .message { color:#718096; font-size:16px; line-height:1.6; margin-bottom:30px; }
+        .details { background:#f7fafc; border-radius:12px; padding:25px; margin:30px 0; text-align:left; }
+        .detail-row { display:flex; justify-content:space-between; padding:12px 0; border-bottom:1px solid #e2e8f0; }
+        .detail-row:last-child { border-bottom:none; }
+        .detail-label { color:#718096; font-size:14px; }
+        .detail-value { color:#2d3748; font-weight:600; font-size:14px; }
+        .amount { font-size:20px; color:#667eea; }
+        .button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color:white; border:none; padding:16px 40px; border-radius:10px;
+            font-size:16px; font-weight:600; cursor:pointer; transition:transform 0.2s, box-shadow 0.2s;
+            width:100%; margin-top:10px;
+        }
+        .button:hover { transform:translateY(-2px); box-shadow:0 10px 25px rgba(102,126,234,0.4); }
+        .button-secondary { background:white; color:#667eea; border:2px solid #667eea; margin-top:15px; }
+        .button-secondary:hover { background:#f7fafc; box-shadow:0 5px 15px rgba(102,126,234,0.2); }
+        .footer { color:white; margin-top:30px; font-size:14px; opacity:0.9; }
+        @media(max-width:600px){ .container{padding:40px 25px;} h1{font-size:26px;} .logo-circle{width:60px;height:60px;} .logo-text{font-size:24px;} }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <div class="logo-circle"><span class="logo-text">P</span></div>
+    </div>
+
+    <div class="container">
+        <div class="success-icon"><div class="checkmark"></div></div>
+
+        <h1>Payment Successful!</h1>
+        <p class="message">Thank you for your payment. Your transaction has been completed successfully.</p>
+
+        <div class="details">
+            <div class="detail-row">
+                <span class="detail-label">Transaction ID</span>
+                <span class="detail-value" id="txn-id">#TXN-XXXX</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Date</span>
+                <span class="detail-value" id="txn-date">--</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Payment Method</span>
+                <span class="detail-value" id="txn-method">--</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Amount Paid</span>
+                <span class="detail-value amount" id="txn-amount">0.00 LKR</span>
+            </div>
+        </div>
+
+        <button class="button" onclick="window.print()">Download Receipt</button>
+        <button class="button button-secondary" onclick="window.location.href='/'">Back to Home</button>
+    </div>
+
+    <div class="footer">
+        <p>A confirmation email has been sent to your inbox</p>
+    </div>
+
+    <script>
+        // Auto-fill details from URL query parameters
+        function getQueryParams() {
+            const params = {};
+            const queryString = window.location.search.substring(1);
+            queryString.split("&").forEach(pair => {
+                const [key, value] = pair.split("=");
+                if (key && value) params[key] = decodeURIComponent(value);
+            });
+            return params;
+        }
+
+        const params = getQueryParams();
+
+        if (params.order_id) document.getElementById("txn-id").innerText = params.order_id;
+        if (params.amount) document.getElementById("txn-amount").innerText = params.amount + " LKR";
+        if (params.date) document.getElementById("txn-date").innerText = params.date;
+        if (params.method) document.getElementById("txn-method").innerText = params.method;
+    </script>
+</body>
+</html>
