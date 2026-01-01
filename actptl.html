@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft Activation Portal</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            max-width: 700px;
+            width: 100%;
+            padding: 40px;
+            margin-bottom: 100px;
+            z-index: 1;
+        }
+
+        .warning-box {
+            background: rgba(255, 243, 205, 0.25);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 193, 7, 0.4);
+            border-left: 5px solid #ffc107;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        .warning-box h2 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .warning-box h2::before {
+            content: "⚠️";
+            font-size: 24px;
+        }
+
+        .warning-box p {
+            line-height: 1.7;
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+
+        .warning-box ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .warning-box li {
+            line-height: 1.8;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .footer-text {
+            margin-top: 20px;
+            font-weight: 600;
+            font-style: italic;
+            text-align: right;
+        }
+
+        .monitored-text {
+            background: rgba(212, 237, 218, 0.3);
+            border: 2px solid rgba(40, 167, 69, 0.5);
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 15px;
+            font-weight: 600;
+        }
+
+        .green-dot {
+            width: 12px;
+            height: 12px;
+            background: #28a745;
+            border-radius: 50%;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(1.2); }
+        }
+
+        .button-container {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+            z-index: 1000;
+        }
+
+        .home-button,
+        .portal-button {
+            background: rgba(0, 120, 212, 0.25);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #fff;
+            padding: 18px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 12px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+
+        .home-button:hover,
+        .portal-button:hover {
+            background: rgba(0, 90, 158, 0.35);
+            box-shadow: 0 12px 40px rgba(0,120,212,0.4);
+            transform: translateY(-2px);
+        }
+
+        .home-button:active,
+        .portal-button:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 20px rgba(0,120,212,0.3);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="warning-box">
+            <h2>Important Notice</h2>
+
+            <p>Each Microsoft product key is licensed for <strong>one end user / one device only</strong>.</p>
+
+            <p>
+                Reusing, sharing, or reselling the same key to multiple customers is a
+                <strong>serious violation</strong> of Microsoft licensing terms and
+                Redtrex Technologies’ reseller policy.
+            </p>
+
+            <p><strong>Misuse may result in:</strong></p>
+
+            <ul>
+                <li>Immediate license deactivation, even on already activated devices</li>
+                <li>Loss of product functionality and activation errors</li>
+                <li>Microsoft account enforcement actions</li>
+                <li>Permanent reseller account suspension with no refund or replacement</li>
+            </ul>
+
+            <div class="monitored-text">
+                <span class="green-dot"></span>
+                <span>Activation activity is monitored. Abuse will be acted upon without notice.</span>
+            </div>
+
+            <p class="footer-text">REDTREX - CRM:0189790001535</p>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <!-- HOME -->
+        <a href="/" class="home-button">Home Page</a>
+
+        <!-- MS ACTIVATION PORTAL -->
+        <a href="https://aka.ms./aoh" class="portal-button" target="_blank">
+            Activation Portal
+        </a>
+    </div>
+
+</body>
+</html>
