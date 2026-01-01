@@ -409,6 +409,12 @@
       min-width: 24px;
       text-align: center;
     }
+
+    .support-icon img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+    }
     
     .support-link {
       color: #F02B2B;
@@ -508,8 +514,12 @@
           <span>U.S: <a href="tel:+12055884201" class="support-link">+1 (205) 588 4201</a> | L.K: <a href="tel:+94722692012" class="support-link">+94 72 269 2012</a></span>
         </div>
         <div class="support-item">
-          <span class="support-icon">💬</span>
+          <span class="support-icon"><img src="https://freepngimg.com/download/whatsapp/77099-whats-icons-text-symbol-computer-messaging-whatsapp.png" alt="WhatsApp"></span>
           <span>WhatsApp: <a href="https://wa.me/94712622012" target="_blank" class="support-link">+94 71 262 2012</a></span>
+        </div>
+        <div class="support-item">
+          <span class="support-icon"><img src="https://static.vecteezy.com/system/resources/previews/016/716/472/non_2x/telegram-icon-free-png.png" alt="Telegram"></span>
+          <span>Telegram: <a href="https://t.me/store_redtrex" target="_blank" class="support-link">@store_redtrex</a></span>
         </div>
         <div class="support-item">
           <span class="support-icon">⏰</span>
@@ -559,7 +569,25 @@
 
       const payBtn = document.getElementById("payBtn");
       payBtn.disabled = true;
-      payBtn.innerHTML = "<span class='spinner'></span>Connecting to WebXPay Services<br><small style='font-size:13px; font-weight:400; opacity:0.9;'>Don't refresh the page • est 16 sec</small>";
+      
+      // First message
+      payBtn.innerHTML = "<span class='spinner'></span>Please wait while we connect you to our payment partner";
+
+      // Wait 5 seconds, then show second message with countdown
+      await new Promise(resolve => setTimeout(resolve, 5000));
+      
+      let countdown = 16;
+      payBtn.innerHTML = `<span class='spinner'></span>Connecting to WebXPay Services<br><small style='font-size:13px; font-weight:400; opacity:0.9;'>Don't refresh the page • est ${countdown} sec</small>`;
+      
+      // Start countdown
+      const countdownInterval = setInterval(() => {
+        countdown--;
+        if (countdown > 0) {
+          payBtn.innerHTML = `<span class='spinner'></span>Connecting to WebXPay Services<br><small style='font-size:13px; font-weight:400; opacity:0.9;'>Don't refresh the page • est ${countdown} sec</small>`;
+        } else {
+          clearInterval(countdownInterval);
+        }
+      }, 1000);
 
       try {
         const payload = {
@@ -581,11 +609,13 @@
           body: JSON.stringify(payload)
         });
 
+        clearInterval(countdownInterval);
         const html = await res.text();
         document.open();
         document.write(html);
         document.close();
       } catch (error) {
+        clearInterval(countdownInterval);
         document.getElementById("amountError").innerText = "Payment failed. Please try again.";
         document.getElementById("amountError").classList.add("show");
         payBtn.disabled = false;
