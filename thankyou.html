@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      padding: 60px 40px;
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+      animation: slideUp 0.6s ease-out;
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Checkmark Circle Animation */
+    .checkmark-wrapper {
+      margin-bottom: 40px;
+      animation: popIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.3s backwards;
+    }
+
+    @keyframes popIn {
+      from {
+        opacity: 0;
+        transform: scale(0.3);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .checkmark-circle {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 30px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    }
+
+    /* SVG Checkmark */
+    .checkmark-svg {
+      width: 70px;
+      height: 70px;
+      stroke: white;
+      stroke-width: 3;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .checkmark-path {
+      animation: checkmarkDraw 0.8s ease-out 0.5s forwards;
+      stroke-dasharray: 100;
+      stroke-dashoffset: 100;
+    }
+
+    @keyframes checkmarkDraw {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    h1 {
+      font-size: 32px;
+      color: #2d3748;
+      margin-bottom: 15px;
+      font-weight: 700;
+      animation: fadeInDown 0.6s ease-out 0.2s backwards;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .subtitle {
+      color: #718096;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 40px;
+      animation: fadeIn 0.6s ease-out 0.4s backwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .message-box {
+      background: #f7fafc;
+      border-left: 4px solid #667eea;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      text-align: left;
+      animation: fadeIn 0.6s ease-out 0.6s backwards;
+    }
+
+    .message-box p {
+      color: #4a5568;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 15px;
+      animation: fadeIn 0.6s ease-out 0.8s backwards;
+    }
+
+    .btn {
+      flex: 1;
+      padding: 13px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+    }
+
+    .btn-secondary {
+      background: #e2e8f0;
+      color: #2d3748;
+    }
+
+    .btn-secondary:hover {
+      background: #cbd5e0;
+      transform: translateY(-2px);
+    }
+
+    .confetti {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      background: #667eea;
+      pointer-events: none;
+      animation: confettiFall 3s ease-out forwards;
+    }
+
+    @keyframes confettiFall {
+      to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 40px 20px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      .checkmark-circle {
+        width: 100px;
+        height: 100px;
+      }
+
+      .checkmark-svg {
+        width: 60px;
+        height: 60px;
+      }
+
+      .button-group {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="checkmark-wrapper">
+      <div class="checkmark-circle">
+        <svg class="checkmark-svg" viewBox="0 0 52 52">
+          <path class="checkmark-path" d="M6 26 L16 36 L46 6" />
+        </svg>
+      </div>
+    </div>
+
+    <h1>Thank You!</h1>
+    <p class="subtitle">Your message has been sent successfully. We appreciate you reaching out and will get back to you soon.</p>
+
+    <div class="button-group">
+      <a href="/" class="btn btn-primary">Back to Home</a>
+      <a href="/contact" class="btn btn-secondary">Send Another</a>
+    </div>
+  </div>
+
+  <script>
+    // Create confetti animation
+    function createConfetti() {
+      const colors = ['#667eea', '#764ba2', '#667eea', '#764ba2'];
+
+      for (let i = 0; i < 30; i++) {
+        setTimeout(() => {
+          const confetti = document.createElement('div');
+          confetti.className = 'confetti';
+          confetti.style.left = Math.random() * 100 + '%';
+          confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+          confetti.style.animationDelay = Math.random() * 0.5 + 's';
+          document.body.appendChild(confetti);
+
+          setTimeout(() => confetti.remove(), 3000);
+        }, i * 30);
+      }
+    }
+
+    // Trigger confetti when page loads
+    window.addEventListener('load', createConfetti);
+  </script>
+</body>
+</html>
