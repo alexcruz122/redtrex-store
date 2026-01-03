@@ -13,6 +13,7 @@
       --text-tertiary: #666;
       --border-color: rgba(240, 43, 43, 0.2);
       --input-bg: rgba(255, 255, 255, 0.8);
+      --section-bg: rgba(240, 43, 43, 0.05);
     }
     
     body.dark-mode {
@@ -23,6 +24,7 @@
       --text-tertiary: #909090;
       --border-color: rgba(240, 43, 43, 0.3);
       --input-bg: rgba(30, 30, 45, 0.8);
+      --section-bg: rgba(240, 43, 43, 0.1);
     }
     
     body {
@@ -223,7 +225,7 @@
     .form-group { margin-bottom:20px; }
     label { 
       display:block; 
-      color:#555; 
+      color: var(--text-secondary); 
       font-weight:600; 
       margin-bottom:8px; 
       font-size:14px;
@@ -243,24 +245,24 @@
     input, select { 
       width:100%; 
       padding:14px 16px; 
-      border:2px solid rgba(240, 43, 43, 0.2);
-      background: rgba(255, 255, 255, 0.8);
+      border:2px solid var(--border-color);
+      background: var(--input-bg);
       backdrop-filter: blur(10px);
       border-radius:12px; 
       font-size:15px; 
       transition:all 0.3s ease; 
       font-family:inherit;
+      color: var(--text-primary);
     }
     input:focus, select:focus { 
       outline:none; 
       border-color:#F02B2B; 
-      background: rgba(255, 255, 255, 1);
       box-shadow:0 0 0 4px rgba(240, 43, 43, 0.1),
                  0 4px 12px rgba(240, 43, 43, 0.15);
       transform: translateY(-1px);
     }
     input:disabled { 
-      background:rgba(245, 245, 245, 0.8); 
+      opacity: 0.6;
       cursor:not-allowed; 
     }
     
@@ -337,7 +339,7 @@
       justify-content:center; 
       gap:8px; 
       margin-top:20px; 
-      color:#888; 
+      color: var(--text-secondary); 
       font-size:13px;
       font-weight: 500;
     }
@@ -359,7 +361,7 @@
     
     .divider { 
       height:1px; 
-      background: linear-gradient(90deg, transparent, rgba(240, 43, 43, 0.3), transparent);
+      background: linear-gradient(90deg, transparent, var(--border-color), transparent);
       margin:30px 0; 
     }
     
@@ -386,97 +388,21 @@
       margin-bottom:20px; 
       text-align:center;
       padding: 16px;
-      background: linear-gradient(135deg, rgba(240, 43, 43, 0.1), rgba(118, 75, 162, 0.1));
+      background: linear-gradient(135deg, var(--section-bg), rgba(118, 75, 162, 0.1));
       border-radius: 12px;
-      border: 1px solid rgba(240, 43, 43, 0.2);
+      border: 1px solid var(--border-color);
       color: #F02B2B;
     }
     
-    /* Customer Support Section */
-    .support-section {
-      margin-top: 30px;
-      padding-top: 25px;
-      border-top: 1px solid rgba(240, 43, 43, 0.2);
-    }
-    
-    .support-title {
-      text-align: center;
-      color: #333;
-      font-size: 16px;
-      font-weight: 700;
-      margin-bottom: 15px;
-    }
-    
-    .support-details {
-      background: linear-gradient(135deg, rgba(240, 43, 43, 0.05), rgba(118, 75, 162, 0.05));
-      border-radius: 12px;
-      padding: 16px;
-      border: 1px solid rgba(240, 43, 43, 0.15);
-    }
-    
-    .support-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 12px;
-      color: #555;
-      font-size: 14px;
-    }
-    
-    .support-item:last-child {
-      margin-bottom: 0;
-    }
-    
-    .support-icon {
-      font-size: 18px;
-      min-width: 24px;
-      text-align: center;
-    }
-
-    .support-icon img {
-      width: 24px;
-      height: 24px;
-      object-fit: contain;
-    }
-    
-    .support-link {
-      color: #F02B2B;
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.2s ease;
-    }
-    
-    .support-link:hover {
-      color: #764ba2;
-      text-decoration: underline;
-    }
-
-    .whatsapp-warning {
-      background: rgba(255, 235, 59, 0.2);
-      border-left: 4px solid #ffa726;
-      padding: 12px;
-      border-radius: 8px;
-      margin-top: 10px;
-    }
-
-    .whatsapp-warning-text {
-      color: #e65100;
-      font-size: 13px;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
     /* Terms and Conditions Section */
     .terms-section {
       margin-top: 30px;
       padding-top: 25px;
-      border-top: 1px solid rgba(240, 43, 43, 0.2);
+      border-top: 1px solid var(--border-color);
     }
 
     .terms-title {
-      color: #333;
+      color: var(--text-primary);
       font-size: 16px;
       font-weight: 700;
       margin-bottom: 18px;
@@ -486,14 +412,14 @@
     }
 
     .terms-content {
-      background: linear-gradient(135deg, rgba(240, 43, 43, 0.05), rgba(118, 75, 162, 0.05));
+      background: linear-gradient(135deg, var(--section-bg), rgba(118, 75, 162, 0.1));
       border-radius: 12px;
       padding: 18px;
-      border: 1px solid rgba(240, 43, 43, 0.15);
+      border: 1px solid var(--border-color);
       max-height: 300px;
       overflow-y: auto;
       font-size: 13px;
-      color: #555;
+      color: var(--text-secondary);
       line-height: 1.6;
     }
 
@@ -555,7 +481,7 @@
     }
 
     .terms-checkbox-label {
-      color: #555;
+      color: var(--text-secondary);
       font-size: 13px;
       font-weight: 500;
       cursor: pointer;
@@ -572,6 +498,123 @@
     .terms-checkbox-label a:hover {
       text-decoration: underline;
       color: #764ba2;
+    }
+    
+    /* Customer Support Section */
+    .support-section {
+      margin-top: 30px;
+      padding-top: 25px;
+      border-top: 1px solid var(--border-color);
+    }
+    
+    .support-title {
+      text-align: center;
+      color: var(--text-primary);
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+    
+    .support-details {
+      background: linear-gradient(135deg, var(--section-bg), rgba(118, 75, 162, 0.1));
+      border-radius: 12px;
+      padding: 16px;
+      border: 1px solid var(--border-color);
+    }
+    
+    .support-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+      color: var(--text-secondary);
+      font-size: 14px;
+    }
+    
+    .support-item:last-child {
+      margin-bottom: 0;
+    }
+    
+    .support-icon {
+      font-size: 18px;
+      min-width: 24px;
+      text-align: center;
+    }
+
+    .support-icon img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+    }
+    
+    .support-link {
+      color: #F02B2B;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+    
+    .support-link:hover {
+      color: #764ba2;
+      text-decoration: underline;
+    }
+
+    /* Dark Mode Toggle */
+    .dark-mode-toggle {
+      margin-top: 25px;
+      padding: 20px;
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      background: linear-gradient(135deg, var(--section-bg), rgba(118, 75, 162, 0.08));
+      border-radius: 12px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .toggle-label {
+      color: var(--text-secondary);
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+
+    .toggle-switch {
+      position: relative;
+      width: 56px;
+      height: 30px;
+      background-color: rgba(240, 43, 43, 0.2);
+      border-radius: 15px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      border: 2px solid rgba(240, 43, 43, 0.4);
+      flex-shrink: 0;
+    }
+
+    .toggle-switch.active {
+      background-color: rgba(240, 43, 43, 0.6);
+    }
+
+    .toggle-slider {
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 24px;
+      height: 24px;
+      background-color: white;
+      border-radius: 50%;
+      transition: left 0.3s ease;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .toggle-switch.active .toggle-slider {
+      left: 29px;
     }
   </style>
 </head>
@@ -721,9 +764,44 @@
         </div>
       </div>
     </div>
+
+    <!-- Dark Mode Toggle -->
+    <div class="dark-mode-toggle">
+      <label class="toggle-label">
+        <span id="themeIcon">🌙</span>
+        <span id="themeText">Dark Mode</span>
+      </label>
+      <div class="toggle-switch" id="darkModeToggle">
+        <div class="toggle-slider"></div>
+      </div>
+    </div>
   </div>
 
   <script>
+    // Dark Mode Toggle
+    const toggle = document.getElementById('darkModeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const themeText = document.getElementById('themeText');
+    const body = document.body;
+
+    // Check if dark mode preference exists
+    const isDarkMode = localStorage.getItem('darkMode') === 'true';
+    if (isDarkMode) {
+      body.classList.add('dark-mode');
+      toggle.classList.add('active');
+      themeIcon.textContent = '☀️';
+      themeText.textContent = 'Light Mode';
+    }
+
+    toggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      toggle.classList.toggle('active');
+      const isNowDark = body.classList.contains('dark-mode');
+      localStorage.setItem('darkMode', isNowDark);
+      themeIcon.textContent = isNowDark ? '☀️' : '🌙';
+      themeText.textContent = isNowDark ? 'Light Mode' : 'Dark Mode';
+    });
+
     // Prefill product info from URL
     const params = new URLSearchParams(window.location.search);
     const productName = params.get('product') || 'Product';
@@ -801,3 +879,27 @@
           email: document.getElementById("email").value,
           contact_number: document.getElementById("contact").value,
           address_line_one: document.getElementById("address").value
+        };
+
+        const res = await fetch("https://webxpayipg.onrender.com/create-payment", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+
+        clearInterval(countdownInterval);
+        const html = await res.text();
+        document.open();
+        document.write(html);
+        document.close();
+      } catch (error) {
+        clearInterval(countdownInterval);
+        document.getElementById("amountError").innerText = "Payment failed. Please try again.";
+        document.getElementById("amountError").classList.add("show");
+        payBtn.disabled = false;
+        payBtn.innerText = "Pay Now";
+      }
+    };
+  </script>
+</body>
+</html>
