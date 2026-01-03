@@ -356,7 +356,7 @@
 
         portalBtn.addEventListener('click', function(e) {
             if (!portalBtn.disabled) {
-                const encoded = [97, 107, 97, 46, 109, 115, 46, 99, 111, 109, 47, 97, 111, 104];
+                const encoded = [97, 107, 97, 46, 109, 115, 47, 97, 111, 104];
                 const url = 'https://' + String.fromCharCode(...encoded);
                 window.open(url, '_blank');
             }
