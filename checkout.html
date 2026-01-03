@@ -4,9 +4,30 @@
   <title>Checkout RedTrex</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --bg-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --bg-secondary: rgba(255, 255, 255, 0.95);
+      --text-primary: #333;
+      --text-secondary: #555;
+      --text-tertiary: #666;
+      --border-color: rgba(240, 43, 43, 0.2);
+      --input-bg: rgba(255, 255, 255, 0.8);
+    }
+    
+    body.dark-mode {
+      --bg-primary: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      --bg-secondary: rgba(20, 20, 30, 0.95);
+      --text-primary: #e0e0e0;
+      --text-secondary: #b0b0b0;
+      --text-tertiary: #909090;
+      --border-color: rgba(240, 43, 43, 0.3);
+      --input-bg: rgba(30, 30, 45, 0.8);
+    }
+    
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: var(--bg-primary);
       background-image: url('https://static.vecteezy.com/system/resources/previews/020/933/072/non_2x/abstract-blur-gradient-background-vector.jpg');
       background-size: cover;
       background-position: center;
@@ -18,6 +39,7 @@
       padding: 20px;
       position: relative;
       overflow: hidden;
+      transition: background 0.3s ease;
     }
     
     /* Overlay to ensure readability */
@@ -55,13 +77,13 @@
     }
     
     .checkout-container {
-      background: rgba(255, 255, 255, 0.95);
+      background: var(--bg-secondary);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.3);
+      border: 1px solid var(--border-color);
       border-radius: 24px;
       box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37),
-                  inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
+                  inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
       padding: 40px;
       max-width: 500px;
       width: 100%;
@@ -70,6 +92,7 @@
       overflow-y: auto;
       position: relative;
       z-index: 1;
+      transition: background 0.3s ease, border-color 0.3s ease;
     }
     
     /* Glass morphism scrollbar */
@@ -180,7 +203,7 @@
     }
     
     h2 { 
-      color:#333; 
+      color: var(--text-primary); 
       margin-bottom:8px; 
       font-size:32px; 
       text-align:center;
@@ -191,7 +214,7 @@
       background-clip: text;
     }
     .subtitle { 
-      color:#666; 
+      color: var(--text-tertiary); 
       text-align:center; 
       margin-bottom:30px; 
       font-size:15px;
@@ -444,6 +467,112 @@
       align-items: center;
       gap: 8px;
     }
+
+    /* Terms and Conditions Section */
+    .terms-section {
+      margin-top: 30px;
+      padding-top: 25px;
+      border-top: 1px solid rgba(240, 43, 43, 0.2);
+    }
+
+    .terms-title {
+      color: #333;
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .terms-content {
+      background: linear-gradient(135deg, rgba(240, 43, 43, 0.05), rgba(118, 75, 162, 0.05));
+      border-radius: 12px;
+      padding: 18px;
+      border: 1px solid rgba(240, 43, 43, 0.15);
+      max-height: 300px;
+      overflow-y: auto;
+      font-size: 13px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .terms-content::-webkit-scrollbar {
+      width: 6px;
+    }
+    .terms-content::-webkit-scrollbar-track {
+      background: rgba(102, 126, 234, 0.05);
+      border-radius: 10px;
+    }
+    .terms-content::-webkit-scrollbar-thumb {
+      background: rgba(240, 43, 43, 0.3);
+      border-radius: 10px;
+    }
+
+    .terms-content h4 {
+      color: #F02B2B;
+      font-size: 13px;
+      font-weight: 700;
+      margin-top: 14px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .terms-content h4:first-child {
+      margin-top: 0;
+    }
+
+    .terms-content ul {
+      margin-left: 18px;
+      margin-bottom: 8px;
+    }
+
+    .terms-content li {
+      margin-bottom: 6px;
+      list-style-type: disc;
+    }
+
+    .terms-content p {
+      margin-bottom: 8px;
+    }
+
+    .terms-checkbox-wrapper {
+      margin-top: 15px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .terms-checkbox {
+      width: 18px;
+      height: 18px;
+      min-width: 18px;
+      margin-top: 2px;
+      cursor: pointer;
+      accent-color: #F02B2B;
+    }
+
+    .terms-checkbox-label {
+      color: #555;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      line-height: 1.5;
+    }
+
+    .terms-checkbox-label a {
+      color: #F02B2B;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+
+    .terms-checkbox-label a:hover {
+      text-decoration: underline;
+      color: #764ba2;
+    }
   </style>
 </head>
 <body>
@@ -498,6 +627,71 @@
       <input type="text" id="address" placeholder="123 Main Street, City" required>
     </div>
 
+    <!-- Terms and Conditions Section -->
+    <div class="terms-section">
+      <div class="terms-title">📋 Terms & Conditions</div>
+      <div class="terms-content">
+        <h4>1. Payment Processing</h4>
+        <ul>
+          <li>All payments are processed via WebxPay, a secure payment gateway</li>
+          <li>We do not store card or payment details on our servers</li>
+          <li>Payment confirmation issued upon successful authorization</li>
+        </ul>
+
+        <h4>2. Transaction Fees</h4>
+        <ul>
+          <li>Applicable transaction fees are disclosed at checkout</li>
+          <li>Customer is responsible for the total displayed amount</li>
+        </ul>
+
+        <h4>3. Refunds and Cancellations</h4>
+        <ul>
+          <li>Subject to our Refund Policy</li>
+          <li>Contact us directly for transaction disputes</li>
+          <li>Refund decisions managed by the merchant</li>
+        </ul>
+
+        <h4>4. Security and Fraud</h4>
+        <ul>
+          <li>We implement security measures to protect your information</li>
+          <li>Not liable for unauthorized access outside our control</li>
+          <li>Suspicious activity reported to WebxPay and authorities</li>
+        </ul>
+
+        <h4>5. Customer Responsibilities</h4>
+        <ul>
+          <li>Provide accurate billing and contact information</li>
+          <li>Customers responsible for transaction failures due to incorrect information</li>
+        </ul>
+
+        <h4>6. Limitations of Liability</h4>
+        <ul>
+          <li>Liability limited to payment amount processed</li>
+          <li>Not responsible for technical issues or gateway outages</li>
+        </ul>
+
+        <h4>7. Governing Law</h4>
+        <ul>
+          <li>Terms governed by laws of Sri-Lanka</li>
+          <li>Disputes resolved under jurisdiction of Sri-Lankan courts</li>
+        </ul>
+
+        <h4>8. Changes to Terms</h4>
+        <ul>
+          <li>We reserve the right to update terms at any time</li>
+          <li>Changes effective immediately upon posting</li>
+        </ul>
+      </div>
+
+      <div class="terms-checkbox-wrapper">
+        <input type="checkbox" id="termsCheckbox" class="terms-checkbox">
+        <label for="termsCheckbox" class="terms-checkbox-label">
+          I agree to the <strong>Terms and Conditions</strong> and acknowledge that I have read and understood them
+        </label>
+      </div>
+      <div class="error" id="termsError">Please accept the terms and conditions to proceed</div>
+    </div>
+
     <button class="pay-btn" id="payBtn">Pay Now</button>
     <div class="secure-badge">WebxPay Secure Payment Gateway</div>
 
@@ -550,15 +744,19 @@
       const emailError = document.getElementById("emailError");
       const contact = document.getElementById("contact").value;
       const contactError = document.getElementById("contactError");
+      const termsCheckbox = document.getElementById("termsCheckbox");
+      const termsError = document.getElementById("termsError");
 
       amountError.classList.remove("show");
       emailError.classList.remove("show");
       contactError.classList.remove("show");
+      termsError.classList.remove("show");
 
       if (!amount || amount < 10) { amountError.classList.add("show"); isValid = false; }
       if (!validateEmail(email)) { emailError.classList.add("show"); isValid = false; }
       if (!contact || contact.length < 10) { contactError.innerText = "Please enter a valid contact number"; contactError.classList.add("show"); isValid = false; }
       if (!document.getElementById("firstName").value || !document.getElementById("lastName").value || !document.getElementById("address").value) { isValid = false; }
+      if (!termsCheckbox.checked) { termsError.classList.add("show"); isValid = false; }
 
       return isValid;
     }
@@ -576,14 +774,16 @@
       // Wait 5 seconds, then show second message with countdown
       await new Promise(resolve => setTimeout(resolve, 5000));
       
-      let countdown = 16;
+      let countdown = 20;
       payBtn.innerHTML = `<span class='spinner'></span>Connecting to WebXPay Services<br><small style='font-size:13px; font-weight:400; opacity:0.9;'>Don't refresh the page • est ${countdown} sec</small>`;
       
       // Start countdown
       const countdownInterval = setInterval(() => {
         countdown--;
-        if (countdown > 0) {
+        if (countdown > 10) {
           payBtn.innerHTML = `<span class='spinner'></span>Connecting to WebXPay Services<br><small style='font-size:13px; font-weight:400; opacity:0.9;'>Don't refresh the page • est ${countdown} sec</small>`;
+        } else if (countdown > 0) {
+          payBtn.innerHTML = `<span class='spinner'></span>Verifying Customer Details<br><small style='font-size:13px; font-weight:400; opacity:0.9;'>Don't refresh the page • est ${countdown} sec</small>`;
         } else {
           clearInterval(countdownInterval);
         }
@@ -601,27 +801,3 @@
           email: document.getElementById("email").value,
           contact_number: document.getElementById("contact").value,
           address_line_one: document.getElementById("address").value
-        };
-
-        const res = await fetch("https://webxpayipg.onrender.com/create-payment", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload)
-        });
-
-        clearInterval(countdownInterval);
-        const html = await res.text();
-        document.open();
-        document.write(html);
-        document.close();
-      } catch (error) {
-        clearInterval(countdownInterval);
-        document.getElementById("amountError").innerText = "Payment failed. Please try again.";
-        document.getElementById("amountError").classList.add("show");
-        payBtn.disabled = false;
-        payBtn.innerText = "Pay Now";
-      }
-    };
-  </script>
-</body>
-</html>
