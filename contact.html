@@ -238,48 +238,48 @@
     </div>
   </div>
 
-  <script>
-    document.getElementById("contactForm").addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const status = document.getElementById("status");
-      const button = e.target.querySelector("button");
-      
-      status.textContent = "Sending...";
-      status.className = "status show loading";
-      button.disabled = true;
+ <script>
+document.getElementById("contactForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const status = document.getElementById("status");
+  const button = e.target.querySelector("button");
+  
+  status.textContent = "Sending...";
+  status.className = "status show loading";
+  button.disabled = true;
 
-      const payload = {
-        name: document.getElementById("name").value.trim(),
-        email: document.getElementById("email").value.trim(),
-        message: document.getElementById("message").value.trim()
-      };
+  const payload = {
+    name: document.getElementById("name").value.trim(),
+    email: document.getElementById("email").value.trim(),
+    message: document.getElementById("message").value.trim()
+  };
 
-      try {
-        const response = await fetch(
-          "https://resend.projectmmdoffcialdev.workers.dev/",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json"
-            },
-            body: JSON.stringify(payload)
-          }
-        );
-        const result = await response.json();
-        if (!response.ok) {
-          throw new Error(result.error || "Failed to send message");
-        }
-        status.textContent = "We Got Your Messege,Check your inbox or Spam folder for confrimation!";
-        status.className = "status show success";
-        e.target.reset();
-      } catch (err) {
-        console.error(err);
-        status.textContent = "Error sending message,Please Contact Us Directly:(redtrex@technologist.com);
-        status.className = "status show error";
-      } finally {
-        button.disabled = false;
+  try {
+    const response = await fetch(
+      "https://resend.projectmmdoffcialdev.workers.dev/",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(payload)
       }
-    });
-  </script>
+    );
+    const result = await response.json();
+    if (!response.ok) {
+      throw new Error(result.error || "Failed to send message");
+    }
+    status.textContent = "We got your message! Check your inbox or spam folder for confirmation.";
+    status.className = "status show success";
+    e.target.reset();
+  } catch (err) {
+    console.error(err);
+    status.textContent = "Error sending message, please contact us directly: redtrex@technologist.com";
+    status.className = "status show error";
+  } finally {
+    button.disabled = false;
+  }
+});
+</script>
 </body>
 </html>
