@@ -187,12 +187,32 @@
 
     <a href="https://invoice.zohosecure.com/portal/redtrextechnologies/signin" class="g2g-btn customer-portal-btn">Customer Portal</a>
     <a href="https://www.redtrex.store/contact" class="g2g-btn customer-portal-btn">Contact Us</a>
-    
+
     <div class="search-container">
       <input type="text" id="productSearch" placeholder="Search products..." autocomplete="off" />
       <ul id="searchResults" class="search-results"></ul>
     </div>
   </nav>
+
+  <!-- Hero Slideshow -->
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+        <img src="Assest/POSTER -RINA.png" style="width:100%" alt="Slide 1">
+      </a>
+      <div class="slide-text">Welcome to RedTrex Technologies</div>
+    </div>
+
+    <div class="mySlides fade">
+        <img src="Assest/Partnership.png" style="width:100%" alt="Slide 2">
+      </a>
+    </div>
+
+    <!-- Navigation dots -->
+    <div class="dot-container">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span>
+    </div>
+  </div>
 
   <video autoplay muted loop id="bg-video" playsinline>
     <source src="assetphy/white-lines-on-blue-background.1920x1080.mp4" type="video/mp4">
@@ -394,7 +414,7 @@
           <li>🌍 Global Activation</li>
         </ul>
       </div>
-      
+
 
     </div>
 
@@ -509,7 +529,7 @@
             <li>✅ Genuine Update Support</li>
             <li>🌍 Global Activation</li>
           </ul>
-      
+
     </div>
 
     <div class="product-card" data-name="Microsoft Office 365 A3 Subscription (5 Device/1Year)" data-unit-price="3744.90">
@@ -538,7 +558,7 @@
           <li>🌍 Global Activation</li>
           <li>💻 Supported Devices:(Windows 10/11 , MacOS , Android/IOS)</li>
         </ul>
-    
+
     </div>
 
       <div class="product-card" data-name="Microsoft Office 2021 Home and Business For MAC (1MAC)" data-unit-price="13380.57">
@@ -571,7 +591,7 @@
 
 
 
-      
+
     <div class="product-card" data-name="SQL Server 2019 Standard [1PC]" data-unit-price="2889.83">
         <img src="Assest/SQL-Server-2019-Standard.png" />
         <h2>SQL Server 2019 Standard [1PC]</h2>
@@ -599,7 +619,7 @@
         </ul>
       </div>
 
-      
+
         <div class="product-card" data-name="Outlook 2016 [5PC]" data-unit-price="1319.34">
             <img src="Assest/outlook-2016-product-key.jpg" />
             <h2>Outlook 2016 [5PC]</h2>
@@ -704,7 +724,7 @@
           <li>👨‍💻 30 Day Technical Support/Warranty</li>
         </ul>
       </div>       
-      
+
     </div>
   </section>
 
@@ -934,6 +954,51 @@
       }, 300);
     });
   </script>
-  
+
+  <script>
+    let slideIndex = 0;
+    let slideTimer;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      
+      clearTimeout(slideTimer);
+      slideTimer = setTimeout(showSlides, 8000); // Change image every 8 seconds
+    }
+
+    function currentSlide(n) {
+      slideIndex = n - 1;
+      showSlides();
+    }
+  </script>
+  <button id="scrollToTopBtn" title="Go to top">↑</button>
+
+  <script>
+    // Scroll to top button logic
+    const scrollBtn = document.getElementById("scrollToTopBtn");
+    window.onscroll = function() {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        scrollBtn.style.display = "block";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+    };
+    scrollBtn.onclick = function() {
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    };
+  </script>
 </body>
 </html>
