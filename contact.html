@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Contact Us</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <style>
     * { margin:0; padding:0; box-sizing:border-box; }
     html, body { width:100%; height:100%; margin:0; padding:0; }
@@ -11,46 +11,183 @@
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
       background: #0f172a;
       display: flex;
-      align-items: stretch;
-      justify-content: stretch;
+      min-height: 100vh;
     }
-    .container { width:100%; height:100%; background:#0f172a; flex-direction:column; display:flex; overflow:hidden; }
+    .container { 
+      width:100%; 
+      background:#0f172a; 
+      flex-direction:column; 
+      display:flex;
+      min-height: 100vh;
+    }
     .header {
       background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 100%), url('https://wallpapers.com/images/hd/mail-icon-in-cyberspace-f9ub11qvrhhhva78.jpg') center/cover;
-      color:white; padding:60px 30px; text-align:center; display:flex; flex-direction:column; justify-content:center; align-items:center; min-height:300px;
+      color:white; 
+      padding: 40px 20px;
+      text-align:center; 
+      display:flex; 
+      flex-direction:column; 
+      justify-content:center; 
+      align-items:center; 
+      min-height:220px;
     }
-    .header h1 { font-size:36px; margin-bottom:12px; font-weight:700; }
-    .header p { font-size:16px; opacity:0.9; }
+    .header h1 { 
+      font-size:28px; 
+      margin-bottom:10px; 
+      font-weight:700; 
+      line-height: 1.3;
+    }
+    .header p { 
+      font-size:14px; 
+      opacity:0.9;
+      margin-bottom: 6px;
+    }
     .form-wrapper {
-      padding:40px 30px; flex:1; display:flex; flex-direction:column; justify-content:center;
-      max-width:500px; margin:0 auto; width:100%; background:#0f172a;
+      padding: 24px 16px;
+      flex:1; 
+      display:flex; 
+      flex-direction:column; 
+      justify-content:center;
+      width:100%;
+      max-width: 100%;
+      margin: 0 auto;
     }
-    .form-group { margin-bottom:24px; }
-    label { display:block; font-size:14px; font-weight:600; color:#cbd5e1; margin-bottom:8px; }
+    .form-group { margin-bottom:20px; }
+    label { 
+      display:block; 
+      font-size:13px; 
+      font-weight:600; 
+      color:#cbd5e1; 
+      margin-bottom:8px; 
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
     input, textarea {
-      width:100%; padding:12px 16px; border:2px solid #334155; border-radius:8px; font-size:15px; font-family:inherit;
-      transition: all 0.3s ease; background:#1e293b; color:#e2e8f0;
+      width:100%; 
+      padding: 14px 14px; 
+      border:2px solid #334155; 
+      border-radius:8px; 
+      font-size:16px;
+      font-family:inherit;
+      transition: all 0.3s ease; 
+      background:#1e293b; 
+      color:#e2e8f0;
+      -webkit-appearance: none;
+      appearance: none;
     }
     input::placeholder, textarea::placeholder { color:#64748b; }
-    input:focus, textarea:focus { outline:none; border-color:#667eea; box-shadow:0 0 0 3px rgba(102,126,234,0.2); background:#1e293b; }
-    textarea { resize:vertical; min-height:120px; }
-    button {
-      width:100%; padding:14px 24px; background: linear-gradient(135deg,#F43504 0%,#764ba2 100%);
-      color:white; border:none; border-radius:8px; font-size:16px; font-weight:600; cursor:pointer; transition: all 0.3s ease; margin-top:10px;
+    input:focus, textarea:focus { 
+      outline:none; 
+      border-color:#667eea; 
+      box-shadow:0 0 0 3px rgba(102,126,234,0.2); 
+      background:#1e293b; 
     }
-    button:hover { transform:translateY(-2px); box-shadow:0 10px 25px rgba(102,126,234,0.4); }
-    button:active { transform:translateY(0); }
-    button:disabled { opacity:0.7; cursor:not-allowed; transform:none; }
-    .status { margin-top:16px; padding:12px 16px; border-radius:8px; font-size:14px; font-weight:500; display:none; animation:slideIn 0.3s ease; }
+    textarea { 
+      resize:vertical; 
+      min-height:100px;
+      font-size: 16px;
+    }
+    button {
+      padding: 12px 24px; 
+      background: linear-gradient(135deg,#F43504 0%,#764ba2 100%);
+      color:white; 
+      border:none; 
+      border-radius:8px; 
+      font-size:15px; 
+      font-weight:600; 
+      cursor:pointer; 
+      transition: all 0.3s ease; 
+      margin-top:8px;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+      width: 100%;
+      max-width: 300px;
+      align-self: center;
+    }
+    button:hover { 
+      transform:translateY(-2px); 
+      box-shadow:0 10px 25px rgba(102,126,234,0.4); 
+    }
+    button:active { 
+      transform:translateY(0); 
+    }
+    button:disabled { 
+      opacity:0.7; 
+      cursor:not-allowed; 
+      transform:none; 
+    }
+    .status { 
+      margin-top:16px; 
+      padding: 14px 16px; 
+      border-radius:8px; 
+      font-size:14px; 
+      font-weight:500; 
+      display:none; 
+      animation:slideIn 0.3s ease;
+      text-align: center;
+    }
     .status.show { display:block; }
-    .status.success { background:#064e3b; color:#86efac; border:1px solid #22c55e; }
-    .status.error { background:#5f1313; color:#fca5a5; border:1px solid #ef4444; }
-    .status.loading { background:#1e3a8a; color:#93c5fd; border:1px solid #3b82f6; }
-    @keyframes slideIn { from { opacity:0; transform:translateY(-10px);} to {opacity:1; transform:translateY(0);} }
-    @media (max-width:480px) {
-      .header { padding:40px 20px; min-height:250px; }
-      .form-wrapper { padding:30px 20px; }
-      .header h1 { font-size:28px; }
+    .status.success { 
+      background:#064e3b; 
+      color:#86efac; 
+      border:1px solid #22c55e; 
+    }
+    .status.error { 
+      background:#5f1313; 
+      color:#fca5a5; 
+      border:1px solid #ef4444; 
+    }
+    .status.loading { 
+      background:#1e3a8a; 
+      color:#93c5fd; 
+      border:1px solid #3b82f6; 
+    }
+    @keyframes slideIn { 
+      from { opacity:0; transform:translateY(-10px);} 
+      to {opacity:1; transform:translateY(0);} 
+    }
+          @media (max-width:480px) {
+      .header { 
+        padding: 32px 12px; 
+        min-height: 200px; 
+      }
+      .header h1 { 
+        font-size: 24px; 
+      }
+      .header p {
+        font-size: 13px;
+      }
+      .form-wrapper { 
+        padding: 20px 12px 30px;
+        max-width: none;
+      }
+      .form-group {
+        margin-bottom: 16px;
+      }
+      input, textarea {
+        padding: 12px 10px;
+        font-size: 16px;
+      }
+      label {
+        font-size: 12px;
+      }
+      button {
+        padding: 14px 16px;
+        font-size: 15px;
+        margin-top: 6px;
+        width: 100%;
+        max-width: none;
+      }
+    }
+    @media (max-height: 600px) {
+      .header {
+        min-height: 150px;
+        padding: 20px 16px;
+      }
+      .header h1 {
+        font-size: 22px;
+        margin-bottom: 6px;
+      }
     }
   </style>
 </head>
@@ -59,24 +196,24 @@
     <div class="header">
       <h1>Contact Us</h1>
       <p>We'd love to hear from you. Send us a message!</p>
-      <p>RedTrex Technologies.</p>
+      <p>RedTrex Technologies</p>
     </div>
 
     <div class="form-wrapper">
       <form id="contactForm">
         <div class="form-group">
           <label for="name">Full Name</label>
-          <input type="text" id="name" placeholder="Dilanka Fernando" required />
+          <input type="text" id="name" name="name" placeholder="Your name" required autocomplete="name" />
         </div>
 
         <div class="form-group">
           <label for="email">Email Address</label>
-          <input type="email" id="email" placeholder="support@redtrex.store" required />
+          <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email" />
         </div>
 
         <div class="form-group">
           <label for="message">Message</label>
-          <textarea id="message" placeholder="Tell us what's on your mind..." required></textarea>
+          <textarea id="message" name="message" placeholder="Tell us what's on your mind..." required></textarea>
         </div>
 
         <button type="submit">Send Message</button>
@@ -111,15 +248,17 @@
           body: JSON.stringify(payload)
         });
 
-        // Instead of parsing JSON, treat response as HTML
-        const html = await response.text();
-        document.open();
-        document.write(html);
-        document.close();
+        if (response.ok) {
+          status.textContent = "Message sent successfully!";
+          status.className = "status show success";
+          form.reset();
+        } else {
+          throw new Error("Server error");
+        }
 
       } catch (err) {
         console.error(err);
-        status.textContent = "Error sending message. Please contact us directly at redtrex@technologist.com";
+        status.textContent = "Error sending message. Please try again or contact redtrex@technologist.com";
         status.className = "status show error";
       } finally {
         button.disabled = false;
