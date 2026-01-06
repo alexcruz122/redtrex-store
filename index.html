@@ -186,6 +186,13 @@
 
     <a href="https://invoice.zohosecure.com/portal/redtrextechnologies/signin" class="g2g-btn customer-portal-btn">Customer Portal</a>
     <a href="https://www.redtrex.store/contact" class="g2g-btn customer-portal-btn">Contact Us</a>
+    
+    <div class="disclaimer-container">
+      <button class="disclaimer-btn" onclick="openDisclaimerPopup()">
+        <img src="Assest/disclaimer-placeholder.png" alt="Disclaimer Icon" class="disclaimer-icon" onerror="this.src='https://img.icons8.com/ios-filled/50/ffffff/info.png'">
+        <span class="disclaimer-text">Disclaimer</span>
+      </button>
+    </div>
 
     <div class="search-container">
       <input type="text" id="productSearch" placeholder="Search products..." autocomplete="off" />
@@ -809,7 +816,7 @@
 
     </div>
 
-    <div class="footer-bottom">
+    <div class="footer-bottom" id="site-disclaimer">
       <p>© 2026 RedTrex Technologies. All Rights Reserved.</p>
       <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.8; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.4;">
         Redtrex.store is a digital-only marketplace specializing in software keys. We do not sell or ship physical products. We are not affiliated with any toy manufacturers or retail brands selling physical 'Red T-Rex' merchandise.
@@ -826,6 +833,25 @@
         please ensure all personal details are accurate.
       </p>
     </div>
+  </div>
+
+  <!-- Disclaimer Popup -->
+  <div id="disclaimerPopup" class="popup-modal">
+      <div class="popup-content glass-effect">
+        <button class="close-btn" onclick="closeDisclaimerPopup()">✕</button>
+        <h2 class="popup-title">🛡️ Official Business Disclosure</h2>
+        <p class="popup-text" style="font-size: 0.95rem; line-height: 1.6; text-align: left;">
+          <strong>Digital Marketplace Notice:</strong><br>
+          Redtrex.store operates exclusively as a <strong>Digital Marketplace</strong> for software activation keys. We specialize in 100% paperless, instant delivery.
+          <br><br>
+          <strong>No Physical Goods:</strong><br>
+          We do not stock, sell, or ship physical merchandise (toys, collectibles, or hardware). We have no affiliation with any physical retail brands or toy manufacturers.
+          <br><br>
+          <strong>Consumer Trust:</strong><br>
+          All transactions are encrypted and delivered digitally. Any reference to third-party trademarks is for descriptive purposes only.
+        </p>
+        <button onclick="closeDisclaimerPopup()" style="width:100%; padding: 10px; background: #ff4d4d; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">I Understand</button>
+      </div>
   </div>
 
   <script>
@@ -847,6 +873,23 @@
       }
     }
 
+    // New Quantity Update Logic for direct inputs
+    document.querySelectorAll('.qty-input').forEach(input => {
+      input.addEventListener('change', function() {
+        let val = parseInt(this.value);
+        if (isNaN(val) || val < 1) val = 1;
+        this.value = val;
+        
+        const card = this.closest('.product-card');
+        const unitPrice = parseFloat(card.dataset.unitPrice);
+        const priceLkr = card.querySelector('.price-lkr');
+        if (priceLkr) {
+          const totalPrice = (unitPrice * val).toFixed(2);
+          priceLkr.textContent = Number(totalPrice).toLocaleString() + ' LKR';
+        }
+      });
+    });
+
     // Redirect to Checkout Page
     function goToCheckout(productName, unitPrice, qtyInput) {
       const qty = parseInt(qtyInput.value) || 1;
@@ -859,6 +902,14 @@
       const modal = document.getElementById('popupModal');
       modal.style.display = 'none';
       localStorage.setItem('popupClosed', new Date().getTime());
+    }
+
+    function closeDisclaimerPopup() {
+      document.getElementById('disclaimerPopup').style.display = 'none';
+    }
+
+    function openDisclaimerPopup() {
+      document.getElementById('disclaimerPopup').style.display = 'flex';
     }
 
     window.addEventListener('load', function() {
@@ -1000,6 +1051,12 @@
     scrollBtn.onclick = function() {
       window.scrollTo({top: 0, behavior: 'smooth'});
     };
+    function scrollToDisclaimer() {
+      const disclaimer = document.getElementById('site-disclaimer');
+      if (disclaimer) {
+        disclaimer.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
   </script>
 </body>
 </html>
