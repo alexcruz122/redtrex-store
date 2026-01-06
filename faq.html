@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - RedTrex Technologies</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #ffffff;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background: #1a1a1a;
+            color: white;
+            padding: 40px 40px 60px 40px;
+            text-align: center;
+        }
+
+        .logo-placeholder {
+            width: 100px;
+            height: 100px;
+            background: transparent;
+            border: none;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .header h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .content {
+            flex: 1;
+            padding: 60px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .faq-section {
+            margin-bottom: 50px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            gap: 20px;
+        }
+
+        .section-icon {
+            width: 60px;
+            height: 60px;
+            background: #f0f0f0;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 1.5em;
+            color: #666;
+            border: 2px solid #e0e0e0;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .section-content {
+            background: #f9f9f9;
+            padding: 35px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .section-content p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #555;
+            font-size: 1em;
+        }
+
+        .section-content p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .feature-list {
+            background: white;
+            padding: 25px;
+            border-radius: 6px;
+            margin-top: 20px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .feature-item {
+            padding: 14px 0;
+            padding-left: 35px;
+            position: relative;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .feature-item:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+
+        .highlight {
+            background: #f0f4f8;
+            padding: 25px;
+            border-radius: 6px;
+            margin-top: 25px;
+            border-left: 4px solid #2c3e50;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .section-content h3 {
+            margin-top: 25px;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        .footer {
+            background: #f5f5f5;
+            padding: 50px 40px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #e0e0e0;
+            font-size: 0.95em;
+            line-height: 1.8;
+        }
+
+        .footer p {
+            margin-bottom: 15px;
+        }
+
+        .footer p:first-child {
+            margin-bottom: 10px;
+            font-size: 1.05em;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .support-link {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            border-bottom: 2px solid #2c3e50;
+        }
+
+        .support-link:hover {
+            color: #1a1a1a;
+            border-bottom-color: #1a1a1a;
+        }
+
+                    @media (max-width: 768px) {
+            .header {
+                padding: 30px 20px 40px 20px;
+            }
+
+            .logo-placeholder {
+                width: 80px;
+                height: 80px;
+                margin-bottom: 20px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .content {
+                padding: 40px 20px;
+            }
+
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .section-icon {
+                width: 50px;
+                height: 50px;
+            }
+
+            .section-content {
+                padding: 25px;
+            }
+
+            .section-title {
+                font-size: 1.5em;
+            }
+
+            .footer {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo-placeholder"><img src="Assest/company.png" alt="RedTrex Logo" style="width: 100px; height: 100px;"></div>
+            <h1>FAQ</h1>
+            <p>RedTrex Technologies!</p>
+        </div>
+
+        <div class="content">
+            <!-- Section 1: Payment Security -->
+            <div class="faq-section">
+                <div class="section-header">
+                    <div class="section-icon"><img src="https://cdn2.iconfinder.com/data/icons/economy-flat-edition/120/locked__card__finance__banking-512.png" alt="Lock Icon" style="width: 40px; height: 40px;"></div>
+                    <h2 class="section-title">Payment Security & Processing</h2>
+                </div>
+                <div class="section-content">
+                    <p>At RedTrex Technologies, customer payment security is a top priority. All payments on our website are processed through <strong><a href="https://www.webxpay.com" target="_blank" style="color: #2c3e50; text-decoration: none; border-bottom: 2px solid #2c3e50;">WebXPay</a></strong>, a PCI-DSS compliant payment gateway trusted by banks and businesses across Sri Lanka.</p>
+                    
+                    <h3>How Your Payment Is Handled</h3>
+                    <div class="feature-list">
+                        <div class="feature-item">Payments are processed directly on WebXPay's secure servers</div>
+                        <div class="feature-item">RedTrex never stores your card details or sensitive financial information</div>
+                        <div class="feature-item">All transactions are encrypted and protected using industry-standard security protocols</div>
+                        <div class="feature-item">WebXPay supports multiple trusted cross border payment methods, ensuring reliability and transparency</div>
+                    </div>
+                    
+                    <div class="highlight">
+                        This approach ensures your payment data remains safe and isolated from our website infrastructure at all times.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 2: Shopping Cart -->
+            <div class="faq-section">
+                <div class="section-header">
+                    <div class="section-icon"><img src="https://cdn0.iconfinder.com/data/icons/shopping-creditcard-cash/100/commerce-shopping-cart-cross-512.png" alt="Card Icon" style="width: 40px; height: 40px;"></div>
+                    <h2 class="section-title">Why We Don't Use a Traditional Shopping Cart</h2>
+                </div>
+                <div class="section-content">
+                    <p>Unlike physical goods, the products we offer are digital software licenses that require individual verification, validation, and vendor-side checks before delivery.</p>
+                    
+                    <h3>To Maintain Accuracy & Prevent Misuse</h3>
+                    <div class="feature-list">
+                        <div class="feature-item">Each order is processed individually</div>
+                        <div class="feature-item">Payments are tied to a unique order reference</div>
+                        <div class="feature-item">Licenses are issued only after successful payment confirmation</div>
+                    </div>
+                    
+                    <h3>This Method Allows Us To</h3>
+                    <div class="feature-list">
+                        <div class="feature-item">Prevent duplicate or invalid license issues</div>
+                        <div class="feature-item">Reduce automated abuse and fraudulent transactions</div>
+                        <div class="feature-item">Provide better post-purchase support and tracking</div>
+                    </div>
+                    
+                    <div class="highlight">
+                        Rather than a mass checkout cart, this controlled flow ensures higher reliability and better customer protection.
+                    </div>
+                </div>
+            </div>
+
+<!-- Section: Software License Sourcing & Verification -->
+<div class="faq-section">
+    <div class="section-header">
+        <div class="section-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" 
+                 alt="License Verification Icon" style="width: 40px; height: 40px;">
+        </div>
+        <h2 class="section-title">Software License Sourcing & Verification</h2>
+    </div>
+
+    <div class="section-content">
+        <p>
+            At RedTrex Technologies, all software licenses are sourced through
+            <strong>authorized distributors, verified resellers, and trusted enterprise channels</strong>.
+            Every license undergoes validation before being delivered to ensure authenticity and usability.
+        </p>
+
+        <h3>How We Source Licenses</h3>
+        <div class="feature-list">
+            <div class="feature-item">Procured from verified supplier networks and enterprise resellers</div>
+            <div class="feature-item">Includes surplus, unused, or volume-issued licenses where applicable</div>
+            <div class="feature-item">Suppliers are reviewed for compliance and reliability</div>
+        </div>
+
+        <h3>Verification Before Delivery</h3>
+        <div class="feature-list">
+            <div class="feature-item">Each license key is checked for activation validity</div>
+            <div class="feature-item">Keys are verified as unused and non-duplicated</div>
+            <div class="feature-item">Delivery is performed only after successful payment confirmation</div>
+        </div>
+
+        <div class="highlight">
+            This verification process ensures customers receive
+            <strong>genuine, functional software licenses</strong> backed by post-purchase support.
+        </div>
+    </div>
+</div>
+
+
+
+
+            <!-- Section 4: Customer Approach -->
+            <div class="faq-section">
+                <div class="section-header">
+                    <div class="section-icon"><img src="https://icon-library.com/images/2018/9009348_repeat-icon-grow-repeat-business-with-your-own.png" alt="Checkmark Icon" style="width: 40px; height: 40px;"></div>
+                    <h2 class="section-title">Transparent & Customer-First Approach</h2>
+                </div>
+                <div class="section-content">
+                    <p>By combining WebXPay's secure payment processing with manual order validation, RedTrex delivers:</p>
+                    
+                    <div class="feature-list">
+                        <div class="feature-item">Safer transactions</div>
+                        <div class="feature-item">Fewer payment errors</div>
+                        <div class="feature-item">More reliable digital product delivery</div>
+                    </div>
+                    
+                    <div class="highlight">
+                        If you have any questions about payments or need assistance before completing a purchase, our support team is always happy to help.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>RedTrex Technologies — Empowering Tomorrow's Tech Today,</p>
+            <p>Questions? <a href="https://www.redtrex.store/contact" class="support-link">Contact us for assistance.</a></p>
+        </div>
+    </div>
+</body>
+</html>
