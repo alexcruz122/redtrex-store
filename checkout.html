@@ -515,6 +515,67 @@
       margin-bottom: 15px;
     }
     
+    .secure-badge { 
+      display:flex; 
+      align-items:center; 
+      justify-content:center; 
+      gap:8px; 
+      margin-top:20px; 
+      color: var(--text-secondary); 
+      font-size:13px;
+      font-weight: 500;
+    }
+    .secure-badge::before { content:"🔒"; font-size: 16px; }
+
+    .security-badges {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .security-badge-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      padding: 11px 12px;
+      background: transparent;
+      border-radius: 8px;
+      border: 0px solid var(--border-color);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .security-badge-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(240, 43, 43, 0.2);
+    }
+
+    .badge-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 36px;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 4px rgba(240, 43, 43, 0.2));
+    }
+
+    .badge-text {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      text-align: center;
+      line-height: 1.2;
+    }
+    
+    
     .support-details {
       background: linear-gradient(135deg, var(--section-bg), rgba(118, 75, 162, 0.1));
       border-radius: 12px;
@@ -737,6 +798,23 @@
 
     <button class="pay-btn" id="payBtn">Pay Now</button>
     <div class="secure-badge">WebxPay Secure Payment Gateway</div>
+    
+    <div class="security-badges">
+      <a href="https://www.pcisecuritystandards.org/" target="_blank" class="security-badge-item" title="PCI-DSS Compliant - Level 1">
+        <img src="https://payguard.co/wp-content/uploads/2024/04/PCIDSS-small-Square-logo.png" alt="PCI-DSS" class="badge-icon" style="width: 36px; height: 36px;">
+      </a>
+      <a href="https://www.mastercard.com/global/en/personal/protection-and-security" target="_blank" class="security-badge-item" title="Mastercard Secure">
+        <img src="https://logowik.com/content/uploads/images/mastercard-securecode6659.jpg" alt="Mastercard Secure" class="badge-icon" style="width: 36px; height: 36px;">
+      </a>
+      <a href="https://www.visa.com.lk/pay-with-visa/security/secure-online-shoppingp" target="_blank" class="security-badge-item" title="Verified by Visa">
+        <img src="https://www.pngplay.com/wp-content/uploads/8/Visa-Verified-Logo-PNG-HD-Quality.png" alt="Verified by Visa" class="badge-icon" style="width: 36px; height: 36px;">
+      </a>
+      <a href="https://www.americanexpress.com/uk/security/safekey/index" target="_blank" class="security-badge-item" title="American Express SafeKey">
+        <img src="https://www.americanexpress.com/content/dam/amex/uk/benefits/SafeKey_BlueBox_rgb.png" alt="Amex SafeKey" class="badge-icon" style="width: 40px; height: 40px;">
+        
+      </a>
+    </div>
+
 
     <!-- Customer Support Section -->
     <div class="support-section">
