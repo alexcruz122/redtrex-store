@@ -551,7 +551,18 @@ nav {
 }
 
 .product-card .description li {
-  margin: 3px 0;
+  margin: 5px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.product-card .description li::before {
+  content: '•';
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 0.8;
 }
 
 /* Hover Effect */
