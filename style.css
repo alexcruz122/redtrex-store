@@ -844,7 +844,73 @@ nav {
   text-decoration: none;
 }
 
-/* Disclaimer Button Styling */
+/* Info Button Styling */
+.info-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 24px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  font-family: serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.info-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Product Info Popup */
+#productInfoPopup .popup-content {
+  max-width: 550px;
+  text-align: left;
+}
+
+#productInfoPopup .popup-title {
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 10px;
+}
+
+#productInfoPopup .info-details {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+.popup-description {
+  list-style: none;
+  padding: 0;
+}
+
+.popup-description li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.popup-description li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #007bff;
+  font-weight: bold;
+}
 .disclaimer-container {
   display: flex;
   align-items: center;
@@ -912,3 +978,40 @@ nav {
     width: auto;
   }
 }
+  /* Contact Sale Button */
+  .contact-sale-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background: rgba(37, 211, 102, 0.15);
+    color: #25d366;
+    border: 1px solid rgba(37, 211, 102, 0.3);
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+  }
+
+  .contact-sale-btn:hover {
+    background: rgba(37, 211, 102, 0.25);
+    border-color: #25d366;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
+  }
+
+  .contact-sale-btn::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    background-image: url("https://img.icons8.com/color/48/whatsapp--v1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
