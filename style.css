@@ -1015,3 +1015,86 @@ nav {
     background-repeat: no-repeat;
   }
   
+  /* Mobile Menu Toggle (3 Dots) */
+  .mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+  }
+
+  .mobile-menu-toggle .dot {
+    width: 6px;
+    height: 6px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+
+  /* Responsive Navigation */
+  @media (max-width: 768px) {
+    .mobile-menu-toggle {
+      display: flex;
+    }
+
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(15px);
+      flex-direction: column;
+      padding: 20px;
+      gap: 15px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+
+    .nav-dropdown, .customer-portal-btn, .disclaimer-container {
+      width: 100%;
+    }
+
+    .g2g-btn, .disclaimer-btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none !important;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background: rgba(10, 10, 30, 0.98) !important;
+      flex-direction: column;
+      padding: 20px;
+      z-index: 9999 !important;
+      backdrop-filter: blur(20px);
+    }
+    .nav-links.active {
+      display: flex !important;
+    }
+    .mobile-menu-toggle {
+      display: flex !important;
+      z-index: 10000 !important;
+      cursor: pointer;
+    }
+  }
+  
+/* USD Price Display */
+.price-usd {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: -8px;
+  margin-bottom: 6px;
+  letter-spacing: 0.02em;
+}
