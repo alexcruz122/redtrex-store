@@ -145,6 +145,46 @@
     margin: 22px 28px 0;
   }
 
+  /* ── Gateway Notice ──────────────────── */
+  .gateway-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-left: 3px solid #f59e0b;
+    border-radius: 10px;
+    padding: 11px 13px;
+    margin: 18px 28px 0;
+  }
+
+  .gateway-notice-icon {
+    font-size: 15px;
+    flex-shrink: 0;
+    line-height: 1.5;
+  }
+
+  .gateway-notice-body { flex: 1; }
+
+  .gateway-notice-title {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: #92400e;
+    margin-bottom: 3px;
+    letter-spacing: 0.01em;
+  }
+
+  .gateway-notice-text {
+    font-size: 11px;
+    color: #78716c;
+    line-height: 1.55;
+  }
+
+  .gateway-notice-text strong {
+    color: #92400e;
+    font-weight: 600;
+  }
+
   /* ── Amount section ──────────────────── */
   .card-body {
     padding: 24px 28px 28px;
@@ -317,9 +357,7 @@
 
   .pay-btn.loading .spinner { opacity: 1; }
 
-  .spinner svg {
-    animation: spin 0.8s linear infinite;
-  }
+  .spinner svg { animation: spin 0.8s linear infinite; }
 
   @keyframes spin { to { transform: rotate(360deg); } }
 
@@ -529,9 +567,7 @@
     transition: transform 0.35s cubic-bezier(0.22,1,0.36,1);
   }
 
-  .processing-overlay.show .processing-card {
-    transform: scale(1);
-  }
+  .processing-overlay.show .processing-card { transform: scale(1); }
 
   .processing-ring {
     width: 64px;
@@ -540,16 +576,9 @@
     position: relative;
   }
 
-  .processing-ring svg {
-    width: 64px;
-    height: 64px;
-  }
+  .processing-ring svg { width: 64px; height: 64px; }
 
-  .ring-track {
-    fill: none;
-    stroke: var(--border);
-    stroke-width: 3;
-  }
+  .ring-track { fill: none; stroke: var(--border); stroke-width: 3; }
 
   .ring-fill {
     fill: none;
@@ -605,11 +634,8 @@
     transition: background 0.3s;
   }
 
-  .processing-dots span.active {
-    background: var(--accent);
-  }
+  .processing-dots span.active { background: var(--accent); }
 
-  /* ── Shimmer progress bar ────────────── */
   .progress-bar-wrap {
     width: 100%;
     height: 3px;
@@ -632,7 +658,6 @@
     100% { transform: translateX(350%); }
   }
 
-  /* ── Patience message ────────────────── */
   .patience-msg {
     margin-top: 14px;
     font-size: 12px;
@@ -645,7 +670,6 @@
 
   .patience-msg.show { opacity: 1; }
 
-  /* ── Do not refresh notice ───────────── */
   .no-refresh-note {
     display: flex;
     align-items: center;
@@ -705,6 +729,9 @@
 
     .card-header { padding: 24px 20px 0; }
     .divider { margin: 18px 20px 0; }
+    .gateway-notice { margin: 14px 20px 0; padding: 10px 12px; }
+    .gateway-notice-title { font-size: 11px; }
+    .gateway-notice-text { font-size: 10.5px; }
     .card-body { padding: 20px 20px 24px; }
     .card-footer { padding: 14px 20px 32px; }
     .amount-input { font-size: 20px; padding: 13px 13px 13px 52px; }
@@ -719,7 +746,6 @@
 
     <!-- Header -->
     <div class="card-header">
-      <!-- 🔲 Replace src with your logo PNG (recommended: 40×40px) -->
       <div class="brand-mark">
         <img
           src="https://www.redtrex.store/Assest/company.png"
@@ -727,13 +753,11 @@
           class="brand-logo-img"
           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
         />
-        <!-- Fallback icon shown if image fails to load -->
         <svg style="display:none" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-8-6h16"/>
         </svg>
       </div>
       <div class="brand-info">
-        <!-- 🔲 Replace src with your wordmark / text logo PNG (recommended: auto×20px) -->
         <div class="brand-wordmark">
           <img
             src="YOUR_WORDMARK.png"
@@ -754,6 +778,20 @@
     </div>
 
     <div class="divider"></div>
+
+    <!-- ===== GATEWAY DELAY NOTICE ===== -->
+    <div class="gateway-notice">
+      <span class="gateway-notice-icon"></span>
+      <div class="gateway-notice-body">
+        <div class="gateway-notice-title">Payment Gateway Notice</div>
+        <div class="gateway-notice-text">
+          Our backend server is currently in a low-power standby state due to reduced traffic.
+          After clicking <strong>Pay Now</strong>, please allow up to <strong>25–30 seconds</strong>
+          for the gateway to initialize. Do not close or refresh this page. Thank you for your patience.
+        </div>
+      </div>
+    </div>
+    <!-- ===== END NOTICE ===== -->
 
     <!-- Body -->
     <div class="card-body">
@@ -927,7 +965,6 @@
     processingOverlay.classList.add('show');
     document.body.style.overflow = 'hidden';
 
-    // Show "taking longer" message if backend hasn't responded after 4s on step 2
     patienceTimer = setTimeout(() => {
       patienceMsg.classList.add('show');
       processingSub.textContent = 'Waiting for server response…';
@@ -970,14 +1007,12 @@
     closeModal();
     showProcessing();
 
-    // Step 0 — connecting to server
     setStep(0);
     await delay(900);
 
     const payload = { order_id: 'PAY_' + Date.now(), amount: amountEl.value };
 
     try {
-      // Step 1 — verifying request (backend call starts)
       setStep(1);
       const fetchPromise = fetch('https://directpay-backend.onrender.com/create-payment', {
         method: 'POST',
@@ -985,7 +1020,6 @@
         body: JSON.stringify(payload)
       });
 
-      // Step 2 — show "Connecting to DirectPay" while waiting
       await delay(800);
       setStep(2);
 
@@ -994,7 +1028,6 @@
 
       const { signature, dataString } = await res.json();
 
-      // Step 3 — launching gateway
       setStep(3);
       await delay(600);
 
