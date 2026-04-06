@@ -2260,10 +2260,13 @@
       if (cart.length === 1) {
         const item = cart[0];
         const encodedName = encodeURIComponent(item.name);
+        // Save to localStorage as fallback
+        localStorage.setItem('redtrex_pending_checkout', JSON.stringify(cart));
         window.location.href = `/checkout?product=${encodedName}&price=${item.unitPrice}&qty=${item.qty}`;
       } else {
-        const cartData = encodeURIComponent(JSON.stringify(cart));
-        window.location.href = `/checkout?cart=${cartData}`;
+        // Always save cart to localStorage so checkout page can read it reliably
+        localStorage.setItem('redtrex_pending_checkout', JSON.stringify(cart));
+        window.location.href = `/checkout?multi=1`;
       }
     }
 
