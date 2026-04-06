@@ -20,6 +20,11 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+// Route for checkout (supports ?product= and ?cart= params)
+app.get('/checkout', (req, res) => {
+  res.sendFile(path.join(__dirname, 'checkout.html'));
+});
+
 // Start server
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`RedTrex Technologies website running on http://0.0.0.0:${PORT}`);
