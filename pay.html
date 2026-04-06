@@ -1014,7 +1014,7 @@
 
     try {
       setStep(1);
-      const fetchPromise = fetch('https://directpay-backend.onrender.com/create-payment', {
+      const fetchPromise = fetch('https://api.redtrex.store/create-payment', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
