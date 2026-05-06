@@ -1,209 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Successful</title>
-    <link rel="icon" type="image/png" href="Assest/company.png">
-    <style>
-        * { margin:0; padding:0; box-sizing:border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #ffd700 0%, #ff4500 100%);
-            min-height: 100vh;
-            display:flex;
-            flex-direction:column;
-            align-items:center;
-            padding:20px;
-        }
-        .logo { margin:40px 0; text-align:center; }
-        .logo-circle {
-            width:80px; height:80px;
-            background:white; border-radius:50%;
-            display:inline-flex; align-items:center; justify-content:center;
-            box-shadow:0 4px 20px rgba(0,0,0,0.1);
-            overflow:hidden;
-        }
-        .logo-img {
-            width:60px; height:60px;
-            object-fit:contain;
-        }
-        .logo-text {
-            font-size:32px; font-weight:bold;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            display:none;
-        }
-        .container {
-            background:white; border-radius:20px; padding:60px 40px;
-            max-width:500px; width:100%; text-align:center;
-            box-shadow:0 20px 60px rgba(0,0,0,0.3);
-            animation: slideUp 0.5s ease-out;
-        }
-        @keyframes slideUp { from {opacity:0; transform:translateY(30px);} to {opacity:1; transform:translateY(0);} }
-        .success-icon {
-            width:100px; height:100px;
-            background: linear-gradient(135deg, #ff6b6b 0%, #ff8787 100%);
-            border-radius:50%;
-            display:flex; align-items:center; justify-content:center;
-            margin:0 auto 30px;
-            position:relative;
-            animation: scaleIn 0.5s ease-out 0.2s both;
-        }
-        @keyframes scaleIn { from {transform:scale(0);} to {transform:scale(1);} }
-        .checkmark {
-            width:60px; height:30px;
-            border:5px solid white;
-            border-top:none;
-            border-right:none;
-            transform:rotate(-45deg);
-            position:absolute;
-            top:30px;
-            left:20px;
-            animation: drawCheck 0.8s ease-out 0.5s both;
-        }
-        @keyframes drawCheck {
-            0% { width:0; height:0; }
-            50% { width:0; height:30px; }
-            100% { width:60px; height:30px; }
-        }
-        h1 { color:#2d3748; font-size:32px; margin-bottom:15px; }
-        .message { color:#718096; font-size:16px; line-height:1.6; margin-bottom:30px; }
-        .details { background:#f7fafc; border-radius:12px; padding:25px; margin:30px 0; text-align:left; }
-        .detail-row { display:flex; justify-content:space-between; padding:12px 0; border-bottom:1px solid #e2e8f0; }
-        .detail-row:last-child { border-bottom:none; }
-        .detail-label { color:#718096; font-size:14px; }
-        .detail-value { color:#2d3748; font-weight:600; font-size:14px; }
-        .notice {
-            background:#e8f4f8; border-left:4px solid #0284c7; padding:20px; margin:30px 0; border-radius:8px; text-align:left;
-        }
-        .notice-title { color:#0c4a6e; font-weight:600; font-size:14px; margin-bottom:8px; }
-        .notice-text { color:#0c5577; font-size:13px; line-height:1.6; }
-        .notice-text strong { color:#0c4a6e; }
-        .notice-text a { color:#0284c7; text-decoration:none; font-weight:600; }
-        .notice-text a:hover { text-decoration:underline; }
-        .contact-methods { margin-top:12px; padding-top:12px; border-top:1px solid #bae6fd; }
-        .contact-methods p { color:#0c5577; font-size:13px; margin-bottom:6px; }
-        .contact-methods a { color:#0284c7; text-decoration:none; font-weight:600; cursor:pointer; transition:color 0.2s; }
-        .contact-methods a:hover { color:#0c4a6e; text-decoration:underline; }
-        .button {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color:white; border:none; padding:16px 40px; border-radius:10px;
-            font-size:16px; font-weight:600; cursor:pointer; transition:transform 0.2s, box-shadow 0.2s;
-            width:100%; margin-top:10px;
-        }
-        .button:hover { transform:translateY(-2px); box-shadow:0 10px 25px rgba(102,126,234,0.4); }
-        .button-secondary { background:white; color:#667eea; border:2px solid #667eea; margin-top:15px; }
-        .button-secondary:hover { background:#f7fafc; box-shadow:0 5px 15px rgba(102,126,234,0.2); }
-        .footer { color:white; margin-top:30px; font-size:14px; opacity:0.9; }
-        @media(max-width:600px){ .container{padding:40px 25px;} h1{font-size:26px;} .logo-circle{width:60px;height:60px;} .logo-text{font-size:24px;} .notice{padding:16px;} }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RedTrex Technologies – We've Moved!</title>
+  <meta name="description" content="RedTrex Technologies has moved to a new website. Visit us at www.redtrex.com.lk">
+  <link rel="icon" type="image/png" href="Assest/company.png" />
+  <meta http-equiv="refresh" content="5;url=https://www.redtrex.com.lk" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0a0a1e;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      overflow: hidden;
+    }
+
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: 0;
+      opacity: 0.35;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 40px 24px;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(24px) saturate(160%);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 28px;
+      padding: 52px 44px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+      animation: fadeUp 0.6s cubic-bezier(.2,.9,.3,1) both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .logo {
+      margin-bottom: 32px;
+    }
+
+    .logo img {
+      height: 64px;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4));
+    }
+
+    .moved-badge {
+      display: inline-block;
+      background: rgba(21, 101, 192, 0.3);
+      border: 1px solid rgba(21, 101, 192, 0.6);
+      color: #90caf9;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 50px;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      color: #ffffff;
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+
+    .subtitle {
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 36px;
+    }
+
+    .new-url-btn {
+      display: inline-block;
+      padding: 16px 40px;
+      background: linear-gradient(135deg, #1565c0, #0d47a1);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 14px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      box-shadow: 0 6px 24px rgba(13, 71, 161, 0.45);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+      margin-bottom: 28px;
+    }
+
+    .new-url-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 32px rgba(13, 71, 161, 0.6);
+    }
+
+    .new-url-btn:active {
+      transform: translateY(0);
+      opacity: 0.9;
+    }
+
+    .redirect-notice {
+      color: rgba(255, 255, 255, 0.45);
+      font-size: 0.85rem;
+    }
+
+    .countdown {
+      color: #90caf9;
+      font-weight: 700;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin: 28px 0;
+    }
+
+    .footer-note {
+      color: rgba(255, 255, 255, 0.35);
+      font-size: 0.78rem;
+    }
+  </style>
 </head>
 <body>
-    <div class="logo">
-        <div class="logo-circle">
-            <img src="Assest/company.png" alt="Logo" class="logo-img">
-            <span class="logo-text">P</span>
-        </div>
+
+  <video autoplay muted loop id="bg-video" playsinline>
+    <source src="assetphy/white-lines-on-blue-background.1920x1080.mp4" type="video/mp4">
+  </video>
+
+  <div class="container">
+    <div class="card">
+
+      <div class="logo">
+        <img src="Assest/company.png" alt="RedTrex Technologies Logo" />
+      </div>
+
+      <div class="moved-badge">We've Moved</div>
+
+      <h1>Our website has a new home</h1>
+
+      <p class="subtitle">
+        RedTrex Technologies has moved to a brand new website.<br>
+        Click below to visit us at our new address.
+      </p>
+
+      <a href="https://www.redtrex.com.lk" class="new-url-btn">
+        Visit www.redtrex.com.lk
+      </a>
+
+      <p class="redirect-notice">
+        You will be redirected automatically in <span class="countdown" id="countdown">5</span> seconds.
+      </p>
+
+      <hr class="divider" />
+
+      <p class="footer-note">RedTrex Technologies &mdash; Genuine Software Keys &amp; IT Services, Sri Lanka</p>
+
     </div>
+  </div>
 
-    <div class="container">
-        <div class="success-icon"><div class="checkmark"></div></div>
+  <script>
+    let seconds = 5;
+    const el = document.getElementById('countdown');
+    const timer = setInterval(() => {
+      seconds--;
+      el.textContent = seconds;
+      if (seconds <= 0) {
+        clearInterval(timer);
+        window.location.href = 'https://www.redtrex.com.lk';
+      }
+    }, 1000);
+  </script>
 
-        <h1>Payment Successful!</h1>
-        <p class="message">Thank you for your payment. Your transaction has been completed successfully.</p>
-
-        <div class="details">
-            <div class="detail-row">
-                <span class="detail-label">Transaction ID</span>
-                <span class="detail-value" id="txn-id">#TXN-XXXX</span>
-            </div>
-            <div class="detail-row">
-                <span class="detail-label">Date</span>
-                <span class="detail-value" id="txn-date">--</span>
-            </div>
-            <div class="detail-row">
-                <span class="detail-label">Payment Method</span>
-                <span class="detail-value" id="txn-method">--</span>
-            </div>
-        </div>
-
-        <div class="notice">
-            <div class="notice-title">What Happens Next</div>
-            <div class="notice-text">
-                <p>A confirmation email containing your order details and customer portal login information will be sent to your registered email address within <strong>5-10 minutes</strong>. Please check your inbox and spam folder.</p>
-                <p style="margin-top:8px;">If you have any questions or require assistance, please don't hesitate to reach out to our support team.</p>
-                <div class="contact-methods">
-                    <p><strong>Contact REDTREX Support:</strong></p>
-                    <p>
-                        <a href="https://www.redtrex.store/contact">Submit a Ticket</a> | 
-                        <a href="https://wa.me/message/JDKR2AEH67JRM1" target="_blank">WhatsApp</a> | 
-                        <a href="https://signal.me/#eu/gaLdZyM2ymA34ZMivZuaRbbSdCQAuxXobaX-seG7qUMH1Ro3J3pFcbRkNGB2WoWw" target="_blank">Signal</a> | 
-                        <a href="https://t.me/store_redtrex" target="_blank">Telegram</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <button class="button" onclick="downloadReceipt()">Download Receipt</button>
-        <button class="button button-secondary" onclick="window.location.href='/'">Back to Home</button>
-    </div>
-
-    <div class="footer">
-        <p>REDTREX will be in contact with you shortly</p>
-    </div>
-
-    <script>
-        // Auto-fill details from URL query parameters
-        function getQueryParams() {
-            const params = {};
-            const queryString = window.location.search.substring(1);
-            queryString.split("&").forEach(pair => {
-                const [key, value] = pair.split("=");
-                if (key && value) params[key] = decodeURIComponent(value);
-            });
-            return params;
-        }
-
-        const params = getQueryParams();
-
-        if (params.order_id) document.getElementById("txn-id").innerText = params.order_id;
-        if (params.date) document.getElementById("txn-date").innerText = params.date;
-        if (params.method) document.getElementById("txn-method").innerText = params.method;
-
-        // Download receipt as text file
-        function downloadReceipt() {
-            const txnId = document.getElementById("txn-id").innerText;
-            const txnDate = document.getElementById("txn-date").innerText;
-            const txnMethod = document.getElementById("txn-method").innerText;
-
-            const receiptContent = `RedTrex Payment Receipt
-
-================================
-Transaction ID: ${txnId}
-Date: ${txnDate}
-Payment Method: ${txnMethod}
-================================
-
-Thank you for your payment. Your transaction has been completed successfully.
-
-A confirmation email containing your order details and customer portal login information will be sent to your registered email address within 5-10 minutes.
-
-================================
-End of Receipt
-`;
-
-            const blob = new Blob([receiptContent], { type: 'text/plain' });
-            const url = window.URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'RedTrex_Receipt.txt';
-            document.body.appendChild(a);
-            a.click();
-            window.URL.revokeObjectURL(url);
-            document.body.removeChild(a);
-        }
-    </script>
 </body>
 </html>
