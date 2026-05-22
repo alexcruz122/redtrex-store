@@ -3,196 +3,4268 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>RedTrex Technologies – We've Moved!</title>
-  <meta name="description" content="RedTrex Technologies has moved to a new website. Visit us at www.redtrex.com.lk">
+  <title>RedTrex Technologies — Genuine Software Keys Sri Lanka</title>
+  <meta name="description" content="Buy genuine Windows, Office, SQL Server & EaseUS keys online in Sri Lanka. Fast delivery, secure checkout, global activation guaranteed.">
+
+  <!-- Performance detection: enable lite mode on older/slower devices to prevent stutter & overheating -->
+  <script>
+    (function () {
+      try {
+        var ua = navigator.userAgent || '';
+        var lite = false;
+
+        // 1. Old iOS (iPhone X tops out at iOS 16; iOS 17+ devices are A12+)
+        var iosMatch = ua.match(/OS (\d+)_/);
+        if (iosMatch && parseInt(iosMatch[1], 10) < 17) lite = true;
+
+        // 2. Low CPU cores (most older mobiles have <= 4)
+        if (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4) lite = true;
+
+        // 3. Low device memory (Android signal; iOS doesn't expose it)
+        if (navigator.deviceMemory && navigator.deviceMemory < 4) lite = true;
+
+        // 4. User explicitly prefers reduced motion
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) lite = true;
+
+        // 5. Save-Data header (user opted into data saver)
+        if (navigator.connection && navigator.connection.saveData) lite = true;
+
+        if (lite) document.documentElement.dataset.perf = 'lite';
+      } catch (e) { /* fail silent — keep full effects */ }
+    })();
+  </script>
   <link rel="icon" type="image/png" href="Assest/company.png" />
-  <meta http-equiv="refresh" content="5;url=https://www.redtrex.com.lk" />
+  <link rel="shortcut icon" type="image/png" href="Assest/company.png" />
+  <link rel="apple-touch-icon" href="Assest/company.png" />
+  <link rel="canonical" href="https://www.redtrex.com.lk/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.redtrex.com.lk/" />
+  <meta property="og:title" content="RedTrex Technologies | Genuine Microsoft, EaseUS &amp; Software Keys" />
+  <meta property="og:description" content="Purchase 100% genuine Windows, Microsoft Office, SQL Server, Visual Studio and EaseUS product keys online. Fast delivery, safe checkout, global activation." />
+  <meta property="og:image" content="https://www.redtrex.com.lk/Assest/company.png" />
+  <meta property="og:site_name" content="RedTrex Technologies" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="RedTrex Technologies | Genuine Microsoft, EaseUS &amp; Software Keys" />
+  <meta name="twitter:description" content="Genuine Windows, Office, SQL Server, Visual Studio &amp; EaseUS keys with global activation." />
+  <meta name="twitter:image" content="https://www.redtrex.com.lk/Assest/company.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "RedTrex Technologies",
+    "alternateName": "RedTrex",
+    "url": "https://www.redtrex.com.lk",
+    "logo": "https://www.redtrex.com.lk/Assest/company.png",
+    "image": "https://www.redtrex.com.lk/Assest/company.png",
+    "description": "Sri Lanka's trusted source for genuine Windows, Microsoft Office, SQL Server, Visual Studio and EaseUS product keys with global activation.",
+    "sameAs": [
+      "https://wa.me/94712622012"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+94-71-262-2012",
+      "contactType": "customer support",
+      "areaServed": "LK",
+      "availableLanguage": ["English"]
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "RedTrex Technologies",
+    "url": "https://www.redtrex.com.lk"
+  }
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1253107888658597" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- TrustBox script -->
+  <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+  <!-- End TrustBox script -->
+
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    /* Popup styles */
+    .popup-modal {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      z-index: 10000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(6px);
     }
 
-    body {
-      min-height: 100vh;
-      display: flex;
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 20px;
+      padding: 25px 28px;
+      max-width: 460px;
+      width: 92%;
+      text-align: center;
+      color: #ffffff;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(18px) saturate(160%);
+      animation: popupIn 0.36s cubic-bezier(.2,.9,.3,1);
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 12px;
+      right: 14px;
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      background: #0a0a1e;
-      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-      overflow: hidden;
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      cursor: pointer;
+      transition: transform .12s ease;
     }
 
-    #bg-video {
+    .close-btn:hover {
+      transform: scale(1.06);
+      background: rgba(255,255,255,0.08);
+    }
+
+    @keyframes popupIn {
+      from { opacity: 0; transform: translateY(-8px) scale(0.98); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    /* Animated gradient background (replaces #bg-video) */
+    #bg-gradient {
       position: fixed;
       top: 0;
       left: 0;
       width: 100vw;
       height: 100vh;
-      object-fit: cover;
-      z-index: 0;
-      opacity: 0.35;
+      z-index: -1;
+      background: linear-gradient(
+        130deg,
+        #0a0a14 0%,
+        #1a0608 18%,
+        #3a0a12 35%,
+        #6b0f1a 52%,
+        #3a0a12 70%,
+        #1a0608 85%,
+        #0a0a14 100%
+      );
+      background-size: 400% 400%;
+      animation: bgShift 22s ease-in-out infinite;
     }
 
-    .container {
-      position: relative;
-      z-index: 1;
+    /* Soft glowing red orbs drifting behind content */
+    #bg-gradient::before,
+    #bg-gradient::after {
+      content: '';
+      position: absolute;
+      width: 60vw;
+      height: 60vw;
+      max-width: 800px;
+      max-height: 800px;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.55;
+      mix-blend-mode: screen;
+      pointer-events: none;
+    }
+    #bg-gradient::before {
+      background: radial-gradient(circle, #ff2a3d 0%, transparent 65%);
+      top: -10%;
+      left: -10%;
+      animation: orbDrift1 18s ease-in-out infinite;
+    }
+    #bg-gradient::after {
+      background: radial-gradient(circle, #ff6a3d 0%, transparent 65%);
+      bottom: -15%;
+      right: -10%;
+      animation: orbDrift2 26s ease-in-out infinite;
+    }
+
+    @keyframes bgShift {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    @keyframes orbDrift1 {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      33%      { transform: translate(15vw, 10vh) scale(1.15); }
+      66%      { transform: translate(-8vw, 18vh) scale(0.9); }
+    }
+    @keyframes orbDrift2 {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      33%      { transform: translate(-12vw, -8vh) scale(0.85); }
+      66%      { transform: translate(10vw, -16vh) scale(1.2); }
+    }
+
+    /* Respect users who prefer reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      #bg-gradient,
+      #bg-gradient::before,
+      #bg-gradient::after {
+        animation: none;
+      }
+    }
+
+    /* ============================================================
+       LITE MODE — auto-applied on older/slower devices (e.g. iPhone X)
+       to prevent GPU overload, stutter and overheating.
+       Triggered by the performance detection script in <head>.
+       ============================================================ */
+    [data-perf="lite"] #bg-gradient {
+      animation: none;
+      background: linear-gradient(135deg, #0a0a14 0%, #2a0810 50%, #0a0a14 100%);
+    }
+    [data-perf="lite"] #bg-gradient::before,
+    [data-perf="lite"] #bg-gradient::after {
+      display: none; /* kill the heavy blurred orbs */
+    }
+    /* Drop expensive backdrop-filter & SVG filter from product cards */
+    [data-perf="lite"] .product-card {
+      background: linear-gradient(180deg, rgba(18,18,28,0.95), rgba(10,10,18,0.97));
+    }
+    [data-perf="lite"] .product-card::after {
+      display: none;
+    }
+    /* Disable any other backdrop-filter usage globally in lite mode */
+    [data-perf="lite"] .dropdown-content,
+    [data-perf="lite"] .submenu-content {
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+      background: rgba(12, 12, 28, 0.96);
+    }
+
+    /* Quantity Controls */
+    .qty-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 15px 0;
+    }
+
+    .qty-btn {
+      width: 36px;
+      height: 36px;
+      border: 2px solid #007bff;
+      background: #fff;
+      color: #007bff;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .qty-btn:hover {
+      background: #007bff;
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    .qty-btn:active {
+      transform: scale(0.95);
+    }
+
+    .qty-input {
+      width: 60px;
+      height: 36px;
       text-align: center;
-      padding: 40px 24px;
-      max-width: 600px;
+      font-size: 16px;
+      font-weight: bold;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      background: #f8f9fa;
+    }
+
+    /* Updated Purchase Button */
+    .purchase-wrapper {
+      display: block;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+
+    .purchase-btn {
       width: 100%;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, #007bff, #0056b3);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
     }
 
-    .card {
-      background: rgba(255, 255, 255, 0.07);
-      backdrop-filter: blur(24px) saturate(160%);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      border-radius: 28px;
-      padding: 52px 44px;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-      animation: fadeUp 0.6s cubic-bezier(.2,.9,.3,1) both;
+    .purchase-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+      background: linear-gradient(135deg, #0056b3, #003d82);
     }
 
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to   { opacity: 1; transform: translateY(0); }
+    .purchase-btn:active {
+      transform: translateY(0);
     }
 
-    .logo {
-      margin-bottom: 32px;
+    .purchase-note {
+      display: block;
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.75);
+      margin-top: 6px;
+      text-align: center;
     }
 
-    .logo img {
-      height: 64px;
-      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4));
+    /* ── Account / Login button in Nav ── */
+    .account-btn {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 12px;
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 7px 13px;
+      cursor: pointer;
+      text-decoration: none;
+      backdrop-filter: blur(10px);
+      transition: background 0.2s, border-color 0.2s;
+      white-space: nowrap;
+      font-family: inherit;
     }
-
-    .moved-badge {
+    .account-btn:hover { background: rgba(220,38,38,0.35); border-color: rgba(255,150,150,0.5); }
+    .account-btn .ab-icon {
+      width: 18px; height: 18px;
       display: inline-block;
-      background: rgba(21, 101, 192, 0.3);
-      border: 1px solid rgba(21, 101, 192, 0.6);
-      color: #90caf9;
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      padding: 5px 14px;
-      border-radius: 50px;
-      margin-bottom: 22px;
+      vertical-align: middle;
+    }
+    .account-btn .ab-label { line-height: 1; }
+    .account-btn.signed-in { background: rgba(220,38,38,0.25); border-color: rgba(248,113,113,0.5); }
+    .account-btn .ab-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: #4ade80;
+      box-shadow: 0 0 6px rgba(74,222,128,0.7);
+    }
+    /* Group login + cart together so they stay side-by-side on every screen */
+    .nav-actions {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    /* Push search + actions together to the right edge on desktop */
+    @media (min-width: 601px) {
+      nav .search-container { margin-left: auto; }
+    }
+    @media (max-width: 600px) {
+      /* Login + Cart stay together as a centered row at the bottom of the wrapped nav */
+      .nav-actions {
+        order: 101;
+        width: 100% !important;
+        margin: 6px 0 0 0 !important;
+        justify-content: center !important;
+        gap: 10px;
+      }
+      .account-btn {
+        padding: 0 !important;
+        font-size: 0 !important;
+        width: 42px; height: 42px;
+        justify-content: center; gap: 0;
+        flex: 0 0 auto !important;
+      }
+      .account-btn .ab-label { display: none; }
+      .account-btn .ab-icon { width: 20px; height: 20px; }
+      /* Override the global rule that forces cart to full-width on mobile */
+      nav .nav-actions .cart-icon-btn {
+        order: 0 !important;
+        width: 42px !important;
+        height: 42px;
+        padding: 0 !important;
+        font-size: 1.1rem !important;
+        margin: 0 !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex: 0 0 auto !important;
+      }
+      nav .nav-actions .cart-icon-btn .cart-badge { top: -4px; right: -4px; }
     }
 
-    h1 {
-      color: #ffffff;
-      font-size: 2rem;
+    /* ── Cart Icon in Nav ── */
+    .cart-icon-btn {
+      position: relative;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 12px;
+      color: #fff;
+      font-size: 1.25rem;
+      padding: 6px 12px;
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+    .cart-icon-btn:hover { background: rgba(255,255,255,0.2); }
+
+    .cart-badge {
+      position: absolute;
+      top: -6px;
+      right: -6px;
+      background: #e53935;
+      color: #fff;
+      font-size: 0.65rem;
       font-weight: 700;
-      line-height: 1.25;
-      margin-bottom: 16px;
+      border-radius: 50%;
+      width: 18px;
+      height: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .subtitle {
-      color: rgba(255, 255, 255, 0.65);
+    /* ── Cart Overlay ── */
+    .cart-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      backdrop-filter: blur(4px);
+      z-index: 19000;
+    }
+    .cart-overlay.open { display: block; }
+
+    /* ── Cart Panel ── */
+    .cart-panel {
+      position: fixed;
+      top: 0;
+      right: -420px;
+      width: 380px;
+      max-width: 95vw;
+      height: 100%;
+      background: rgba(10,10,30,0.96);
+      backdrop-filter: blur(20px);
+      border-left: 1px solid rgba(255,255,255,0.12);
+      z-index: 20000;
+      display: flex;
+      flex-direction: column;
+      transition: right 0.35s cubic-bezier(.4,0,.2,1);
+      box-shadow: -8px 0 40px rgba(0,0,0,0.5);
+    }
+    .cart-panel.open { right: 0; }
+
+    .cart-panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 20px 14px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .cart-panel-header h3 { font-size: 1.1rem; color: #fff; margin: 0; }
+
+    .cart-close-btn {
+      background: rgba(255,255,255,0.1);
+      border: none;
+      color: #fff;
       font-size: 1rem;
-      line-height: 1.6;
-      margin-bottom: 36px;
+      border-radius: 8px;
+      padding: 4px 10px;
+      cursor: pointer;
+    }
+    .cart-close-btn:hover { background: rgba(255,255,255,0.2); }
+
+    /* ── Cart Items ── */
+    .cart-items-list {
+      flex: 1;
+      overflow-y: auto;
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
     }
 
-    .new-url-btn {
-      display: inline-block;
-      padding: 16px 40px;
+    .cart-empty-msg {
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      margin-top: 60px;
+      font-size: 0.95rem;
+    }
+
+    .cart-item {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 12px 14px;
+    }
+    .cart-item-name {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+    .cart-item-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .cart-item-qty {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .cart-qty-btn {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #fff;
+      width: 26px;
+      height: 26px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .cart-qty-btn:hover { background: rgba(255,255,255,0.25); }
+    .cart-qty-num {
+      color: #fff;
+      font-size: 0.9rem;
+      min-width: 20px;
+      text-align: center;
+    }
+    .cart-item-price {
+      text-align: right;
+    }
+    .cart-item-price .lkr { font-size: 0.85rem; color: #fff; font-weight: 600; }
+    .cart-item-price .usd { font-size: 0.72rem; color: rgba(255,255,255,0.5); }
+    .cart-remove-btn {
+      background: rgba(229,57,53,0.15);
+      border: 1px solid rgba(229,57,53,0.3);
+      color: #ef9a9a;
+      border-radius: 6px;
+      padding: 3px 8px;
+      font-size: 0.75rem;
+      cursor: pointer;
+    }
+    .cart-remove-btn:hover { background: rgba(229,57,53,0.3); }
+
+    /* ── Cart Footer ── */
+    .cart-footer {
+      padding: 16px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .cart-total-row {
+      display: flex;
+      justify-content: space-between;
+      color: rgba(255,255,255,0.85);
+      font-size: 0.9rem;
+    }
+    .cart-total-row strong { color: #fff; }
+
+    .cart-checkout-btn {
       background: linear-gradient(135deg, #1565c0, #0d47a1);
       color: #fff;
-      text-decoration: none;
-      border-radius: 14px;
-      font-size: 1.1rem;
-      font-weight: 700;
-      letter-spacing: 0.02em;
-      box-shadow: 0 6px 24px rgba(13, 71, 161, 0.45);
-      transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
-      margin-bottom: 28px;
-    }
-
-    .new-url-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 32px rgba(13, 71, 161, 0.6);
-    }
-
-    .new-url-btn:active {
-      transform: translateY(0);
-      opacity: 0.9;
-    }
-
-    .redirect-notice {
-      color: rgba(255, 255, 255, 0.45);
-      font-size: 0.85rem;
-    }
-
-    .countdown {
-      color: #90caf9;
-      font-weight: 700;
-    }
-
-    .divider {
       border: none;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      margin: 28px 0;
+      border-radius: 10px;
+      padding: 12px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: opacity 0.2s;
+      margin-top: 4px;
+    }
+    .cart-checkout-btn:hover { opacity: 0.88; }
+
+    .cart-clear-btn {
+      background: transparent;
+      border: 1px solid rgba(229,57,53,0.4);
+      color: #ef9a9a;
+      border-radius: 10px;
+      padding: 8px;
+      font-size: 0.82rem;
+      cursor: pointer;
+    }
+    .cart-clear-btn:hover { background: rgba(229,57,53,0.1); }
+
+    /* ── Add to Cart Button on Cards ── */
+    .add-to-cart-btn {
+      display: block;
+      width: 100%;
+      margin-top: 8px;
+      padding: 9px 14px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 10px;
+      color: #fff;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      backdrop-filter: blur(8px);
+      transition: background 0.2s, transform 0.15s;
+    }
+    .add-to-cart-btn:hover {
+      background: rgba(255,255,255,0.18);
+      transform: translateY(-1px);
+    }
+    .add-to-cart-btn.added {
+      background: rgba(46,125,50,0.25);
+      border-color: rgba(76,175,80,0.5);
+      color: #a5d6a7;
     }
 
-    .footer-note {
-      color: rgba(255, 255, 255, 0.35);
-      font-size: 0.78rem;
+    /* ── iOS 26 Liquid Glass Pill — mobile only ── */
+    #ios-pill  { display: none; }
+    #pill-menu { display: none; }
+
+    @media (max-width: 768px) {
+      /* Pill handles menu + account + cart — hide only those from the top nav */
+      nav .nav-dropdown   { display: none !important; }
+      nav .nav-actions    { display: none !important; }
+      nav .disclaimer-container { display: none !important; }
+
+      #ios-pill {
+        display: flex;
+        position: fixed;
+        bottom: 28px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 9999;
+        align-items: center;
+        gap: 0;
+        padding: 5px 12px;
+        border-radius: 60px;
+
+        /* Deep liquid glass — almost invisible fill, all detail from light */
+        background: linear-gradient(
+          160deg,
+          rgba(255, 255, 255, 0.18) 0%,
+          rgba(255, 255, 255, 0.05) 60%,
+          rgba(255, 255, 255, 0.10) 100%
+        );
+        backdrop-filter: blur(48px) saturate(200%) brightness(1.15) contrast(1.05);
+        -webkit-backdrop-filter: blur(48px) saturate(200%) brightness(1.15) contrast(1.05);
+
+        /* Bright hairline on top/left, near-invisible on bottom — like a glass edge */
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        border-top-color:   rgba(255, 255, 255, 0.80);
+        border-left-color:  rgba(255, 255, 255, 0.45);
+        border-bottom-color: rgba(255, 255, 255, 0.08);
+        border-right-color:  rgba(255, 255, 255, 0.12);
+
+        box-shadow:
+          0 16px 48px rgba(0, 0, 0, 0.38),          /* ambient depth */
+          0 2px 6px  rgba(0, 0, 0, 0.20),            /* close shadow */
+          0 0px 0px 1px rgba(0, 0, 0, 0.12),         /* dark outer ring */
+          inset 0 2px 0 rgba(255, 255, 255, 0.90),   /* strong top shine */
+          inset 0 -1px 0 rgba(255, 255, 255, 0.15),  /* faint bottom reflection */
+          inset 1px 0 0  rgba(255, 255, 255, 0.30);  /* left edge light */
+
+        touch-action: none;
+        user-select: none;
+        -webkit-user-select: none;
+        cursor: grab;
+        transition: box-shadow 0.2s ease;
+
+        /* Isolate for ::before gloss to clip correctly */
+        isolation: isolate;
+        overflow: hidden;
+      }
+
+      /* Top-edge gloss sweep + faint bottom reflection — real glass has both */
+      #ios-pill::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.55) 0%,
+          rgba(255, 255, 255, 0.12) 30%,
+          transparent 55%,
+          rgba(255, 255, 255, 0.04) 100%
+        );
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      /* Bottom-edge inner reflection — gives the pill a curved-glass depth */
+      #ios-pill::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 10%;
+        right: 10%;
+        height: 35%;
+        border-radius: 0 0 60px 60px;
+        background: linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.18) 0%,
+          transparent 100%
+        );
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      /* Subtle pulse after 220ms hold — signals "drag ready" to the user */
+      #ios-pill.is-hold-ready {
+        transform: scale(1.05) translateX(-50%) !important;
+        transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+        box-shadow:
+          0 16px 50px rgba(0, 0, 0, 0.45),
+          0 4px 12px rgba(0, 0, 0, 0.22),
+          inset 0 1.5px 0 rgba(255, 255, 255, 0.75);
+      }
+
+      #ios-pill.is-snapping {
+        transition:
+          left   0.38s cubic-bezier(0.34, 1.4, 0.64, 1),
+          top    0.38s cubic-bezier(0.34, 1.4, 0.64, 1),
+          bottom 0.38s cubic-bezier(0.34, 1.4, 0.64, 1),
+          transform 0.38s cubic-bezier(0.34, 1.4, 0.64, 1),
+          box-shadow 0.2s ease;
+      }
+
+      #ios-pill.is-dragging {
+        cursor: grabbing;
+        background: rgba(255, 255, 255, 0.16);
+        box-shadow:
+          0 28px 70px rgba(0, 0, 0, 0.45),
+          0 8px 20px rgba(0, 0, 0, 0.22),
+          inset 0 1.5px 0 rgba(255, 255, 255, 0.75);
+        transform: scale(1.08) !important;
+      }
+
+      .pill-btn {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        /* Subtle gloss: light tint on top half, clear on bottom — see-through but polished */
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.18) 0%,
+          rgba(255, 255, 255, 0.04) 100%
+        );
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        border-top-color: rgba(255, 255, 255, 0.55);
+        border-bottom-color: rgba(255, 255, 255, 0.08);
+        box-shadow:
+          inset 0 1px 0 rgba(255, 255, 255, 0.60),   /* top specular */
+          inset 0 -1px 0 rgba(255, 255, 255, 0.08),  /* bottom reflection */
+          0 1px 4px rgba(0, 0, 0, 0.18);             /* soft drop */
+        color: #fff;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        text-decoration: none;
+        transition: background 0.12s ease, box-shadow 0.12s ease, transform 0.1s ease;
+        flex-shrink: 0;
+        touch-action: none;
+        overflow: hidden;
+      }
+
+      /* Inner gloss highlight — a half-circle shine on the top of each button */
+      .pill-btn::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 50%;
+        border-radius: 50% 50% 0 0;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.30) 0%,
+          transparent 100%
+        );
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .pill-btn:active {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.10) 0%,
+          rgba(255, 255, 255, 0.02) 100%
+        );
+        box-shadow:
+          inset 0 1px 0 rgba(255, 255, 255, 0.35),
+          0 1px 3px rgba(0, 0, 0, 0.22);
+        transform: scale(0.88);
+      }
+
+      .pill-btn svg {
+        position: relative;
+        z-index: 1;
+        width: 23px;
+        height: 23px;
+        stroke: rgba(255, 255, 255, 0.95);
+        fill: none;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        pointer-events: none;
+        filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3));
+      }
+
+      .pill-divider {
+        width: 1px;
+        height: 28px;
+        background: linear-gradient(180deg, transparent, rgba(255,255,255,0.30) 30%, rgba(255,255,255,0.30) 70%, transparent);
+        flex-shrink: 0;
+        margin: 0 4px;
+        z-index: 1;
+      }
+
+      .pill-cart-badge {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        background: #ef4444;
+        color: #fff;
+        font-size: 9px;
+        font-weight: 700;
+        min-width: 16px;
+        height: 16px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 3px;
+        line-height: 1;
+        border: 1.5px solid rgba(255,255,255,0.35);
+        pointer-events: none;
+        transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+        z-index: 2;
+      }
+
+      .pill-cart-badge.pill-badge-hidden { display: none; }
+      .pill-cart-badge.pill-badge-pop { transform: scale(1.45); }
+
+      #pillAccount.signed-in svg { stroke: #f87171; }
+
+      /* ── Pill Navigation Menu Panel ── */
+      #pill-menu {
+        display: block;
+        position: fixed;
+        bottom: 108px;
+        left: 50%;
+        transform: translateX(-50%) translateY(14px) scale(0.95);
+        transform-origin: bottom center;
+        width: min(300px, calc(100vw - 32px));
+        z-index: 9998;
+        background: linear-gradient(160deg, rgba(255,255,255,0.16) 0%, rgba(255,255,255,0.05) 60%, rgba(255,255,255,0.11) 100%);
+        backdrop-filter: blur(48px) saturate(200%) brightness(1.15);
+        -webkit-backdrop-filter: blur(48px) saturate(200%) brightness(1.15);
+        border: 1px solid rgba(255,255,255,0.20);
+        border-top-color: rgba(255,255,255,0.72);
+        border-bottom-color: rgba(255,255,255,0.08);
+        border-radius: 20px;
+        box-shadow:
+          0 -8px 48px rgba(0,0,0,0.42),
+          0 2px 10px rgba(0,0,0,0.22),
+          inset 0 1.5px 0 rgba(255,255,255,0.80),
+          inset 0 -1px 0 rgba(255,255,255,0.10);
+        /* Never taller than the screen — scroll if content overflows */
+        max-height: calc(100svh - 140px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity 0.20s ease, transform 0.24s cubic-bezier(0.34,1.4,0.64,1), visibility 0s linear 0.22s;
+      }
+      #pill-menu.open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+        transform: translateX(-50%) translateY(0) scale(1);
+        transition: opacity 0.20s ease, transform 0.24s cubic-bezier(0.34,1.4,0.64,1), visibility 0s linear 0s;
+      }
+      #pill-menu::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        background: linear-gradient(180deg, rgba(255,255,255,0.42) 0%, rgba(255,255,255,0.07) 28%, transparent 56%);
+        pointer-events: none;
+        z-index: 0;
+      }
+      .pm-section-label {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.42);
+        padding: 12px 16px 3px;
+        position: relative;
+        z-index: 1;
+      }
+      .pm-link {
+        display: block;
+        padding: 9px 16px;
+        font-size: 14px;
+        font-weight: 500;
+        color: rgba(255,255,255,0.90);
+        text-decoration: none;
+        position: relative;
+        z-index: 1;
+        transition: background 0.12s ease;
+      }
+      .pm-link:active { background: rgba(255,255,255,0.12); }
+      .pm-sep {
+        height: 1px;
+        margin: 5px 14px;
+        background: rgba(255,255,255,0.11);
+        position: relative;
+        z-index: 1;
+      }
+      .pm-disclaimer {
+        display: block;
+        padding: 9px 16px 14px;
+        font-size: 13px;
+        color: rgba(255,255,255,0.52);
+        text-align: center;
+        cursor: pointer;
+        background: none;
+        border: none;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        transition: color 0.12s ease;
+      }
+      .pm-disclaimer:active { color: rgba(255,255,255,0.88); }
+
+      /* Hamburger ↔ X icon swap */
+      #pillMenu .icon-close { display: none; }
+      #pillMenu.pm-open .icon-ham  { display: none; }
+      #pillMenu.pm-open .icon-close { display: block; }
+
+      /* Lite mode: no backdrop-filter but still transparent glass look */
+      [data-perf="lite"] #ios-pill {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        background: rgba(30, 15, 20, 0.72);
+        border-color: rgba(255,255,255,0.30);
+      }
     }
   </style>
 </head>
 <body>
 
-  <video autoplay muted loop id="bg-video" playsinline>
-    <source src="assetphy/white-lines-on-blue-background.1920x1080.mp4" type="video/mp4">
-  </video>
-
-  <div class="container">
-    <div class="card">
-
-      <div class="logo">
-        <img src="Assest/company.png" alt="RedTrex Technologies Logo" />
+  <!-- ============ Welcome Loading Screen ============ -->
+  <div id="loadingScreen" aria-hidden="true">
+    <div class="ls-bg"></div>
+    <div class="ls-content">
+      <div class="ls-logo-wrap">
+        <div class="ls-ring"></div>
+        <img src="Assest/company.png" alt="RedTrex Technologies" class="ls-logo" />
       </div>
+      <h1 class="ls-title">RedTrex Technologies</h1>
+      <p class="ls-tagline">Empowering Tomorrow's Tech Today</p>
+      <div class="ls-bar"><div class="ls-bar-fill"></div></div>
+      <div class="ls-versions">
+        <span class="ls-ver-pill">AI API VER : v1.0.6</span>
+        <span class="ls-ver-pill">SITE VER : v7.3.6</span>
+      </div>
+    </div>
+  </div>
+  <style>
+    #loadingScreen {
+      position: fixed; inset: 0; z-index: 99999;
+      display: flex; align-items: center; justify-content: center;
+      background: #0a0a0a;
+      overflow: hidden;
+      transition: opacity 0.6s ease, visibility 0.6s ease;
+    }
+    #loadingScreen.hide { opacity: 0; visibility: hidden; pointer-events: none; }
+    #loadingScreen .ls-bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(229,57,53,0.25), transparent 50%),
+        radial-gradient(circle at 75% 70%, rgba(229,57,53,0.18), transparent 55%),
+        linear-gradient(135deg, #0a0a0a, #1a0606);
+    }
+    #loadingScreen .ls-content {
+      position: relative; text-align: center; padding: 24px;
+      animation: lsFadeIn 0.6s ease;
+    }
+    @keyframes lsFadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+    #loadingScreen .ls-logo-wrap {
+      position: relative; width: 140px; height: 140px; margin: 0 auto 22px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    #loadingScreen .ls-ring {
+      position: absolute; inset: 0;
+      border: 3px solid rgba(229,57,53,0.18);
+      border-top-color: #e53935;
+      border-radius: 50%;
+      animation: lsSpin 1.1s linear infinite;
+    }
+    @keyframes lsSpin { to { transform: rotate(360deg); } }
+    #loadingScreen .ls-logo {
+      width: 92px; height: 92px; object-fit: contain;
+      border-radius: 50%;
+      background: #fff;
+      padding: 10px;
+      box-shadow: 0 6px 30px rgba(229,57,53,0.45);
+      animation: lsPulse 2s ease-in-out infinite;
+    }
+    @keyframes lsPulse {
+      0%, 100% { transform: scale(1); box-shadow: 0 6px 30px rgba(229,57,53,0.45); }
+      50%      { transform: scale(1.05); box-shadow: 0 6px 40px rgba(229,57,53,0.7); }
+    }
+    #loadingScreen .ls-title {
+      color: #fff; font-family: 'Segoe UI', system-ui, sans-serif;
+      font-size: 1.7rem; font-weight: 800; letter-spacing: 0.5px;
+      margin: 0 0 6px;
+      background: linear-gradient(135deg, #ff6b6b, #ffffff, #ff6b6b);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    #loadingScreen .ls-tagline {
+      color: rgba(255,255,255,0.65); font-size: 0.95rem; margin: 0 0 22px;
+      letter-spacing: 0.4px;
+    }
+    #loadingScreen .ls-bar {
+      width: 220px; height: 4px; margin: 0 auto;
+      background: rgba(255,255,255,0.08); border-radius: 4px; overflow: hidden;
+    }
+    #loadingScreen .ls-bar-fill {
+      width: 40%; height: 100%;
+      background: linear-gradient(90deg, transparent, #e53935, transparent);
+      animation: lsBar 1.4s ease-in-out infinite;
+    }
+    @keyframes lsBar {
+      0%   { transform: translateX(-120%); }
+      100% { transform: translateX(320%); }
+    }
+    #loadingScreen .ls-versions {
+      display: flex; justify-content: center; gap: 10px;
+      margin-top: 18px; flex-wrap: wrap;
+    }
+    #loadingScreen .ls-ver-pill {
+      font-family: 'Courier New', monospace;
+      font-size: 0.72rem; letter-spacing: 0.5px;
+      color: #ff8a8a;
+      background: rgba(229, 57, 53, 0.10);
+      border: 1px solid rgba(229, 57, 53, 0.35);
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+    @media (max-width: 480px) {
+      #loadingScreen .ls-logo-wrap { width: 110px; height: 110px; }
+      #loadingScreen .ls-logo { width: 72px; height: 72px; }
+      #loadingScreen .ls-title { font-size: 1.4rem; }
+      #loadingScreen .ls-ver-pill { font-size: 0.65rem; padding: 3px 8px; }
+    }
+  </style>
+  <script>
+    (function(){
+      function hideLoader(){
+        var el = document.getElementById('loadingScreen');
+        if (!el) return;
+        el.classList.add('hide');
+        setTimeout(function(){ if (el && el.parentNode) el.parentNode.removeChild(el); }, 700);
+      }
+      var minDelay = new Promise(function(r){ setTimeout(r, 900); });
+      if (document.readyState === 'complete') {
+        minDelay.then(hideLoader);
+      } else {
+        window.addEventListener('load', function(){ minDelay.then(hideLoader); });
+      }
+      // Safety fallback
+      setTimeout(hideLoader, 6000);
+    })();
+  </script>
 
-      <div class="moved-badge">We've Moved</div>
+  <!-- Domain Migration Notice -->
+  <div id="domainNotice" style="
+    background: linear-gradient(90deg, rgba(20,30,55,0.92), rgba(28,42,72,0.95));
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(120,170,255,0.22);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.25), inset 0 1px 0 rgba(160,200,255,0.12);
+    color: #e8f0ff;
+    font-size: 0.82rem;
+    padding: 8px 48px 8px 16px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    line-height: 1.5;
+    position: relative;
+    z-index: 9999;
+  ">
+    <span style="margin-right:6px;" aria-hidden="true">🎉</span>
+    <strong style="color:#a8c8ff;">We've moved!</strong>
+    Welcome to our new home at <strong style="color:#fff;">www.redtrex.com.lk</strong> —
+    same trusted RedTrex, fresh new address.
+    <span style="opacity:0.75;">(redtrex.store will retire soon — feel free to update your bookmarks when you have a moment.)</span>
+    <span style="opacity:0.9;">redtrex.store will be retired shortly. Please update your bookmarks.</span>
+    <button onclick="document.getElementById('domainNotice').style.display='none'" style="
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.18);
+      color: #fff;
+      border-radius: 6px;
+      width: 24px;
+      height: 24px;
+      font-size: 14px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+    " title="Dismiss">✕</button>
+  </div>
 
-      <h1>Our website has a new home</h1>
+  <!-- Live Exchange Rate Ticker -->
+  <div class="rate-ticker" id="rateTicker">
+    <span class="rate-ticker-label">💱 Live LKR/USD Rate:</span>
+    <span id="rateTickerValue">Loading...</span>
+    <span class="rate-ticker-sep">|</span>
+    <span id="rateTickerInverse">Loading...</span>
+    <span class="rate-ticker-updated" id="rateTickerTime"></span>
+  </div>
 
-      <p class="subtitle">
-        RedTrex Technologies has moved to a brand new website.<br>
-        Click below to visit us at our new address.
-      </p>
+  <header>
+    <a href="index.html" class="logo">
+      <img src="Assest/company.png" alt="RedTrex Logo" style="height: 50px" />
+    </a>
+  </header>
 
-      <a href="https://www.redtrex.com.lk" class="new-url-btn">
-        Visit www.redtrex.com.lk
+  <nav>
+    <div class="nav-dropdown">
+      <button class="dropdown-toggle g2g-btn" type="button" aria-haspopup="true" aria-expanded="false">Menu ▾</button>
+      <div class="dropdown-content">
+        <div class="dropdown-submenu">
+          <button class="submenu-toggle" type="button">Shop <span class="submenu-arrow">▸</span></button>
+          <div class="submenu-content">
+            <a href="pay.html">RedTrex Pay</a>
+            <a href="https://tudo.lk/store/redtrex-technologies" target="_blank" rel="noopener">Buy From Tudo.lk</a>
+            <a href="https://www.redtrex.com.lk/downloads">Downloads</a>
+          </div>
+        </div>
+
+        <div class="dropdown-submenu">
+          <button class="submenu-toggle" type="button">Services <span class="submenu-arrow">▸</span></button>
+          <div class="submenu-content">
+            <a href="https://www.redtrex.com.lk/request-service">Service Request</a>
+            <a href="https://www.redtrex.com.lk/services">Our Services</a>
+            <a href="/activation-guide">Activation Guide</a>
+            <a href="https://www.redtrex.com.lk/actptl">MS Product Activation Portal</a>
+          </div>
+        </div>
+
+        <div class="dropdown-submenu">
+          <button class="submenu-toggle" type="button">Support <span class="submenu-arrow">▸</span></button>
+          <div class="submenu-content">
+            <a href="https://www.redtrex.com.lk/contact">Contact Us</a>
+            <a href="https://www.redtrex.com.lk/faq">FAQ</a>
+            <a href="https://www.redtrex.com.lk/about">About Us</a>
+            <a href="https://maps.app.goo.gl/YCUu4UEXES2juyQ5A" target="_blank" rel="noopener">Our Location</a>
+          </div>
+        </div>
+
+        <div class="dropdown-submenu">
+          <button class="submenu-toggle" type="button">Account<span class="submenu-arrow">▸</span></button>
+          <div class="submenu-content">
+            <a href="https://www.redtrex.com.lk/login">Sign In</a>
+            <a href="https://www.redtrex.com.lk/track-order">Orders/Payments Tracking</a>
+            <a href="https://www.redtrex.com.lk/track-service">Service Tracking</a>
+          </div>
+        </div>
+
+        <hr class="dropdown-divider" />
+        <a href="#" onclick="openDisclaimerPopup(); return false;">Disclaimer</a>
+      </div>
+    </div>
+    
+    <div class="disclaimer-container">
+      <button class="disclaimer-btn" onclick="openDisclaimerPopup()">
+        <img src="Assest/disclaimer-placeholder.png" alt="Disclaimer Icon" class="disclaimer-icon" onerror="this.src='https://img.icons8.com/ios-filled/50/ffffff/info.png'">
+        <span class="disclaimer-text">Disclaimer</span>
+      </button>
+    </div>
+
+    <!-- Service Status Indicator (auto-updates based on Sri Lanka time) -->
+    <div class="service-status-row">
+      <div class="service-status" id="serviceStatus" title="Service hours: 8:00 AM – 12:00 AM (Sri Lanka Time)" onclick="toggleStatusPopup(event)">
+        <span class="status-label">Service Status:</span>
+        <span class="status-dot" id="statusDot"></span>
+        <span class="status-text" id="statusText">Checking…</span>
+        <div class="status-popup" id="statusPopup">
+          <div class="status-popup-title" id="statusPopupTitle"></div>
+          <div class="status-popup-detail" id="statusPopupDetail"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="search-container">
+      <input type="text" id="productSearch" placeholder="Search products..." autocomplete="off" />
+      <ul id="searchResults" class="search-results"></ul>
+    </div>
+
+    <div class="nav-actions">
+      <a href="https://www.redtrex.com.lk/login" class="account-btn" id="accountBtn" title="Sign in to your account">
+        <svg class="ab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+        <span class="ab-label" id="accountBtnLabel">Login</span>
       </a>
 
-      <p class="redirect-notice">
-        You will be redirected automatically in <span class="countdown" id="countdown">5</span> seconds.
-      </p>
+      <button class="cart-icon-btn" onclick="openCart()" title="View Cart">
+        🛒
+        <span class="cart-badge" id="cartBadge">0</span>
+      </button>
+    </div>
+  </nav>
 
-      <hr class="divider" />
+  <!-- ── Category Bar ── -->
+  <div class="cat-bar" id="cat-bar">
+    <div class="cat-bar-inner">
 
-      <p class="footer-note">RedTrex Technologies &mdash; Genuine Software Keys &amp; IT Services, Sri Lanka</p>
+      <div class="cat-item has-dropdown">
+        <button class="cat-btn" type="button" aria-haspopup="true" aria-expanded="false">
+          Microsoft <span class="cat-arrow">▾</span>
+        </button>
+        <div class="cat-dropdown">
+          <a href="#section-os-keys" class="cat-sub-link">Windows Products</a>
+          <a href="#section-software-keys" class="cat-sub-link">Office &amp; More</a>
+        </div>
+      </div>
+
+      <a class="cat-btn cat-direct" href="#section-easeus">EaseUs</a>
+
+      <a class="cat-btn cat-direct" href="#section-other">Other</a>
 
     </div>
   </div>
+  <script>
+    (function () {
+      var nav    = document.querySelector('nav');
+      var catBar = document.getElementById('cat-bar');
+
+      function syncTop() {
+        if (nav && catBar) {
+          catBar.style.top = nav.offsetHeight + 'px';
+        }
+      }
+      syncTop();
+      window.addEventListener('resize', syncTop);
+
+      var items = document.querySelectorAll('.cat-item.has-dropdown');
+      items.forEach(function (item) {
+        var btn = item.querySelector('.cat-btn');
+        btn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          var open = item.classList.toggle('open');
+          btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+      });
+      document.querySelectorAll('.cat-sub-link').forEach(function (link) {
+        link.addEventListener('click', function () {
+          items.forEach(function (i) { i.classList.remove('open'); });
+        });
+      });
+      document.addEventListener('click', function () {
+        items.forEach(function (i) { i.classList.remove('open'); });
+      });
+    })();
+  </script>
 
   <script>
-    let seconds = 5;
-    const el = document.getElementById('countdown');
-    const timer = setInterval(() => {
-      seconds--;
-      el.textContent = seconds;
-      if (seconds <= 0) {
-        clearInterval(timer);
-        window.location.href = 'https://www.redtrex.com.lk';
+    // ===== Categorized menu — click-to-toggle (works on every device) =====
+    (function () {
+      const navDropdown = document.querySelector('.nav-dropdown');
+      if (!navDropdown) return;
+      const navToggle = navDropdown.querySelector('.dropdown-toggle');
+      const submenus = navDropdown.querySelectorAll('.dropdown-submenu');
+
+      function closeAllSubmenus() {
+        submenus.forEach(s => s.classList.remove('open'));
       }
-    }, 1000);
+      function closeMenu() {
+        navDropdown.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        closeAllSubmenus();
+      }
+
+      // Main button: toggle the whole menu
+      navToggle.addEventListener('click', function (e) {
+        e.stopPropagation();
+        const isOpen = navDropdown.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        if (!isOpen) closeAllSubmenus();
+      });
+
+      // Each category button: toggle its submenu (close siblings)
+      submenus.forEach(function (sub) {
+        const subBtn = sub.querySelector('.submenu-toggle');
+        if (!subBtn) return;
+        subBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          const wasOpen = sub.classList.contains('open');
+          closeAllSubmenus();
+          if (!wasOpen) sub.classList.add('open');
+        });
+      });
+
+      // Click outside → close everything
+      document.addEventListener('click', function (e) {
+        if (!navDropdown.contains(e.target)) closeMenu();
+      });
+
+      // Escape → close everything
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeMenu();
+      });
+
+      // Clicking a real link inside should close the menu before navigating
+      navDropdown.querySelectorAll('.dropdown-content a, .submenu-content a').forEach(function (a) {
+        a.addEventListener('click', function () { closeMenu(); });
+      });
+    })();
+
+    // Account button — reflects sign-in state from localStorage
+    (function () {
+      try {
+        const s = JSON.parse(localStorage.getItem("rtx_session") || "null");
+        const btn = document.getElementById("accountBtn");
+        const lbl = document.getElementById("accountBtnLabel");
+        if (s && s.token && s.expires && s.expires > Date.now()) {
+          btn.classList.add("signed-in");
+          btn.title = "View your account (" + (s.email || "signed in") + ")";
+          lbl.textContent = "My Account";
+        } else {
+          btn.title = "Sign in to your account";
+          lbl.textContent = "Login";
+        }
+      } catch {}
+    })();
   </script>
+
+  <!-- Cart Panel -->
+  <div id="cartOverlay" class="cart-overlay" onclick="closeCart()"></div>
+  <div id="cartPanel" class="cart-panel">
+    <div class="cart-panel-header">
+      <h3>🛒 Your Cart</h3>
+      <button class="cart-close-btn" onclick="closeCart()">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items-list"></div>
+    <div class="cart-footer" id="cartFooter" style="display:none;">
+      <div class="cart-total-row">
+        <span>Total (LKR):</span>
+        <strong id="cartTotalLkr">0.00 LKR</strong>
+      </div>
+      <div class="cart-total-row">
+        <span>Total (USD):</span>
+        <strong id="cartTotalUsd">≈ $0.00</strong>
+      </div>
+      <button class="cart-checkout-btn" onclick="checkoutCart()">Proceed to Checkout</button>
+      <button class="cart-clear-btn" onclick="clearCart()">Clear Cart</button>
+    </div>
+  </div>
+
+  <!-- Hero Slideshow -->
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+        <img src="Assest/Untitled design.png" style="width:100%" alt="Slide 1">
+      </a>
+    </div>
+
+    <!-- Navigation dots -->
+    <div class="dot-container">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+    </div>
+  </div>
+
+  <!-- ================= CUSTOMER REVIEWS MARQUEE ================= -->
+    <section class="reviews-marquee" aria-label="Customer reviews">
+      <div class="reviews-marquee-header">
+        <div class="reviews-marquee-title">
+          <span class="reviews-source-icons">
+            <img src="https://www.gstatic.com/images/branding/product/2x/googleg_48dp.png" alt="Google" class="g-logo">
+            <span class="reviews-source-divider">+</span>
+            <svg viewBox="0 0 32 32" width="20" height="20" aria-label="Trustpilot"><path fill="#00B67A" d="M16 0l3.708 11.412H32l-9.854 7.176L25.854 30 16 22.824 6.146 30l3.708-11.412L0 11.412h12.292z"/></svg>
+          </span>
+          <span>What our customers say on <strong>Google</strong> &amp; <strong>Trustpilot</strong></span>
+          <span class="reviews-stars">★★★★★ <em>5.0</em></span>
+        </div>
+        <a href="https://g.page/r/CUoC5lP8xkydEBM/review" target="_blank" rel="noopener" class="reviews-write-btn">Write a Review →</a>
+      </div>
+
+      <div class="reviews-track-wrap">
+        <div class="reviews-track">
+          <article class="review-card">
+            <div class="review-head">
+              <div class="review-avatar" style="background:#16a34a">H</div>
+              <div class="review-meta-wrap">
+                <div class="review-name">Hexadecimal</div>
+                <div class="review-meta">★★★★★ · Mar 13, 2026</div>
+              </div>
+              <span class="review-source-tp" title="Trustpilot review"><svg viewBox="0 0 32 32" width="18" height="18" aria-hidden="true"><path fill="#00B67A" d="M16 0l3.708 11.412H32l-9.854 7.176L25.854 30 16 22.824 6.146 30l3.708-11.412L0 11.412h12.292z"/></svg></span>
+            </div>
+            <p class="review-body">Absolutely awesome service. I bought their recovery service and Windows 11 Pro key. They recovered all of my lost data within 2 days, and the product key worked perfectly. Will choose their services again in the future.</p>
+          </article>
+
+        <article class="review-card">
+            <div class="review-head">
+              <img class="review-avatar review-avatar-img" src="https://lh3.googleusercontent.com/a-/ALV-UjVmOMhT62U-h3EEKOhYmDlq8eRYEKFLQn1bl6rBRZeg0Z0Xc5O6Tw=s128-c-rp-mo-br100" alt="Rizwan Deen">
+              <div class="review-meta-wrap">
+                <div class="review-name">Rizwan Deen</div>
+                <div class="review-meta">★★★★★ · 8 weeks ago</div>
+              </div>
+              <img src="https://www.gstatic.com/images/branding/product/2x/googleg_48dp.png" class="review-source-google" alt="Google" title="Google review">
+            </div>
+            <p class="review-body review-body-empty">Rated us <strong>5 stars</strong> on Google.</p>
+          </article>
+
+        <article class="review-card">
+            <div class="review-head">
+              <img class="review-avatar review-avatar-img" src="https://lh3.googleusercontent.com/a-/ALV-UjVPi4dukTCiQBYIoXHlBCy21MicnQIfvCAjsLo3FVEFYwkEQHU=s128-c-rp-mo-br100" alt="Tech Wave Solutions">
+              <div class="review-meta-wrap">
+                <div class="review-name">Tech Wave Solutions</div>
+                <div class="review-meta">★★★★★ · 42 weeks ago</div>
+              </div>
+              <img src="https://www.gstatic.com/images/branding/product/2x/googleg_48dp.png" class="review-source-google" alt="Google" title="Google review">
+            </div>
+            <p class="review-body">Excellent service. Recommended.</p>
+          </article>
+
+        <article class="review-card">
+            <div class="review-head">
+              <div class="review-avatar" style="background:#0891b2">R</div>
+              <div class="review-meta-wrap">
+                <div class="review-name">Rezo</div>
+                <div class="review-meta">★★★★★ · Feb 23, 2026</div>
+              </div>
+              <span class="review-source-tp" title="Trustpilot review"><svg viewBox="0 0 32 32" width="18" height="18" aria-hidden="true"><path fill="#00B67A" d="M16 0l3.708 11.412H32l-9.854 7.176L25.854 30 16 22.824 6.146 30l3.708-11.412L0 11.412h12.292z"/></svg></span>
+            </div>
+            <p class="review-body">Bought Windows Standard Server 2025. Quick service, reasonable pricing. Got exactly what I need. Recommended.</p>
+          </article>
+
+        <article class="review-card">
+            <div class="review-head">
+              <img class="review-avatar review-avatar-img" src="https://lh3.googleusercontent.com/a-/ALV-UjV9nDTwKOB7gePexpiSf0zGuauE4m7noevhteqJbo80iXNElfs=s128-c-rp-mo-br100" alt="VSS Trading Pvt Ltd">
+              <div class="review-meta-wrap">
+                <div class="review-name">VSS Trading Pvt Ltd</div>
+                <div class="review-meta">★★★★★ · 20 weeks ago</div>
+              </div>
+              <img src="https://www.gstatic.com/images/branding/product/2x/googleg_48dp.png" class="review-source-google" alt="Google" title="Google review">
+            </div>
+            <p class="review-body review-body-empty">Rated us <strong>5 stars</strong> on Google.</p>
+          </article>
+
+        <article class="review-card">
+            <div class="review-head">
+              <div class="review-avatar" style="background:#ea580c">S</div>
+              <div class="review-meta-wrap">
+                <div class="review-name">Sandaya Kumari</div>
+                <div class="review-meta">★★★★★ · Dec 31, 2024</div>
+              </div>
+              <img src="https://www.gstatic.com/images/branding/product/2x/googleg_48dp.png" class="review-source-google" alt="Google" title="Google review">
+            </div>
+            <p class="review-body review-body-empty">Rated us <strong>5 stars</strong> on Google.</p>
+          </article>
+
+        <article class="review-card">
+            <div class="review-head">
+              <div class="review-avatar" style="background:#059669">V</div>
+              <div class="review-meta-wrap">
+                <div class="review-name">Vac Remo</div>
+                <div class="review-meta">★★★★★ · Dec 31, 2024</div>
+              </div>
+              <img src="https://www.gstatic.com/images/branding/product/2x/googleg_48dp.png" class="review-source-google" alt="Google" title="Google review">
+            </div>
+            <p class="review-body review-body-empty">Rated us <strong>5 stars</strong> on Google.</p>
+          </article>
+
+        <article class="review-card">
+            <div class="review-head">
+              <div class="review-avatar" style="background:#60a5fa">R</div>
+              <div class="review-meta-wrap">
+                <div class="review-name">Ravindu Chamod</div>
+                <div class="review-meta">★★★★★ · Apr 26, 2026</div>
+              </div>
+              <span class="review-source-tp" title="Trustpilot review"><svg viewBox="0 0 32 32" width="18" height="18" aria-hidden="true"><path fill="#00B67A" d="M16 0l3.708 11.412H32l-9.854 7.176L25.854 30 16 22.824 6.146 30l3.708-11.412L0 11.412h12.292z"/></svg></span>
+            </div>
+            <p class="review-body">Excerllent service</p>
+          </article>
+
+        <article class="review-card" aria-hidden="true">
+            <div class="review-head">
+              <div class="review-avatar" style="background:#16a34a">H</div>
+              <div class="review-meta-wrap">
+                <div class="review-name">Hexadecimal</div>
+                <div class="review-meta">★★★★★ · Mar 13, 2026</div>
+              </div>
+              <span class="review-source-tp" title="Trustpilot review"><svg viewBox="0 0 32 32" width="18" height="18" aria-hidden="true"><path fill="#00B67A" d="M16 0l3.708 11.412H32l-9.854 7.176L25.854 30 16 22.824 6.146 30l3.708-11.412L0 11.412h12.292z"/></svg></span>
+            </div>
+            <p class="review-body">Absolutely awesome service. I bought their recovery service and Windows 11 Pro key. They recovered all of my lost data within 2 days, and the product key worked perfectly. Will choose their services again in the future.</p>
+          </article>
+
+        <article class="review-card" aria-hidden="true">
+            <div class="review-head">
+              <img class="review-avatar review-avatar-img" src="https://lh3.googleusercontent.com/a-/ALV-UjVmOMhT62U-h3EEKOhYmDlq8eRYEKFLQn1bl6rBRZeg0Z0Xc5O6Tw=s128-c-rp-mo-br100" alt="Rizwan Deen">
+              <div class="review-meta-wrap">
+                <div class="review-name">Rizwan Deen</div>
+                <div class="review-meta">★★★★★ · 8 weeks ago</div>
+              </div>
+              <img src="https://www.gstatic.com/images/branding/product/2x/googleg_48dp.png" class="review-source-google" alt="Google" title="Google review">
+            </div>
+            <p class="review-body review-body-empty">Rated us <strong>5 stars</strong> on Google.</p>
+          </article>
+
+        <article class="review-card" aria-hidden="true">
+            <div class="review-head">
+              <img class="review-avatar review-avatar-img" src="https://lh3.googleusercontent.com/a-/ALV-UjVPi4dukTCiQBYIoXHlBCy21MicnQIfvCAjsLo3FVEFYwkEQHU=s128-c-rp-mo-br100" alt="Tech Wave Solutions">
+              <div class="review-meta-wrap">
+                <div class="review-name">Tech Wave Solutions</div>
+                <div class="review-meta">★★★★★ · 42 weeks ago</div>
+              </div>
+              <img src="https://www.gstatic.com/images/branding/product/2x/googleg_48dp.png" class="review-source-google" alt="Google" title="Google review">
+            </div>
+            <p class="review-body">Excellent service. Recommended.</p>
+          </article>
+
+        <article class="review-card" aria-hidden="true">
+            <div class="review-head">
+              <div class="review-avatar" style="background:#0891b2">R</div>
+              <div class="review-meta-wrap">
+                <div class="review-name">Rezo</div>
+                <div class="review-meta">★★★★★ · Feb 23, 2026</div>
+              </div>
+              <span class="review-source-tp" title="Trustpilot review"><svg viewBox="0 0 32 32" width="18" height="18" aria-hidden="true"><path fill="#00B67A" d="M16 0l3.708 11.412H32l-9.854 7.176L25.854 30 16 22.824 6.146 30l3.708-11.412L0 11.412h12.292z"/></svg></span>
+            </div>
+            <p class="review-body">Bought Windows Standard Server 2025. Quick service, reasonable pricing. Got exactly what I need. Recommended.</p>
+          </article>
+
+        <article class="review-card" aria-hidden="true">
+            <div class="review-head">
+              <img class="review-avatar review-avatar-img" src="https://lh3.googleusercontent.com/a-/ALV-UjV9nDTwKOB7gePexpiSf0zGuauE4m7noevhteqJbo80iXNElfs=s128-c-rp-mo-br100" alt="VSS Trading Pvt Ltd">
+              <div class="review-meta-wrap">
+                <div class="review-name">VSS Trading Pvt Ltd</div>
+                <div class="review-meta">★★★★★ · 20 weeks ago</div>
+              </div>
+              <img src="https://www.gstatic.com/images/branding/product/2x/googleg_48dp.png" class="review-source-google" alt="Google" title="Google review">
+            </div>
+            <p class="review-body review-body-empty">Rated us <strong>5 stars</strong> on Google.</p>
+          </article>
+
+        <article class="review-card" aria-hidden="true">
+            <div class="review-head">
+              <div class="review-avatar" style="background:#ea580c">S</div>
+              <div class="review-meta-wrap">
+                <div class="review-name">Sandaya Kumari</div>
+                <div class="review-meta">★★★★★ · Dec 31, 2024</div>
+              </div>
+              <img src="https://www.gstatic.com/images/branding/product/2x/googleg_48dp.png" class="review-source-google" alt="Google" title="Google review">
+            </div>
+            <p class="review-body review-body-empty">Rated us <strong>5 stars</strong> on Google.</p>
+          </article>
+
+        <article class="review-card" aria-hidden="true">
+            <div class="review-head">
+              <div class="review-avatar" style="background:#059669">V</div>
+              <div class="review-meta-wrap">
+                <div class="review-name">Vac Remo</div>
+                <div class="review-meta">★★★★★ · Dec 31, 2024</div>
+              </div>
+              <img src="https://www.gstatic.com/images/branding/product/2x/googleg_48dp.png" class="review-source-google" alt="Google" title="Google review">
+            </div>
+            <p class="review-body review-body-empty">Rated us <strong>5 stars</strong> on Google.</p>
+          </article>
+
+        <article class="review-card" aria-hidden="true">
+            <div class="review-head">
+              <div class="review-avatar" style="background:#60a5fa">R</div>
+              <div class="review-meta-wrap">
+                <div class="review-name">Ravindu Chamod</div>
+                <div class="review-meta">★★★★★ · Apr 26, 2026</div>
+              </div>
+              <span class="review-source-tp" title="Trustpilot review"><svg viewBox="0 0 32 32" width="18" height="18" aria-hidden="true"><path fill="#00B67A" d="M16 0l3.708 11.412H32l-9.854 7.176L25.854 30 16 22.824 6.146 30l3.708-11.412L0 11.412h12.292z"/></svg></span>
+            </div>
+            <p class="review-body">Excerllent service</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  <div id="bg-gradient" aria-hidden="true"></div>
+
+  <!-- ================= PROMOTIONS / DISCOUNTS ================= -->
+  <section id="promotions" class="category">
+    <h2 class="promo-section-title">Promotions &amp; Discounts</h2>
+    <p class="promo-section-subtitle">Limited-time offers-grab them before they're gone!</p>
+    <div class="products">
+
+      <div class="product-card promo-card" data-name="Windows 11 Pro Product Key [OEM] [5PC] PROMO" data-unit-price="4800.30">
+        <span class="promo-badge">🔥 HOT DEAL</span>
+        <img src="Assest/windows-11-pro-5pc.jpeg" alt="Windows 11 Pro Product Key [OEM] [5PC] PROMO" />
+        <h2>Windows 11 Pro Product Key [OEM] [5PC] PROMO</h2>
+        <p class="promo-original-price">Was: 6.962.07 LKR</p>
+        <p class="price-lkr">4,800.30 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn" onclick="goToCheckout('Windows 11 Pro Product Key [OEM] [5PC] PROMO', 4800.30, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">Contact Sale</a>
+      </div>
+
+      <div class="product-card promo-card" data-name="EaseUS Data Recovery Wizard Professional (Life-Time Upgrade) PROMO" data-unit-price="36574.28">
+        <span class="promo-badge">🔥 HOT DEAL</span>
+        <img src="Assest/EaseUS Data Recovery Wizard (Windows).png" alt="EaseUS Data Recovery Wizard Professional (Life-Time Upgrade) PROMO" />
+        <h2>EaseUS Data Recovery Wizard Professional (Life-Time Upgrade) PROMO</h2>
+        <p class="promo-original-price">Was: 39,515.80 LKR</p>
+        <p class="price-lkr">36,574.28 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn" onclick="goToCheckout('EaseUS Data Recovery Wizard Professional (Life-Time Upgrade) PROMO', 36574.28, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">Contact Sale</a>
+      </div>
+
+  </section>
+
+  <section id="digital" class="category">
+
+    <!-- ================= MICROSOFT PRODUCTS ================= -->
+    <h1 class="mega-category">Microsoft Products</h1>
+    <div class="mega-category-sub">Genuine Windows, Office, SQL Server, Visual Studio, Project &amp; more</div>
+
+    <!-- ================= OS PRODUCT KEYS ================= -->
+    <h2 id="section-os-keys">OS Product Keys</h2>
+    <div class="products">
+
+      <div class="product-card" data-name="Windows 11 Pro OEM Key" data-unit-price="1581.44">
+        <img src="https://uniq.software/images/com_hikashop/upload/11_pro-angle.png" alt="Windows 11 Pro OEM Product Key Image" />
+        <h2>Windows 11 Pro Product Key [OEM] [1PC]</h2>
+        <p class="price-lkr">1,581.44 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+                onclick="goToCheckout('Windows 11 Pro Product Key [OEM] [1PC]', 1581.44, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          
+
+          
+
+        <ul class="description">
+          <li>Official OEM Windows 11 Pro key</li>
+          <li>Windows 10 Pro Compatible and can be upgrade to windows 11</li>
+          <li>One-time activation for 1 PC</li>
+          <li>Non-transferable license</li>
+          <li>24/7 Activation Support</li>
+          <li>Genuine Update Support</li>
+          <li>Global Activation</li>
+        </ul>
+      </div>
+
+      <div class="product-card" data-name="Windows 11 Pro Retail Key" data-unit-price="4279.16">
+        <img src="https://uniq.software/images/com_hikashop/upload/11_pro-angle.png" alt="Windows 11 Pro Retail Product Key Image" />
+        <h2>Windows 11 Pro Product Key [RETAIL] [1PC]</h2>
+        <p class="price-lkr">4,279.16 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+                onclick="goToCheckout('Windows 11 Pro Product Key [RETAIL] [1PC]', 4279.16, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          
+
+          
+
+        <ul class="description">
+          <li>Official RETAIL Windows 11 Pro key</li>
+          <li>Windows 10 Pro Compatible and can be upgrade to windows 11</li>
+          <li>One-time activation for 1 PC</li>
+          <li>Transferable license</li>
+          <li>24/7 Activation Support</li>
+          <li>Genuine Update Support</li>
+          <li>Global Activation</li>
+        </ul>
+      </div>
+
+      <div class="product-card" data-name="Windows 11 Pro Product Key [OEM] [5PC]" data-unit-price="6962.07">
+        <img src="Assest/windows-11-pro-5pc.jpeg" alt="Windows 11 Pro OEM 5PC Product Key Image" />
+        <span class="promo-badge">Special Promotion Available</span>
+        <h2>Windows 11 Pro Product Key [OEM] [5PC]</h2>
+        <p class="price-lkr">6,962.07 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+                onclick="goToCheckout('Windows 11 Pro Product Key [OEM] [5PC]', 6962.07, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          
+
+          
+
+        <ul class="description">
+          <li>Official OEM Windows 11 Pro key</li>
+          <li>Windows 10 Pro Compatible and can be upgrade to windows 11</li>
+          <li>One-time activation for 5 PC</li>
+          <li>Non-transferable license</li>
+          <li>24/7 Activation Support</li>
+          <li>Genuine Update Support</li>
+          <li>Global Activation</li>
+        </ul>
+      </div>
+
+
+      <div class="product-card" data-name="Windows Server 2022 Standard [2PC]" data-unit-price="1850.00">
+        <img src="Assest/microsoft-windows-server-2022-standard.png" alt="Windows Server 2022 Standard 2PC Product Key Image"/>
+        <h2>Windows Server 2022 Standard [2PC]</h2>
+        <p class="price-lkr">1,850.00 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+                onclick="goToCheckout('Windows Server 2022 Standard [2PC]', 1850.00, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          
+
+          
+
+        <ul class="description">
+          <li>You will receive 1x Windows Server 2022 Standard key that can activate 2PCs.</li>
+          <li>One-time activation for 2 PC</li>
+          <li>Transferable license</li>
+          <li>24/7 Activation Support</li>
+          <li>100% Authentic Licenses.</li>
+          <li>Global Activation</li>
+        </ul>
+      </div>
+
+      <div class="product-card" data-name="Windows Server 2022 Datacenter [2PC]" data-unit-price="1910.45">
+        <img src="Assest/microsoft-windows-server-2022-datacenter.png" alt="Windows Server 2022 Datacenter 2PC Product Key Image"/>
+        <h2>Windows Server 2022 Datacenter [2PC]</h2>
+        <p class="price-lkr">1,910.45 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+                onclick="goToCheckout('Windows Server 2022 Datacenter [2PC]', 1910.45, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          
+
+          
+
+        <ul class="description">
+          <li>You will receive 1x Windows Server 2022 Datacenter key that can activate 2PCs.</li>
+          <li>One-time activation for 2 PC</li>
+          <li>Transferable license</li>
+          <li>24/7 Activation Support</li>
+          <li>100% Authentic Licenses.</li>
+          <li>Global Activation</li>
+        </ul>
+      </div>
+
+      <div class="product-card" data-name="Windows Server 2025 Standard [2PC]" data-unit-price="1888.22">
+        <img src="Assest/microsoft-windows-server-2025-standard.png" alt="Windows Server 2025 Standard 2PC Product Key Image" />
+        <h2>Windows Server 2025 Standard [2PC]</h2>
+        <p class="price-lkr">1,888.22 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+                onclick="goToCheckout('Windows Server 2025 Standard [2PC]', 1888.22, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          
+
+          
+
+        <ul class="description">
+          <li>You will receive 1x Windows Server 2025 Standard key that can activate 2PCs.</li>
+          <li>One-time activation for 2 PC</li>
+          <li>Transferable license</li>
+          <li>24/7 Activation Support</li>
+          <li>100% Authentic Licenses.</li>
+          <li>Global Activation</li>
+        </ul>
+      </div>
+
+      <div class="product-card" data-name="Windows Server 2025 Datacenter [2PC]" data-unit-price="1951.77">
+        <img src="Assest/microsoft-windows-server-2025-datacenter.png" alt="Windows Server 2025 Datacenter 2PC Product Key Image"/>
+        <h2>Windows Server 2025 Datacenter [2PC]</h2>
+        <p class="price-lkr">1,951.77 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+                onclick="goToCheckout('Windows Server 2025 Datacenter [2PC]', 1951.77, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          
+
+          
+
+        <ul class="description">
+          <li>You will receive 1x Windows Server 2025 Datacenter key that can activate 2PCs.</li>
+          <li>One-time activation for 2 PC</li>
+          <li>Transferable license</li>
+          <li>24/7 Activation Support</li>
+          <li>100% Authentic Licenses.</li>
+          <li>Global Activation</li>
+        </ul>
+      </div>
+
+
+    </div>
+
+    <!-- ================= SOFTWARE PRODUCT KEYS ================= -->
+    <h2 id="section-software-keys">Software Product Keys</h2>
+    <div class="products">
+
+      <div class="product-card" data-name="Microsoft Office 2024" data-unit-price="2807.22">
+        <img src="Assest/office24.png" alt="Microsoft Office 2024 Product Key Image"/>
+        <h2>Microsoft Office Professional Plus LTSC [2024] [1PC]</h2>
+        <p class="price-lkr">2,807.22 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+                onclick="goToCheckout('Microsoft Office Professional Plus [2024] [1PC]', 2807.22, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          
+
+          
+
+        <ul class="description">
+          <li>Official MS Office 2024 LTSC Pro Plus</li>
+          <li>One-time activation for 1 PC</li>
+          <li>Non-transferable license</li>
+          <li>24/7 Activation Support</li>
+          <li>Genuine Update Support</li>
+          <li>Global Activation</li>
+        </ul>
+      </div>
+
+      <div class="product-card" data-name="Microsoft Office Professional Plus [2021] [1PC]" data-unit-price="1982.40">
+        <img src="Assest/officepro21.png" alt="Microsoft Office Professional Plus [2021] [1PC] Product Key Image" />
+        <h2>Microsoft Office Professional Plus Retail [2021] [1PC]</h2>
+        <p class="price-lkr">1,982.40 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+                onclick="goToCheckout('Microsoft Office Professional Plus [2021] [1PC]', 1982.40, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          
+
+          
+
+        <ul class="description">
+          <li>Official MS Office 2021 Retail Pro Plus</li>
+          <li>One-time activation for 1 PC</li>
+          <li>Non-transferable license</li>
+          <li>24/7 Activation Support</li>
+          <li>Genuine Update Support</li>
+          <li>Global Activation</li>
+        </ul>
+      </div>
+
+      <div class="product-card" data-name="Microsoft Office 2021 Professional Plus (1PC) [BIND]" data-unit-price="18635.17">
+        <img src="Assest/office2021proplusbind.png" alt="Microsoft Office 2021 Professional Plus (1PC) [BIND] Product Key Image" />
+        <h2>Microsoft Office 2021 Professional Plus (1PC) [BIND]</h2>
+        <p class="price-lkr">18,635.17 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+                onclick="goToCheckout('Microsoft Office 2021 Professional Plus (1PC) [BIND]', 18635.17, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+        <ul class="description">
+          <li>Official MS Office Pro Plus 2021 [BIND]</li>
+          <li>One-time activation for 1 PC</li>
+          <li>Non-transferable license</li>
+          <li>24/7 Activation Support</li>
+          <li>Genuine Update Support</li>
+          <li>Global Activation</li>
+        </ul>
+      </div>
+      
+
+      <div class="product-card" data-name="Visio 2021 Professional [1PC]" data-unit-price="1628.16">
+        <img src="Assest/visio_2021_professional.png" alt="Visio 2021 Professional [1PC] Product Key Image" />
+        <h2>Visio 2021 Professional [1PC]</h2>
+        <p class="price-lkr">1,628.16 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+                onclick="goToCheckout('Visio 2021 Professional [1PC]', 1628.16, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          
+
+          
+
+        <ul class="description">
+          <li>Visio 2021 Professional [1PC]</li>
+          <li>One-time activation for 1 PC</li>
+          <li>Non-transferable license</li>
+          <li>24/7 Activation Support</li>
+          <li>Genuine Update Support</li>
+          <li>Global Activation</li>
+        </ul>
+
+        
+
+        </div>
+
+      <div class="product-card" data-name="Visio 2024 Professional (1PC) [BIND]" data-unit-price="9970.20">
+        <img src="Assest/viso pro 2024 bind.webp" alt="Visio 2024 Professional (1PC) [BIND] Product Key Image" />
+        <h2>Visio 2024 Professional (1PC) [BIND] </h2>
+        <p class="price-lkr">9,970.20 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+                onclick="goToCheckout('Visio 2024 Professional (1PC) [BIND]', 9970.20, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+
+
+
+
+        <ul class="description">
+          <li>Visio 2024 Professional Bind to MS Account</li>
+          <li>One-time activation for 1 PC</li>
+          <li>Non-transferable license</li>
+          <li>24/7 Activation Support</li>
+          <li>Genuine Update Support</li>
+          <li>Global Activation</li>
+        </ul>
+
+
+
+        </div>
+      
+        <div class="product-card" data-name="Microsoft Office Professional Plus [2021] [5PC]" data-unit-price="11696.16">
+          <img src="Assest/officepro21.png" alt="Microsoft Office Professional Plus [2021] [5PC] Product Key Image"/>
+          <h2>Microsoft Office Professional Plus Retail [2021] [5PC]</h2>
+          <p class="price-lkr">11,696.16 LKR</p>
+
+          <div class="qty-controls">
+            <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+            <input type="number" class="qty-input" value="1" readonly />
+            <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+          </div>
+
+          <button class="purchase-btn"
+                  onclick="goToCheckout('Microsoft Office Professional Plus [2021] [5PC]', 11696.16, this.closest('.product-card').querySelector('.qty-input'))">
+            Purchase Now
+          </button>
+          <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          
+
+          
+
+          <ul class="description">
+            <li>Official MS Office 2021 Retail Pro Plus</li>
+            <li>One-time activation for 5 PC</li>
+            <li>Non-transferable license</li>
+            <li>24/7 Activation Support</li>
+            <li>Genuine Update Support</li>
+            <li>Global Activation</li>
+          </ul>
+
+    </div>
+
+    <div class="product-card" data-name="Microsoft Office 365 A3 Subscription (5 Device/1Year)" data-unit-price="3744.90">
+        <img src="Assest/officea3.png" alt="Microsoft Office 365 A3 Subscription (5 Device/1Year) Product Key Image"/>
+        <h2>Microsoft Office 365 A3 Subscription (5 Device/1Year)</h2>
+        <p class="price-lkr">3,744.90 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+      <button class="purchase-btn"
+              onclick="goToCheckout('Microsoft Office 365 A3 Subscription (5 Device/1Year)', 3744.90, this.closest('.product-card').querySelector('.qty-input'))">
+        Purchase Now
+      </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          
+
+          
+
+        <ul class="description">
+          <li>Official Microsoft Office 365 A3 Subscription</li>
+          <li>1 Year Subscription for up to 5 devices</li>
+          <li>Account-based license</li>
+          <li>24/7 Activation Support</li>
+          <li>Genuine Update Support</li>
+          <li>Global Activation</li>
+          <li>Supported Devices:(Windows 10/11 , MacOS , Android/IOS)</li>
+        </ul>
+
+    </div>
+
+      <div class="product-card" data-name="Microsoft Office 2021 Home and Business For MAC (1MAC)" data-unit-price="13380.57">
+          <img src="Assest/microsoft-office-2021-home-business-mac-1.png" alt="Microsoft Office 2021 Home and Business For MAC (1MAC) Product Key Image"/>
+          <h2>Microsoft Office 2021 Home & Business For MAC (1MAC)</h2>
+          <p class="price-lkr">13,380.57 LKR</p>
+
+          <div class="qty-controls">
+            <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+            <input type="number" class="qty-input" value="1" readonly />
+            <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+          </div>
+
+        <button class="purchase-btn"
+                onclick="goToCheckout('Microsoft Office 2021 Home & Business For MAC (1MAC)', 13380.57, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+          <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          
+
+          
+
+          <ul class="description">
+            <li>Official MS Office 2021 Home & Business Key For Redeem</li>
+            <li>One-time activation for 1 MAC Device/Account</li>
+            <li>Transferable license</li>
+            <li>24/7 Activation Support</li>
+            <li>Genuine Update Support</li>
+            <li>Global Activation</li>
+          </ul>
+
+      </div>
+
+      <div class="product-card" data-name="Microsoft Excel 2024 (1PC) [Bind]" data-unit-price="9970.20">
+        <img src="Assest/excel2024bind.webp" alt="Microsoft Excel 2024 (1PC) [Bind] Product Key Image" />
+        <h2>Microsoft Excel 2024 (1PC) [Bind]</h2>
+        <p class="price-lkr">9,970.20 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+      <button class="purchase-btn"
+              onclick="goToCheckout('Microsoft Excel 2024 (1PC) [Bind]', 9970.20, this.closest('.product-card').querySelector('.qty-input'))">
+        Purchase Now
+      </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+      <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+      Contact Sale
+      </a>
+
+
+
+
+
+        <ul class="description">
+          <li>Microsoft Excel 2024 Bind to MS Account</li>
+          <li>One-time activation for 1 PC</li>
+          <li>Non-transferable license</li>
+          <li>24/7 Activation Support</li>
+          <li>Genuine Software Support</li>
+          <li>Global Activation</li>
+        </ul>
+        </div>
+
+      <div class="product-card" data-name="Microsoft PowerPoint 2024 (1PC) [Bind]" data-unit-price="9970.20">
+        <img src="Assest/powerpoint2024bind.webp" alt="Microsoft PowerPoint 2024 (1PC) [Bind] Product Key Image" />
+        <h2>Microsoft PowerPoint 2024 (1PC) [Bind]</h2>
+        <p class="price-lkr">9,970.20 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+      <button class="purchase-btn"
+              onclick="goToCheckout('Microsoft PowerPoint 2024 (1PC) [Bind]', 9970.20, this.closest('.product-card').querySelector('.qty-input'))">
+        Purchase Now
+      </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+      <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+      Contact Sale
+      </a>
+
+
+
+
+
+        <ul class="description">
+          <li>Microsoft PowerPoint 2024 Bind to MS Account</li>
+          <li>One-time activation for 1 PC</li>
+          <li>Non-transferable license</li>
+          <li>24/7 Activation Support</li>
+          <li>Genuine Software Support</li>
+          <li>Global Activation</li>
+        </ul>
+        </div>
+
+      <div class="product-card" data-name="Microsoft Word 2024 (1PC) [Bind]" data-unit-price="9970.20">
+        <img src="Assest/word2024bind.webp" alt="Microsoft Word 2024 (1PC) [Bind] Product Key Image" />
+        <h2>Microsoft Word 2024 (1PC) [Bind]</h2>
+        <p class="price-lkr">9,970.20 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+      <button class="purchase-btn"
+              onclick="goToCheckout('Microsoft Word 2024 (1PC) [Bind]', 9970.20, this.closest('.product-card').querySelector('.qty-input'))">
+        Purchase Now
+      </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+      <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+      Contact Sale
+      </a>
+
+        <ul class="description">
+          <li>Microsoft Word 2024 Bind to MS Account</li>
+          <li>One-time activation for 1 PC</li>
+          <li>Non-transferable license</li>
+          <li>24/7 Activation Support</li>
+          <li>Genuine Software Support</li>
+          <li>Global Activation</li>
+        </ul>
+        </div>
+
+
+
+
+    <div class="product-card" data-name="SQL Server 2019 Standard [1PC]" data-unit-price="2889.83">
+        <img src="Assest/SQL-Server-2019-Standard.png" alt="SQL Server 2019 Standard [1PC] Product Key Image" />
+        <h2>SQL Server 2019 Standard [1PC]</h2>
+        <p class="price-lkr">2,889.83 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+      <button class="purchase-btn"
+              onclick="goToCheckout('SQL Server 2019 Standard [1PC]', 2889.83, this.closest('.product-card').querySelector('.qty-input'))">
+        Purchase Now
+      </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          
+
+          
+
+        <ul class="description">
+          <li>You will receive 1x SQL Server 2019 Standard key that can activate 1PC.</li>
+          <li>One-time activation for 1 PC</li>
+          <li>Non-transferable license</li>
+          <li>24/7 Activation Support</li>
+          <li>Genuine Software Support</li>
+          <li>Global Activation</li>
+        </ul>
+      </div>
+
+
+        <div class="product-card" data-name="Outlook 2016 [5PC]" data-unit-price="1319.34">
+            <img src="Assest/outlook-2016-product-key.jpg" alt="Outlook 2016 [5PC] Product Key Image" />
+            <h2>Outlook 2016 [5PC]</h2>
+            <p class="price-lkr">1,319.34 LKR</p>
+
+            <div class="qty-controls">
+              <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+              <input type="number" class="qty-input" value="1" readonly />
+              <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+            </div>
+
+          <button class="purchase-btn"
+                  onclick="goToCheckout('Outlook 2016 [5PC]', 1319.34, this.closest('.product-card').querySelector('.qty-input'))">
+            Purchase Now
+          </button>
+            <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          
+
+          
+
+            <ul class="description">
+              <li>Official Outlook 2016 License Key</li>
+              <li>One-time activation for 5 PC</li>
+              <li>Non-transferable license</li>
+              <li>24/7 Activation Support</li>
+              <li>Genuine Software Support</li>
+              <li>Global Activation</li>
+            </ul>
+          </div>
+
+      <div class="product-card" data-name="Outlook 2024 (1PC) [Bind]" data-unit-price="8749.35">
+        <img src="Assest/outlook2024.webp" alt="Outlook 2024 (1PC) [Bind] Product Key Image" />
+        <h2>Outlook 2024 (1PC) [Bind]</h2>
+        <p class="price-lkr">8,749.35 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+      <button class="purchase-btn"
+              onclick="goToCheckout('Outlook 2024 (1PC) [Bind]', 8749.35, this.closest('.product-card').querySelector('.qty-input'))">
+        Purchase Now
+      </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+      <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+      Contact Sale
+      </a>
+
+
+
+
+
+        <ul class="description">
+          <li>Outlook 2024 Bind to MS Account</li>
+          <li>One-time activation for 1 PC</li>
+          <li>Non-transferable license</li>
+          <li>24/7 Activation Support</li>
+          <li>Genuine Software Support</li>
+          <li>Global Activation</li>
+        </ul>
+        </div>
+
+      <div class="product-card" data-name="Visual Studio 2022 Enterprise [2PC]" data-unit-price="990.19">
+        <img src="Assest/microsoft-visual-studio-enterprise-2022-1.png" alt="Visual Studio 2022 Enterprise [2PC] Product Key Image" />
+        <h2>Visual Studio 2022 Enterprise [2PC]</h2>
+        <p class="price-lkr">990.19 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+                onclick="goToCheckout('Visual Studio 2022 Enterprise [2PC]', 990.19, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          
+
+          
+
+        <ul class="description">
+          <li>Official Visual Studio 2022 License Key</li>
+          <li>One-time activation for 2 PC</li>
+          <li>Non-transferable license</li>
+          <li>24/7 Activation Support</li>
+          <li>Genuine Software Support</li>
+          <li>Global Activation</li>
+        </ul>
+      </div>
+
+      <div class="product-card" data-name="Visual Studio 2022 Professional [5PC]" data-unit-price="3871.47">
+        <img src="Assest/visual_studio_2022_professional.png" alt="Visual Studio 2022 Professional [5PC] Product Key Image" />
+        <h2>Visual Studio 2022 Professional [5PC]</h2>
+        <p class="price-lkr">3,871.47 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+                onclick="goToCheckout('Visual Studio 2022 Professional [5PC]', 3871.47, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          
+
+          
+
+        <ul class="description">
+          <li>Official Visual Studio 2025 Pro License Key</li>
+          <li>One-time activation for 5 PC</li>
+          <li>Non-transferable license</li>
+          <li>24/7 Activation Support</li>
+          <li>Genuine Software Support</li>
+          <li>Global Activation</li>
+        </ul>
+      </div>
+
+
+      <div class="product-card" data-name="Visual Studio 2026 Enterprise [5PC]" data-unit-price="5710.89">
+        <img src="Assest/visual studio 26.webp" alt="Visual Studio 2026 Enterprise [5PC] Product Image" />
+        <h2>Visual Studio 2026 Enterprise [5PC]</h2>
+        <p class="price-lkr">5,710.89 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+                onclick="goToCheckout('Visual Studio 2026 Enterprise [5PC]', 5710.89, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          
+
+          
+
+        <ul class="description">
+          <li>Visual Studio 2026 Enterprise Product Key</li>
+          <li>One-time activation for 5 PC</li>
+          <li>Non-transferable license</li>
+          <li>24/7 Activation Support</li>
+          <li>Genuine Software Support</li>
+          <li>Global Activation</li>
+        </ul>
+      </div>
+
+      <div class="product-card" data-name="Visual Studio 2026 Professional [5PC]" data-unit-price="6390.90">
+        <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/B00-Visual-Studio-Professional-Perpetual?qlt=90&amp;hei=270&amp;wid=270&amp;bgc=FFFFFFFF&amp;fmt=jpg" alt="Visual Studio 2026 Professional [5PC] Product Image" />
+        <h2>Visual Studio 2026 Professional [5PC]</h2>
+        <p class="price-lkr">6,390.90 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+                onclick="goToCheckout('Visual Studio 2026 Enterprise [5PC]', 6390.90, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          
+
+          
+
+        <ul class="description">
+          <li>Visual Studio 2026 Professional Product Key</li>
+          <li>One-time activation for 5 PC</li>
+          <li>Non-transferable license</li>
+          <li>24/7 Activation Support</li>
+          <li>Genuine Software Support</li>
+          <li>Global Activation</li>
+        </ul>
+      </div>
+
+
+      <div class="product-card" data-name="Microsoft Project Standard 2019 1PC [Retail]" data-unit-price="1320.601">
+        <img src="Assest/ProjectSTD1PC2019.webp" alt="Microsoft Project Standard 2019 1PC [Retail] Product Key Image" />
+        <h2>Microsoft Project Standard 2019 1PC [Retail]</h2>
+        <p class="price-lkr">1,320.60 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+                onclick="goToCheckout('Microsoft Project Standard 2019 1PC [Retail]', 1320.601, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          
+
+          
+
+        <ul class="description">
+          <li>Windows 10/11 Required</li>
+          <li>Can be activated globally</li>
+          <li>Transferable Product Key</li>
+          <li>30 day Technical Support</li>
+          <li>Lifetime Activation</li>
+        </ul>
+      </div>       
+
+
+      <div class="product-card" data-name="Microsoft Project Professional 2019 1PC [Retail]" data-unit-price="1680.10">
+        <img src="Assest/Projectpro20191pc.png" alt="Microsoft Project Professional 2019 1PC [Retail] Product Key Image" />
+        <h2>Microsoft Project Professional 2019 1PC [Retail]</h2>
+        <p class="price-lkr">1,680.10 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+                onclick="goToCheckout('Microsoft Project Professional 2019 1PC [Retail]', 1680.10, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          
+
+          
+
+        <ul class="description">
+          <li>Windows 10/11 Required</li>
+          <li>Can be activated globally</li>
+          <li>Transferable Product Key</li>
+          <li>30 day Technical Support</li>
+          <li>Lifetime Activation</li>
+        </ul>
+      </div>       
+
+      <div class="product-card" data-name="Microsoft Project Standard 2024 1PC [BIND]" data-unit-price="7180.10">
+        <img src="Assest/Project.webp" alt="Microsoft Project Standard 2024 1PC [BIND] Product Key Image" />
+        <h2>Microsoft Project Standard 2024 1PC [BIND]</h2>
+        <p class="price-lkr">7,180.10 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+                onclick="goToCheckout('Microsoft Project Standard 2024 1PC [BIND]', 7180.10, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          
+
+          
+
+        <ul class="description">
+          <li>Windows 10/11 Required</li>
+          <li>Can be activated globally</li>
+          <li>Bind to your microsoft account</li>
+          <li>30 day Technical Support</li>
+          <li>Lifetime Activation</li>
+        </ul>
+      </div>       
+
+
+      <div class="product-card" data-name="Microsoft Project Professional 2024 1PC [BIND]" data-unit-price="10482.66">
+        <img src="Assest/projectstd20241pc.webp" alt="Microsoft Project Professional 2024 1PC [BIND] Product Key Image" />
+        <h2>Microsoft Project Professional 2024 1PC [BIND]</h2>
+        <p class="price-lkr">10,482.66 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+                onclick="goToCheckout('Microsoft Project Professional 2024 1PC [BIND]', 10482.6, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          
+
+          
+
+        <ul class="description">
+          <li>Windows 10/11 Required</li>
+          <li>Can be activated globally</li>
+          <li>Bind to your microsoft account</li>
+          <li>30 day Technical Support</li>
+          <li>Lifetime Activation</li>
+        </ul>
+      </div>       
+
+
+      <div class="product-card" data-name="Windows Server 2025 Remote Desktop Services Device connections (50) CAL" data-unit-price="4972.15">
+        <img src="Assest/ws-2025-rds-cal.webp" alt="Windows Server 2025 Remote Desktop Services Device connections (50) CAL Product Key Image" />
+        <h2>Windows Server 2025 Remote Desktop Services Device connections (50) CAL</h2>
+        <p class="price-lkr">4,972.15 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+                onclick="goToCheckout('Windows Server 2025 Remote Desktop Services Device connections (50) CAL', 4972.15, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          <ul class="description">
+          <li>Remote Desktop Services Device CAL (Not User CAL)</li>
+          <li>Cannot be used to Activate your Windows 2025 Server.</li>
+          <li>Global Activation</li>
+          <li>30 day Technical Support</li>
+          <li>Lifetime Activation</li>
+        </ul>
+      </div>       
+
+
+      <div class="product-card" data-name="Windows Server 2025 Remote Desktop Services User connections (50) CAL" data-unit-price="9684.61">
+        <img src="Assest/ws-2025-rds-cal.webp" alt="Windows Server 2025 Remote Desktop Services User connections (50) CAL Product Key Image" />
+        <h2>Windows Server 2025 Remote Desktop Services User connections (50) CAL</h2>
+        <p class="price-lkr">9,684.61 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+                onclick="goToCheckout('Windows Server 2025 Remote Desktop Services User connections (50) CAL', 9684.61, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          <ul class="description">
+          <li>Remote Desktop Services User CAL (Not Device CAL)</li>
+          <li>Cannot be used to Activate your Windows 2025 Server.</li>
+          <li>Global Activation</li>
+          <li>30 day Technical Support</li>
+          <li>Lifetime Activation</li>
+        </ul>
+      </div>       
+
+    </div>
+
+    <!-- ================= EASEUS PRODUCTS ================= -->
+    <h1 class="mega-category" id="section-easeus">EaseUs Products</h1>
+    <div class="mega-category-sub">Data Recovery, Backup, Partition Manager &amp; PDF Editor</div>
+    <div class="products">
+
+      <div class="product-card" data-name="EaseUS Data Recovery Wizard Professional (1 Year)" data-unit-price="27976.80">
+        <img src="Assest/EaseUS Data Recovery Wizard (Windows).png" alt="EaseUS Data Recovery Wizard Professional (1 Year) Product Key Image" />
+        <h2>EaseUS Data Recovery Wizard Professional (1 Year)</h2>
+        <p class="price-lkr">27,976.80 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+                onclick="goToCheckout('EaseUS Data Recovery Wizard Professional (1 Year)', 27976.80, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          
+
+          
+
+        <ul class="description">
+          <li>For Windows Only</li>
+          <li>One license for one computer</li>
+          <li>Free remote assistance</li>
+          <li>The license is valid for one year after activation, with no renewal fees applicable.</li>
+        </ul>
+      </div>       
+
+
+      <div class="product-card" data-name="EaseUS Data Recovery Wizard Professional (1 Month)" data-unit-price="18710.36">
+        <img src="Assest/EaseUS Data Recovery Wizard (Windows).png" alt="EaseUS Data Recovery Wizard Professional (1 Month) Product Key Image" />
+        <h2>EaseUS Data Recovery Wizard Professional (1 Month)</h2>
+        <p class="price-lkr">18,710.36 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+                onclick="goToCheckout('EaseUS Data Recovery Wizard Professional (1 Month)', 18710.36, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          
+
+          
+
+        <ul class="description">
+          <li>For Windows Only</li>
+          <li>One license for one computer</li>
+          <li>Free remote assistance</li>
+          <li>The license is valid for one month after activation, with no renewal fees applicable.</li>
+        </ul>
+      </div>       
+
+      <div class="product-card" data-name="EaseUS Data Recovery Wizard Professional (Life-Time Upgrade)" data-unit-price="39515.80">
+        <img src="Assest/EaseUS Data Recovery Wizard (Windows).png" alt="EaseUS Data Recovery Wizard Professional (Life-Time Upgrade) Product Key Image" />
+        <span class="promo-badge">Special Promotion Available</span>
+        <h2>EaseUS Data Recovery Wizard Professional (Life-Time Upgrade)</h2>
+        <p class="price-lkr">39,515.80 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+                onclick="goToCheckout('EaseUS Data Recovery Wizard Professional (Life-Time Upgrade)', 39515.80, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          
+
+          
+
+        <ul class="description">
+          <li>For Windows Only</li>
+          <li>One license for one computer</li>
+          <li>Free remote assistance</li>
+          <li>Lifetime license including free upgrades</li>
+        </ul>
+      </div>       
+
+
+      <div class="product-card" data-name="EaseUS Data Recovery Wizard Professional (1 Year)" data-unit-price="30810.24">
+        <img src="Assest/EaseUS Data Recovery Wizard for Mac.png" alt="EaseUS Data Recovery Wizard Professional (1 Year) Product Key Image" />
+        <h2>EaseUS Data Recovery Wizard Professional (1 Year)</h2>
+        <p class="price-lkr">30,810.24 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+                onclick="goToCheckout('EaseUS Data Recovery Wizard Professional (1 Year)', 30810.24, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          
+
+          
+
+        <ul class="description">
+          <li>For MacOS Only</li>
+          <li>One license for one computer</li>
+          <li>Free remote assistance</li>
+          <li>The license is valid for one year after activation, with no renewal fees applicable.</li>
+        </ul>
+      </div>       
+
+
+      <div class="product-card" data-name="EaseUS Data Recovery Wizard Professional (1 Month)" data-unit-price="24205.00">
+        <img src="Assest/EaseUS Data Recovery Wizard for Mac.png" alt="EaseUS Data Recovery Wizard Professional (1 Month) Product Key Image" />
+        <h2>EaseUS Data Recovery Wizard Professional (1 Month)</h2>
+        <p class="price-lkr">24,205.00 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+                onclick="goToCheckout('EaseUS Data Recovery Wizard Professional (1 Month)', 24205.00, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          
+
+          
+
+        <ul class="description">
+          <li>For MacOS Only</li>
+          <li>One license for one computer</li>
+          <li>Free remote assistance</li>
+          <li>The license is valid for one month after activation, with no renewal fees applicable.</li>
+        </ul>
+      </div>       
+
+
+      <div class="product-card" data-name="EaseUS Data Recovery Wizard Professional  (Life-Time Upgrade)" data-unit-price="45810.12">
+        <img src="Assest/EaseUS Data Recovery Wizard for Mac.png" alt="EaseUS Data Recovery Wizard Professional  (Life-Time Upgrade) Product Key Image" />
+        <h2>EaseUS Data Recovery Wizard Professional (Life-Time Upgrade)</h2>
+        <p class="price-lkr">45,8100.12 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+                onclick="goToCheckout('EaseUS Data Recovery Wizard Professional  (Life-Time Upgrade)', 45810.12, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          
+
+          
+
+        <ul class="description">
+          <li>For MacOS Only</li>
+          <li>One license for one computer</li>
+          <li>Free remote assistance</li>
+          <li>Lifetime Upgrades.</li>
+        </ul>
+      </div>       
+
+
+      <div class="product-card" data-name="EaseUS Todo Backup Home ( Yearly Subscription )" data-unit-price="9479.53">
+        <img src="Assest/Todo Backup Home Edition.png" alt="EaseUS Todo Backup Home ( Yearly Subscription ) Image" />
+        <h2>EaseUS Todo Backup Home ( Yearly Subscription )</h2>
+        <p class="price-lkr">9,479.53 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+                onclick="goToCheckout('EaseUS Todo Backup Home ( Yearly Subscription )', 9479.53, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          
+
+          
+
+        <ul class="description">
+          <li>For Windows Only</li>
+          <li>One license for one computer</li>
+          <li>Standard technical support</li>
+          <li>One-year free upgrade</li>
+        </ul>
+      </div>       
+
+
+      <div class="product-card" data-name="EaseUS Todo Backup Home ( Current - Perpetual )" data-unit-price="15610.23">
+        <img src="Assest/Todo Backup Home Edition.png" alt="EaseUS Todo Backup Home ( Current - Perpetual ) Image" />
+        <h2>EaseUS Todo Backup Home ( Current - Perpetual )</h2>
+        <p class="price-lkr">15,610.23 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+                onclick="goToCheckout('EaseUS Todo Backup Home ( Current - Perpetual )', 15610.23, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          
+
+          
+
+        <ul class="description">
+          <li>For Windows Only</li>
+          <li>One license for one computer</li>
+          <li>Standard technical support</li>
+          <li>No free upgrade</li>
+        </ul>
+      </div>       
+
+      <div class="product-card" data-name="EaseUS Todo Backup Home ( Lifetime Upgrades )" data-unit-price="21795.38">
+        <img src="Assest/Todo Backup Home Edition.png" alt="EaseUS Todo Backup Home ( Current - Perpetual ) Image" />
+        <h2>EaseUS Todo Backup Home ( Lifetime Upgrades )</h2>
+        <p class="price-lkr">21,795.38 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+                onclick="goToCheckout('EaseUS Todo Backup Home ( Lifetime Upgrades )', 21795.38, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          
+
+          
+
+        <ul class="description">
+          <li>For Windows Only</li>
+          <li>One license for one computer</li>
+          <li>Premium technical support</li>
+          <li>Lifetime free upgrade</li>
+        </ul>
+      </div>       
+
+
+      <div class="product-card" data-name="EaseUS Partition Master Professional (Monthly Subscription)" data-unit-price="6348.16">
+        <img src="Assest/EaseUS Partition Master.png" alt="EaseUS Partition Master Professional (1 Month Subscription) Image" />
+        <h2>EaseUS Partition Master Professional (Monthly Subscription)</h2>
+        <p class="price-lkr">6,348.16 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+                onclick="goToCheckout('EaseUS Partition Master Professional (Monthly Subscription)', 6348.16, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          
+
+          
+
+        <ul class="description">
+          <li>For Windows Only</li>
+          <li>One license for 2 PCs</li>
+          <li>Standard technical support</li>
+          <li>One-month free upgrade</li>
+          <li>Cancel Any-time</li>
+        </ul>
+      </div>       
+
+
+      <div class="product-card" data-name="EaseUS Partition Master Professional (1 - Year Subscription)" data-unit-price="12520.06">
+        <img src="Assest/EaseUS Partition Master.png" alt="EaseUS Partition Master Professional (1 - Year Subscription) Image" />
+        <h2>EaseUS Partition Master Professional (1 - Year Subscription)</h2>
+        <p class="price-lkr">12,520.06 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+                onclick="goToCheckout('EaseUS Partition Master Professional (1 - Year Subscription)',12520.0, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          
+
+          
+
+        <ul class="description">
+          <li>For Windows Only</li>
+          <li>One license for 2 PCs</li>
+          <li>Premium technical support</li>
+          <li>One-month free upgrade</li>
+          <li>Cancel Any-time</li>
+        </ul>
+      </div>       
+
+      <div class="product-card" data-name="EaseUS Partition Master Professional (Lifetime Upgrades)" data-unit-price="18520.06">
+        <img src="Assest/EaseUS Partition Master.png" alt="EaseUS Partition Master Professional 19.0 (Lifetime Upgrades) Image" />
+        <h2>EaseUS Partition Master Professional (Lifetime Upgrades)</h2>
+        <p class="price-lkr">18,520.06 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+                onclick="goToCheckout('EaseUS Partition Master Professional (Lifetime Upgrades)',18520.06, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          
+
+          
+
+        <ul class="description">
+          <li>For Windows Only</li>
+          <li>One license for 2 PCs</li>
+          <li>Premium technical support</li>
+          <li>Lifetime Usage & Free Upgrades</li>
+          <li>Cancel Any-time</li>
+        </ul>
+      </div>       
+
+
+      <div class="product-card" data-name="EaseUS PDF Editor (1-Year Upgrades)" data-unit-price="12520.06">
+        <img src="Assest/PDF Editor.png" alt="EaseUS PDF Editor (1-Year Upgrades) Image" />
+        <h2>EaseUS PDF Editor (1-Year Upgrades)</h2>
+        <p class="price-lkr">12,520.06 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+                onclick="goToCheckout('EaseUS PDF Editor (1-Year Upgrades)',12520.06, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          
+
+          
+
+        <ul class="description">
+          <li>For Windows Only</li>
+          <li>One license for one computer</li>
+          <li>1-year free upgrades</li>
+          <li>Cancel Any-time</li>
+        </ul>
+      </div>       
+
+
+      <div class="product-card" data-name="EaseUS PDF Editor (1-Month Upgrades)" data-unit-price="6348.16">
+        <img src="Assest/PDF Editor.png" alt="EaseUS PDF Editor (1-Month Upgrades) Image" />
+        <h2>EaseUS PDF Editor (1-Month Upgrades)</h2>
+        <p class="price-lkr">6,348.16 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+                onclick="goToCheckout('EaseUS PDF Editor (1-Month Upgrades)',6348.16, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          
+
+          
+
+        <ul class="description">
+          <li>For Windows Only</li>
+          <li>One license for one computer</li>
+          <li>1-month free upgrades</li>
+          <li>Cancel Any-time</li>
+        </ul>
+      </div>       
+
+      <div class="product-card" data-name="EaseUS PDF Editor (Life-Time Upgrades)" data-unit-price="21795.38">
+        <img src="Assest/PDF Editor.png" alt="EaseUS PDF Editor (Life-Time Upgrades) Image" />
+        <h2>EaseUS PDF Editor (Life-Time Upgrades)</h2>
+        <p class="price-lkr">21,795.38 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+                onclick="goToCheckout('EaseUS PDF Editor (Life-Time Upgrades)',21795.38, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+          
+
+          
+
+        <ul class="description">
+          <li>For Windows Only</li>
+          <li>One license for one computer</li>
+          <li>Lifetime free upgrades</li>
+          <li>Cancel Any-time</li>
+        </ul>
+      </div>           
+
+      
+    </div>
+
+    <!-- ================= OTHER PRODUCTS ================= -->
+    <h1 class="mega-category" id="section-other">Other Products</h1>
+    <div class="mega-category-sub">Design, graphics &amp; other software</div>
+    <div class="products">
+
+      <div class="product-card" data-name="CorelDraw Standard 2021 [1PC]" data-unit-price="2169.19">
+        <img src="Assest/CorelDrawStandard2021_.webp" alt="CorelDraw Standard 2021 [1PC] Product Key Image" />
+        <h2>CorelDraw Standard 2021 [1PC]</h2>
+        <p class="price-lkr">2,169.19 LKR</p>
+
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <input type="number" class="qty-input" value="1" readonly />
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+
+        <button class="purchase-btn"
+                onclick="goToCheckout('CorelDraw Standard 2021 [1PC]', 2169.19, this.closest('.product-card').querySelector('.qty-input'))">
+          Purchase Now
+        </button>
+        <small class="purchase-note">Safe Checkout – T&C Apply</small>
+        <a href="https://wa.me/94712622012" target="_blank" class="contact-sale-btn">
+          Contact Sale
+        </a>
+
+        <ul class="description">
+          <li>Windows</li>
+          <li>Global Activation</li>
+          <li>30 Day Technical Support/Warranty</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="physical" class="category">
+    <div class="products">
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <!-- LEFT: Company Info -->
+      <div class="footer-info">
+        <h3>RedTrex Technologies</h3>
+
+        <p><img src="Assest/location-icon.png" class="footer-icon">74,Katuwapitiya Road Negombo, Sri-Lanka , 11500.</p>
+
+        <p><img src="Assest/phone-icon.png" class="footer-icon">
+          <a href="tel:+94712622012">+94 71 262 2012</a>
+        </p>
+
+        <p><img src="Assest/phone-icon.png" class="footer-icon">
+          <a href="tel:+94722692012">+94 72 269 2012</a>
+        </p>
+
+        <p><img src="Assest/phone-icon.png" class="footer-icon">
+          <a href="tel:+12055884201">+1 205 588 4201 (TOLL-FREE)</a>
+        </p>
+
+        <p><img src="Assest/mail-icon.png" class="footer-icon">
+          <a href="mailto:redtrex@technologist.com">redtrex@technologist.com</a>
+        </p>
+
+        <!-- Social Icons inside the left column -->
+        <div class="footer-social">
+          <a href="https://www.facebook.com/profile.php?id=61550727811373" target="_blank"><img src="Assest/facebook.png"></a>
+          <a href="https://www.instagram.com/rina_redtrex" target="_blank"><img src="Assest/instagramico.png"></a>
+          <a href="https://www.tiktok.com/@rinafromredtrex" target="_blank"><img src="Assest/tiktok.webp"></a>
+          <a href="https://x.com/its_me_rina_ai?s=21" target="_blank"><img src="Assest/x.xom.png"></a>
+          <a href="https://wa.me/message/JDKR2AEH67JRM1" target="_blank"><img src="Assest/waicon.png"></a>
+          <a href="https://t.me//store_redtrex" target="_blank"><img src="Assest/telgrm ico.png"></a>
+          <a href="https://signal.me/#eu/gaLdZyM2ymA34ZMivZuaRbbSdCQAuxXobaX-seG7qUMH1Ro3J3pFcbRkNGB2WoWw" target="_blank"><img src="Assest/signal-ico.png"></a>
+        </div>
+      </div>
+
+      <!-- MIDDLE: Partners & Reviews -->
+      <div class="footer-logo">
+        <h4>Trusted Partners</h4>
+
+        <div class="partner-logos">
+          <a href="Assest/REDTrex- Reseller Certificate.png" title="Authorized Reseller"><img src="Assest/Partner Authorition logo.svg" alt="Authorized Reseller"></a>
+          <a href="https://marketplace.microsoft.com/en-us/partners/1f0d0338-bde9-4fd8-bf04-eb8e6d70faf1/overview" title="Microsoft CSP"><img src="Assest/m-csp.png" alt="Microsoft Cloud Solution Provider"></a>
+          <a href="https://bybit.com" title="Bybit"><img src="assetphy/Bybit-Logo.png" alt="Bybit"></a>
+          <a href="https://anydesk.com/en/partners" title="AnyDesk Partner"><img src="Assest/anydesk.png" alt="AnyDesk"></a>
+          <a href="https://www.directpay.lk/" title="DirectPay"><img src="https://res.cloudinary.com/directpay/image/upload/v1621411813/logo-bckp-min_tvuf38.png" alt="DirectPay"></a>
+        </div>
+
+        <div class="google-rating">
+          <span class="stars">★★★★★</span>
+          <span class="rating-text">5.0 / 5.0</span>
+          <p class="review-count">
+            <a href="https://g.page/r/CUoC5lP8xkydEBM/review" target="_blank">Read our 5 Google Reviews →</a>
+          </p>
+        </div>
+
+        <div class="payment-logos" title="Accepted Payment Methods">
+          <img src="Assest/visa-ico.webp" alt="Visa">
+          <img src="Assest/mastercard.webp" alt="Mastercard">
+          <img src="Assest/American-Express-Logo.png" alt="American Express">
+          <img src="Assest/tether-usdt-logo.png" alt="Tether USDT">
+          <img src="Assest/toncoin.webp" alt="TON Coin">
+        </div>
+      </div>
+
+      <!-- RIGHT: Legal -->
+      <div class="footer-links">
+        <h4>Legal & Policies</h4>
+        <ul>
+          <li><a href="terms.html">Terms & Conditions</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="refund.html">Refund Policy</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="sitemap.html">Site Map</a></li>
+          <li><a href="news.html">News Room</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom" id="site-disclaimer">
+      <p>&nbsp;<span class="site-version">AI API VER : v1.0.6</span>
+      <span class="site-version">SITE VER : v7.3.6</span>
+        <span class="site-version">SECURITY : LKNG2026MAYDTRX425880BV(ENFORCED)</span>
+      </p>
+      
+      <!-- TrustBox widget - Review Collector -->
+      <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="695cc6e19a00ec5c081ad5cf" data-style-height="52px" data-style-width="100%" data-token="d9199b8b-2dd3-442e-bb28-a0178778ded4" style="margin: 20px 0;">
+        <a href="https://www.trustpilot.com/review/redtrex.store" target="_blank" rel="noopener">Trustpilot</a>
+      </div>
+      <!-- End TrustBox widget -->
+
+      <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.8; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.4;">
+        © 2026 RedTrex Technologies.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Disclaimer Popup -->
+  <div id="disclaimerPopup" class="popup-modal">
+      <div class="popup-content glass-effect">
+        <button class="close-btn" onclick="closeDisclaimerPopup()">✕</button>
+        <h2 class="popup-title">Important Information</h2>
+        <p class="popup-text" style="font-size: 0.95rem; line-height: 1.65; text-align: left;">
+          <strong>Authorized Software Reseller</strong><br>
+          RedTrex Technologies is an authorized reseller of genuine software product keys, including Microsoft,EaseUS and other industry-leading vendors. Every license we sell is sourced through legitimate distribution channels.
+        </p>
+        <button onclick="closeDisclaimerPopup()" style="width:100%; padding: 12px; background: linear-gradient(135deg,#DC2626,#b91c1c); color: white; border: none; border-radius: 10px; cursor: pointer; font-weight: bold; font-size: 0.95rem; box-shadow: 0 4px 14px rgba(220,38,38,0.35);">I Understand</button>
+      </div>
+  </div>
+
+  <script>
+    // Quantity Update Function
+    function updateQty(btn, change) {
+      const input = btn.parentElement.querySelector('.qty-input');
+      let currentVal = parseInt(input.value) || 1;
+      let newVal = currentVal + change;
+      if (newVal < 1) newVal = 1;
+      input.value = newVal;
+
+      // Update displayed price
+      const card = btn.closest('.product-card');
+      const unitPrice = parseFloat(card.dataset.unitPrice);
+      const priceLkr = card.querySelector('.price-lkr');
+      const priceUsd = card.querySelector('.price-usd');
+      if (priceLkr) {
+        const totalPrice = (unitPrice * newVal).toFixed(2);
+        priceLkr.textContent = Number(totalPrice).toLocaleString() + ' LKR';
+        if (priceUsd && window._lkrToUsdRate) {
+          const usdTotal = (totalPrice * window._lkrToUsdRate).toFixed(2);
+          priceUsd.textContent = '≈ $' + Number(usdTotal).toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' USD';
+        }
+      }
+    }
+
+    // New Quantity Update Logic for direct inputs
+    document.querySelectorAll('.qty-input').forEach(input => {
+      input.addEventListener('change', function() {
+        let val = parseInt(this.value);
+        if (isNaN(val) || val < 1) val = 1;
+        this.value = val;
+        
+        const card = this.closest('.product-card');
+        const unitPrice = parseFloat(card.dataset.unitPrice);
+        const priceLkr = card.querySelector('.price-lkr');
+        const priceUsd = card.querySelector('.price-usd');
+        if (priceLkr) {
+          const totalPrice = (unitPrice * val).toFixed(2);
+          priceLkr.textContent = Number(totalPrice).toLocaleString() + ' LKR';
+          if (priceUsd && window._lkrToUsdRate) {
+            const usdTotal = (totalPrice * window._lkrToUsdRate).toFixed(2);
+            priceUsd.textContent = '≈ $' + Number(usdTotal).toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' USD';
+          }
+        }
+      });
+    });
+
+    // Redirect to Checkout Page
+    function goToCheckout(productName, unitPrice, qtyInput) {
+      const qty = parseInt(qtyInput.value) || 1;
+      const encodedName = encodeURIComponent(productName);
+      window.location.href = `checkout.html?product=${encodedName}&price=${unitPrice}&qty=${qty}`;
+    }
+
+    function closeDisclaimerPopup() {
+      document.getElementById('disclaimerPopup').style.display = 'none';
+    }
+
+    function openDisclaimerPopup() {
+      document.getElementById('disclaimerPopup').style.display = 'flex';
+    }
+    const soldCounts = {
+      'Windows 11 Pro Product Key [OEM] [5PC] PROMO':                            0,
+      'EaseUS Data Recovery Wizard Professional (Life-Time Upgrade) PROMO':       0,
+      'Windows 11 Pro + Office 2024 Bundle [OEM] [1PC]':                         0,
+      'Microsoft Office 2021 Professional Plus (1PC) [BIND]':                     0,
+      'Visio 2024 Professional (1PC) [BIND]':                                     0,
+      'Microsoft Excel 2024 (1PC) [Bind]':                                         0,
+      'Microsoft PowerPoint 2024 (1PC) [Bind]':                                    0,
+      'Microsoft Word 2024 (1PC) [Bind]':                                         0,
+      'Outlook 2024 (1PC) [Bind]':                                                 0,
+      'Windows 11 Pro OEM Key':                                                   584,
+      'Windows 11 Pro Retail Key':                                                8,
+      'Windows 11 Pro Product Key [OEM] [5PC]':                                  0,
+      'Windows Server 2022 Standard [2PC]':                                       0,
+      'Windows Server 2022 Datacenter [2PC]':                                     0,
+      'Windows Server 2025 Standard [2PC]':                                       1,
+      'Windows Server 2025 Datacenter [2PC]':                                     0,
+      'Microsoft Office 2024':                                                    65,
+      'Microsoft Office Professional Plus [2021] [1PC]':                         206,
+      'Visio 2021 Professional [1PC]':                                            0,
+      'Microsoft Office Professional Plus [2021] [5PC]':                         0,
+      'Microsoft Office 365 A3 Subscription (5 Device/1Year)':                   3,
+      'Microsoft Office 2021 Home and Business For MAC (1MAC)':                  0,
+      'SQL Server 2019 Standard [1PC]':                                           1,
+      'Outlook 2016 [5PC]':                                                       0,
+      'Visual Studio 2022 Enterprise [2PC]':                                      16,
+      'Visual Studio 2022 Professional [5PC]':                                    0,
+      'Visual Studio 2026 Enterprise [5PC]':                                      0,
+      'Visual Studio 2026 Professional [5PC]':                                    0,
+      'CorelDraw Standard 2021 [1PC]':                                            8,
+      'Microsoft Project Standard 2019 1PC [Retail]':                            1,
+      'Microsoft Project Professional 2019 1PC [Retail]':                        0,
+      'Microsoft Project Standard 2024 1PC [BIND]':                              0,
+      'Microsoft Project Professional 2024 1PC [BIND]':                          20,
+      'Windows Server 2025 Remote Desktop Services Device connections (50) CAL':  1,
+      'Windows Server 2025 Remote Desktop Services User connections (50) CAL':    0,
+      'EaseUS Data Recovery Wizard Professional (1 Year)':                       0,
+      'EaseUS Data Recovery Wizard Professional (1 Month)':                      0,
+      'EaseUS Data Recovery Wizard Professional (Life-Time Upgrade)':            0,
+      'EaseUS Data Recovery Wizard Professional  (Life-Time Upgrade)':           0,
+      'EaseUS Todo Backup Home ( Yearly Subscription )':                         0,
+      'EaseUS Todo Backup Home ( Current - Perpetual )':                         0,
+      'EaseUS Todo Backup Home ( Lifetime Upgrades )':                           0,
+      'EaseUS Partition Master Professional (Monthly Subscription)':             0,
+      'EaseUS Partition Master Professional (1 - Year Subscription)':            0,
+      'EaseUS Partition Master Professional (Lifetime Upgrades)':                0,
+      'EaseUS PDF Editor (1-Year Upgrades)':                                      0,
+      'EaseUS PDF Editor (1-Month Upgrades)':                                     0,
+      'EaseUS PDF Editor (Life-Time Upgrades)':                                   0,
+    };
+    (function() {
+      document.querySelectorAll('.product-card').forEach(function(card) {
+        var name = card.getAttribute('data-name') || '';
+        var count = soldCounts.hasOwnProperty(name) ? soldCounts[name] : 100;
+        var badge = document.createElement('div');
+        badge.className = 'sold-count-badge';
+        badge.innerHTML = 'Sold: <span class="sold-num">' + count + '</span>';
+        card.appendChild(badge);
+      });
+    })();
+
+    // Search Functionality
+    const searchInput = document.getElementById('productSearch');
+    const searchResults = document.getElementById('searchResults');
+    const allProducts = Array.from(document.querySelectorAll('.product-card'));
+
+    if (searchInput) {
+      searchInput.addEventListener('input', () => {
+        const query = searchInput.value.trim().toLowerCase();
+        searchResults.innerHTML = '';
+
+        if (!query) {
+          searchResults.style.display = 'none';
+          return;
+        }
+
+        const matches = allProducts.filter(card => 
+          card.dataset.name.toLowerCase().includes(query)
+        );
+
+        if (matches.length === 0) {
+          const li = document.createElement('li');
+          li.textContent = 'No results found';
+          searchResults.appendChild(li);
+        } else {
+          matches.forEach(match => {
+            const li = document.createElement('li');
+            li.textContent = match.dataset.name;
+            li.addEventListener('click', () => {
+              match.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              searchResults.style.display = 'none';
+              searchInput.value = '';
+            });
+            searchResults.appendChild(li);
+          });
+        }
+        searchResults.style.display = 'block';
+      });
+    }
+
+    // ===== Service Status (Sri Lanka time, UTC+5:30) =====
+    function updateServiceStatus() {
+      var el = document.getElementById('serviceStatus');
+      var dot = document.getElementById('statusDot');
+      var txt = document.getElementById('statusText');
+      var popupTitle = document.getElementById('statusPopupTitle');
+      var popupDetail = document.getElementById('statusPopupDetail');
+      if (!el || !txt) return;
+      // Convert current UTC time to Sri Lanka time
+      var now = new Date();
+      var sl = new Date(now.getTime() + (5.5 * 60 + now.getTimezoneOffset()) * 60000);
+      var hr = sl.getHours();
+      // Online: 8:00 AM (08) to 11:59 PM (23). Offline: 12 AM (00) to 7:59 AM (07)
+      var isOnline = (hr >= 8 && hr <= 23);
+      el.classList.remove('online', 'offline');
+      if (isOnline) {
+        el.classList.add('online');
+        txt.textContent = 'Online';
+        el.title = 'We are online and processing orders. Service hours: 8:00 AM – 12:00 AM (Sri Lanka Time)';
+        if (popupTitle) popupTitle.textContent = '● We are Online';
+        if (popupDetail) popupDetail.textContent = 'We are processing orders right now.\nService hours: 8:00 AM – 12:00 AM (Sri Lanka Time)';
+      } else {
+        el.classList.add('offline');
+        txt.textContent = 'Offline';
+        el.title = 'We are currently offline (12:00 AM – 8:00 AM SLT). Please expect delays in orders during this time.';
+        if (popupTitle) popupTitle.textContent = '● We are Offline';
+        if (popupDetail) popupDetail.textContent = 'Currently offline (12:00 AM – 8:00 AM SLT).\nPlease expect delays during this time.';
+      }
+    }
+    updateServiceStatus();
+    setInterval(updateServiceStatus, 60000);
+
+    // ===== Service Status Popup Toggle =====
+    function toggleStatusPopup(e) {
+      e.stopPropagation();
+      var popup = document.getElementById('statusPopup');
+      if (!popup) return;
+      popup.classList.toggle('open');
+    }
+    document.addEventListener('click', function() {
+      var popup = document.getElementById('statusPopup');
+      if (popup) popup.classList.remove('open');
+    });
+
+  </script>
+
+
+  <!-- Cart Logic -->
+  <script>
+    // ── Cart State ──
+    let cart = JSON.parse(localStorage.getItem('redtrex_cart') || '[]');
+
+    function saveCart() {
+      localStorage.setItem('redtrex_cart', JSON.stringify(cart));
+    }
+
+    function addToCart(name, unitPrice, qtyInputEl) {
+      const qty = parseInt(qtyInputEl.value) || 1;
+      const existing = cart.find(i => i.name === name);
+      if (existing) {
+        existing.qty += qty;
+      } else {
+        cart.push({ name, unitPrice, qty });
+      }
+      saveCart();
+      updateCartBadge();
+      flashAdded(name);
+    }
+
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      saveCart();
+      updateCartBadge();
+      renderCartItems();
+    }
+
+    function updateCartItemQty(index, change) {
+      cart[index].qty = Math.max(1, cart[index].qty + change);
+      saveCart();
+      updateCartBadge();
+      renderCartItems();
+    }
+
+    function clearCart() {
+      cart = [];
+      saveCart();
+      updateCartBadge();
+      renderCartItems();
+    }
+
+    function updateCartBadge() {
+      const total = cart.reduce((sum, i) => sum + i.qty, 0);
+      const badge = document.getElementById('cartBadge');
+      if (badge) badge.textContent = total;
+    }
+
+    function flashAdded(name) {
+      document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
+        if (btn.dataset.name === name) {
+          const orig = btn.textContent;
+          btn.textContent = '✓ Added!';
+          btn.classList.add('added');
+          setTimeout(() => {
+            btn.textContent = orig;
+            btn.classList.remove('added');
+          }, 1500);
+        }
+      });
+    }
+
+    function renderCartItems() {
+      const container = document.getElementById('cartItems');
+      const footer = document.getElementById('cartFooter');
+      if (!container) return;
+
+      if (cart.length === 0) {
+        container.innerHTML = '<p class="cart-empty-msg">Your cart is empty.<br>Add products using the "Add to Cart" button.</p>';
+        if (footer) footer.style.display = 'none';
+        return;
+      }
+
+      if (footer) footer.style.display = 'flex';
+
+      const rate = window._lkrToUsdRate || (1 / 310);
+      let totalLkr = 0;
+
+      container.innerHTML = cart.map((item, i) => {
+        const lineTotal = item.unitPrice * item.qty;
+        totalLkr += lineTotal;
+        const lineUsd = (lineTotal * rate).toFixed(2);
+        return `
+          <div class="cart-item">
+            <div class="cart-item-name">${item.name}</div>
+            <div class="cart-item-controls">
+              <div class="cart-item-qty">
+                <button class="cart-qty-btn" onclick="updateCartItemQty(${i}, -1)">−</button>
+                <span class="cart-qty-num">${item.qty}</span>
+                <button class="cart-qty-btn" onclick="updateCartItemQty(${i}, 1)">+</button>
+              </div>
+              <div class="cart-item-price">
+                <div class="lkr">${Number(lineTotal.toFixed(2)).toLocaleString()} LKR</div>
+                <div class="usd">≈ $${Number(lineUsd).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})}</div>
+              </div>
+              <button class="cart-remove-btn" onclick="removeFromCart(${i})">Remove</button>
+            </div>
+          </div>`;
+      }).join('');
+
+      const totalUsd = (totalLkr * rate).toFixed(2);
+      const lkrEl = document.getElementById('cartTotalLkr');
+      const usdEl = document.getElementById('cartTotalUsd');
+      if (lkrEl) lkrEl.textContent = Number(totalLkr.toFixed(2)).toLocaleString() + ' LKR';
+      if (usdEl) usdEl.textContent = '≈ $' + Number(totalUsd).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+    }
+
+    function openCart() {
+      renderCartItems();
+      document.getElementById('cartPanel').classList.add('open');
+      document.getElementById('cartOverlay').classList.add('open');
+    }
+
+    function closeCart() {
+      document.getElementById('cartPanel').classList.remove('open');
+      document.getElementById('cartOverlay').classList.remove('open');
+    }
+
+    function checkoutCart() {
+        if (cart.length === 0) return;
+        var cartJson = JSON.stringify(cart);
+        try { localStorage.setItem('redtrex_pending_checkout', cartJson); } catch(e) {}
+        try { sessionStorage.setItem('redtrex_pending_checkout', cartJson); } catch(e) {}
+
+        if (cart.length === 1) {
+          var item = cart[0];
+          var encodedName = encodeURIComponent(item.name);
+          window.location.href = 'checkout.html?product=' + encodedName + '&price=' + item.unitPrice + '&qty=' + item.qty;
+        } else {
+          window.location.href = 'checkout.html?multi=1';
+        }
+      }
+
+    // ── Inject "Add to Cart" buttons onto every product card ──
+    document.addEventListener('DOMContentLoaded', () => {
+      updateCartBadge();
+      document.querySelectorAll('.product-card').forEach(card => {
+        const name = card.dataset.name;
+        const unitPrice = parseFloat(card.dataset.unitPrice);
+        const qtyInput = card.querySelector('.qty-input');
+        if (!name || isNaN(unitPrice) || !qtyInput) return;
+        if (card.querySelector('.add-to-cart-btn')) return; // already added
+
+        const btn = document.createElement('button');
+        btn.className = 'add-to-cart-btn';
+        btn.dataset.name = name;
+        btn.textContent = '+ Add to Cart';
+        btn.onclick = () => addToCart(name, unitPrice, qtyInput);
+
+        const contactBtn = card.querySelector('.contact-sale-btn');
+        if (contactBtn) {
+          contactBtn.insertAdjacentElement('afterend', btn);
+        } else {
+          card.appendChild(btn);
+        }
+      });
+    });
+  </script>
+
+  <!-- Live USD Price Script -->
+  <script>
+    (async function loadUsdPrices() {
+      let rate = null;
+      let lkrPerUsd = null;
+      try {
+        const res = await fetch('https://open.er-api.com/v6/latest/USD');
+        const data = await res.json();
+        if (data && data.rates && data.rates.LKR) {
+          lkrPerUsd = data.rates.LKR;
+          rate = 1 / lkrPerUsd;
+          window._lkrToUsdRate = rate;
+        }
+      } catch (e) {
+        lkrPerUsd = 310;
+        rate = 1 / 310;
+        window._lkrToUsdRate = rate;
+      }
+
+      // Update the ticker bar
+      if (lkrPerUsd) {
+        const tickerVal = document.getElementById('rateTickerValue');
+        const tickerInv = document.getElementById('rateTickerInverse');
+        const tickerTime = document.getElementById('rateTickerTime');
+        if (tickerVal) tickerVal.textContent = `1 USD = ${lkrPerUsd.toFixed(2)} LKR`;
+        if (tickerInv) tickerInv.textContent = `1 LKR = $${rate.toFixed(5)} USD`;
+        if (tickerTime) {
+          const now = new Date();
+          tickerTime.textContent = `Updated ${now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`;
+        }
+      }
+
+      if (!rate) return;
+
+      document.querySelectorAll('.product-card').forEach(card => {
+        const priceLkr = card.querySelector('.price-lkr');
+        const unitPrice = parseFloat(card.dataset.unitPrice);
+        if (!priceLkr || isNaN(unitPrice)) return;
+
+        // Create USD price element if not already present
+        if (!card.querySelector('.price-usd')) {
+          const priceUsd = document.createElement('p');
+          priceUsd.className = 'price-usd';
+          const usdAmount = (unitPrice * rate).toFixed(2);
+          priceUsd.textContent = '≈ $' + Number(usdAmount).toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' USD';
+          priceLkr.insertAdjacentElement('afterend', priceUsd);
+        }
+      });
+    })();
+  </script>
+
+  <!-- Elfsight AI Chatbot | RinaAi-RedTrex -->
+  <script id="chatbotkit-widget" src="https://static.chatbotkit.com/integrations/widget/v2.js" data-widget="cmoq14hfa000t04lb816kemiv"></script>
+  <style>
+    .eapps-widget-show-btn,
+    [class*="eapps-widget-show"],
+    [class*="eapps-apps-branding"],
+    .eapps-apps-branding,
+    a[href*="elfsight.com"][target="_blank"] { display: none !important; }
+  </style>
+
+  <script>
+    let slideIndex = 0;
+    let slideTimer;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      
+      clearTimeout(slideTimer);
+      slideTimer = setTimeout(showSlides, 8000); // Change image every 8 seconds
+    }
+
+    function currentSlide(n) {
+      slideIndex = n - 1;
+      showSlides();
+    }
+
+    /* ============== TIME-LIMITED PROMO REMOVAL ==============
+       Removes any product card whose data-expires (ISO UTC) is in the past.
+       Bundle deal expires May 26, 2026 at 12:00 AM SLT (UTC+5:30) = 2026-05-25T18:30:00Z. */
+    (function () {
+      function purgeExpired() {
+        var now = Date.now();
+        document.querySelectorAll('.product-card[data-expires]').forEach(function (card) {
+          var ts = Date.parse(card.getAttribute('data-expires'));
+          if (!isNaN(ts) && now >= ts) card.remove();
+        });
+      }
+      purgeExpired();
+      // Re-check every minute so the card disappears live if a user keeps the page open past the cutoff
+      setInterval(purgeExpired, 60000);
+    })();
+
+    /* ============== REVIEWS MARQUEE — manual nav with glass arrows ============== */
+    (function () {
+      const wrap = document.querySelector('.reviews-track-wrap');
+      const track = document.querySelector('.reviews-track');
+      if (!wrap || !track) return;
+
+      const ANIM_DURATION = 60; // matches CSS reviewsScroll duration
+
+      // Build glass arrow buttons
+      const prevBtn = document.createElement('button');
+      prevBtn.className = 'reviews-arrow prev';
+      prevBtn.setAttribute('aria-label', 'Previous reviews');
+      prevBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>';
+
+      const nextBtn = document.createElement('button');
+      nextBtn.className = 'reviews-arrow next';
+      nextBtn.setAttribute('aria-label', 'Next reviews');
+      nextBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>';
+
+      wrap.appendChild(prevBtn);
+      wrap.appendChild(nextBtn);
+
+      let reviewsPaused = false;
+
+      function getTranslateX() {
+        const cs = getComputedStyle(track);
+        if (!cs.transform || cs.transform === 'none') return 0;
+        const m = cs.transform.match(/matrix.*\(([^)]+)\)/);
+        if (!m) return 0;
+        const v = m[1].split(',').map(x => parseFloat(x.trim()));
+        return v.length === 6 ? v[4] : (v.length === 16 ? v[12] : 0);
+      }
+      function getHalfWidth() { return track.scrollWidth / 2; }
+
+      function pauseTrack() {
+        if (reviewsPaused) return;
+        const x = getTranslateX();
+        // Snap to current position with no transition so we don't animate from a stale value
+        track.style.transition = 'none';
+        track.style.animation = 'none';
+        track.style.transform = 'translateX(' + x + 'px)';
+        // Force reflow, then restore the transition so manual shifts glide
+        void track.offsetWidth;
+        track.style.transition = '';
+        reviewsPaused = true;
+      }
+
+      function resumeTrack() {
+        if (!reviewsPaused) return;
+        const x = getTranslateX();
+        const half = getHalfWidth();
+        const fraction = half ? Math.min(Math.max(Math.abs(x) / half, 0), 1) : 0;
+        // Kill the transition while we hand control back to the CSS animation —
+        // otherwise the browser tries to interpolate between inline transform
+        // and the animated transform, which causes a visible jitter on mobile.
+        track.style.transition = 'none';
+        track.style.transform = '';
+        track.style.animation = 'none';
+        void track.offsetWidth; // reflow so the reset is committed
+        track.style.animation = '';
+        track.style.animationDelay = (-fraction * ANIM_DURATION) + 's';
+        // Restore transition on the next frame for future manual shifts
+        requestAnimationFrame(function () {
+          track.style.transition = '';
+        });
+        reviewsPaused = false;
+      }
+
+      function shift(dir) {
+        pauseTrack();
+        const step = (track.firstElementChild ? track.firstElementChild.getBoundingClientRect().width : 340) + 18;
+        let x = getTranslateX() + (dir > 0 ? -step : step);
+        const half = getHalfWidth();
+        if (half) {
+          if (x > 0) x -= half;
+          if (x < -half) x += half;
+        }
+        track.style.transform = 'translateX(' + x + 'px)';
+      }
+
+      prevBtn.addEventListener('click', function (e) { e.stopPropagation(); shift(-1); });
+      nextBtn.addEventListener('click', function (e) { e.stopPropagation(); shift(1); });
+
+      // Resume auto-scroll when user clicks anywhere outside the reviews marquee
+      document.addEventListener('click', function (e) {
+        if (!reviewsPaused) return;
+        const marquee = document.querySelector('.reviews-marquee');
+        if (marquee && marquee.contains(e.target)) return;
+        resumeTrack();
+      });
+    })();
+  </script>
+  <button id="scrollToTopBtn" title="Go to top">↑</button>
+
+  <script>
+    // Scroll to top button logic
+    const scrollBtn = document.getElementById("scrollToTopBtn");
+    window.onscroll = function() {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        scrollBtn.style.display = "block";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+    };
+    scrollBtn.onclick = function() {
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    };
+    function scrollToDisclaimer() {
+      const disclaimer = document.getElementById('site-disclaimer');
+      if (disclaimer) {
+        disclaimer.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  </script>
+
+  <!-- ── Pill Navigation Menu Panel ── -->
+  <div id="pill-menu" role="dialog" aria-label="Navigation Menu">
+    <div class="pm-section-label">Shop</div>
+    <a class="pm-link" href="pay.html">RedTrex Pay</a>
+    <a class="pm-link" href="https://tudo.lk/store/redtrex-technologies" target="_blank" rel="noopener">Buy From Tudo.lk</a>
+    <a class="pm-link" href="https://www.redtrex.com.lk/downloads">Downloads</a>
+    <div class="pm-sep"></div>
+    <div class="pm-section-label">Services</div>
+    <a class="pm-link" href="https://www.redtrex.com.lk/request-service">Service Request</a>
+    <a class="pm-link" href="https://www.redtrex.com.lk/services">Our Services</a>
+    <a class="pm-link" href="/activation-guide">Activation Guide</a>
+    <a class="pm-link" href="https://www.redtrex.com.lk/actptl">MS Activation Portal</a>
+    <div class="pm-sep"></div>
+    <div class="pm-section-label">Support</div>
+    <a class="pm-link" href="https://www.redtrex.com.lk/contact">Contact Us</a>
+    <a class="pm-link" href="https://www.redtrex.com.lk/faq">FAQ</a>
+    <a class="pm-link" href="https://www.redtrex.com.lk/about">About Us</a>
+    <a class="pm-link" href="https://maps.app.goo.gl/YCUu4UEXES2juyQ5A" target="_blank" rel="noopener">Our Location</a>
+    <div class="pm-sep"></div>
+    <div class="pm-section-label">Account</div>
+    <a class="pm-link" href="https://www.redtrex.com.lk/login">Sign In</a>
+    <a class="pm-link" href="https://www.redtrex.com.lk/track-order">Orders / Payment Tracking</a>
+    <a class="pm-link" href="https://www.redtrex.com.lk/track-service">Service Tracking</a>
+    <div class="pm-sep"></div>
+    <button class="pm-disclaimer" onclick="if(typeof openDisclaimerPopup==='function')openDisclaimerPopup(); if(typeof closePillMenu==='function')closePillMenu();">Disclaimer</button>
+  </div>
+
+  <!-- ── iOS 26 Liquid Glass Pill (mobile) ── -->
+  <div id="ios-pill" role="toolbar" aria-label="Quick actions">
+
+    <!-- Menu -->
+    <button class="pill-btn" id="pillMenu" title="Menu" aria-label="Open Menu" aria-expanded="false">
+      <svg class="icon-ham" viewBox="0 0 24 24" aria-hidden="true">
+        <line x1="3" y1="7" x2="21" y2="7" stroke-width="2" stroke-linecap="round"/>
+        <line x1="3" y1="12" x2="21" y2="12" stroke-width="2" stroke-linecap="round"/>
+        <line x1="3" y1="17" x2="21" y2="17" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <svg class="icon-close" viewBox="0 0 24 24" aria-hidden="true">
+        <line x1="18" y1="6" x2="6" y2="18" stroke-width="2" stroke-linecap="round"/>
+        <line x1="6" y1="6" x2="18" y2="18" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+
+    <div class="pill-divider"></div>
+
+    <!-- Account -->
+    <a href="https://www.redtrex.com.lk/login" class="pill-btn" id="pillAccount" title="Login / Account" aria-label="Account">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+        <circle cx="12" cy="7" r="4"></circle>
+      </svg>
+    </a>
+
+    <div class="pill-divider"></div>
+
+    <!-- Cart -->
+    <button class="pill-btn" id="pillCart" title="View Cart" aria-label="Cart">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="9" cy="21" r="1"></circle>
+        <circle cx="20" cy="21" r="1"></circle>
+        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+      </svg>
+      <span class="pill-cart-badge pill-badge-hidden" id="pillCartBadge">0</span>
+    </button>
+
+  </div>
+
+  <script>
+  /* ── iOS 26 Floating Pill: drag, snap, badge sync ── */
+  (function () {
+    var pill = document.getElementById('ios-pill');
+    if (!pill) return;
+
+    /* Pill is stationary — no drag */
+
+    /* ─── Pill Menu toggle ─── */
+    (function () {
+      var pmenu = document.getElementById('pill-menu');
+      var pbtn  = document.getElementById('pillMenu');
+      if (!pmenu || !pbtn) return;
+
+      function openPillMenu() {
+        pmenu.classList.add('open');
+        pbtn.classList.add('pm-open');
+        pbtn.setAttribute('aria-expanded', 'true');
+      }
+      function closePillMenu() {
+        pmenu.classList.remove('open');
+        pbtn.classList.remove('pm-open');
+        pbtn.setAttribute('aria-expanded', 'false');
+      }
+      window.closePillMenu = closePillMenu;
+
+      pbtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        pmenu.classList.contains('open') ? closePillMenu() : openPillMenu();
+      });
+
+      pmenu.querySelectorAll('.pm-link').forEach(function (a) {
+        a.addEventListener('click', closePillMenu);
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!pmenu.contains(e.target) && !pbtn.contains(e.target)) closePillMenu();
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closePillMenu();
+      });
+    })();
+
+    /* ─── Cart tap ─── */
+    document.getElementById('pillCart').addEventListener('click', function (e) {
+      if (typeof openCart === 'function') openCart();
+    });
+
+    /* ─── Badge sync ─── */
+    function syncBadge() {
+      var src  = document.getElementById('cartBadge');
+      var dest = document.getElementById('pillCartBadge');
+      if (!src || !dest) return;
+      var n = parseInt(src.textContent, 10) || 0;
+      dest.textContent = n;
+      dest.classList.toggle('pill-badge-hidden', n === 0);
+      if (n > 0) {
+        dest.classList.add('pill-badge-pop');
+        setTimeout(function () { dest.classList.remove('pill-badge-pop'); }, 250);
+      }
+    }
+    var mb = document.getElementById('cartBadge');
+    if (mb && window.MutationObserver) {
+      new MutationObserver(syncBadge).observe(mb, { childList: true, characterData: true, subtree: true });
+    }
+    syncBadge();
+
+    /* ─── Product policy tags ─── */
+    (function() {
+      var headings = document.querySelectorAll('h1.mega-category');
+      var sections = {};
+      headings.forEach(function(h) {
+        var text = h.textContent.trim();
+        if (text === 'Microsoft Products') sections.ms = h;
+        else if (text === 'EaseUs Products') sections.easeus = h;
+        else if (text === 'Other Products') sections.other = h;
+      });
+
+      function injectTag(start, end, cls, label) {
+        if (!start) return;
+        var el = start.nextElementSibling;
+        while (el && el !== end) {
+          el.querySelectorAll('.product-card').forEach(function(card) {
+            if (!card.querySelector('.' + cls)) {
+              var h2 = card.querySelector('h2');
+              if (h2) {
+                var tag = document.createElement('span');
+                tag.className = cls;
+                tag.textContent = label;
+                h2.insertAdjacentElement('afterend', tag);
+              }
+            }
+          });
+          el = el.nextElementSibling;
+        }
+      }
+
+      injectTag(sections.ms,     sections.easeus, 'warranty-tag', '7 Day Return Warranty');
+      injectTag(sections.easeus, sections.other,  'refund-tag',   'Please Refer Official EaseUs Refund Policy');
+    })();
+
+    /* ─── Product Share Buttons ─── */
+    window.shareProduct = function shareProduct(btn) {
+      var card = btn.closest('.product-card');
+      var name = card.getAttribute('data-name');
+      var url  = location.origin + location.pathname + '?product=' + encodeURIComponent(name);
+      var original = btn.innerHTML;
+      function showCopied() {
+        btn.textContent = 'Link Copied!';
+        btn.classList.add('copied');
+        setTimeout(function () { btn.innerHTML = original; btn.classList.remove('copied'); }, 2200);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(showCopied).catch(function () {
+          fallbackCopy(url); showCopied();
+        });
+      } else {
+        fallbackCopy(url); showCopied();
+      }
+    }
+    function fallbackCopy(text) {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.cssText = 'position:fixed;opacity:0';
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); } catch(e) {}
+      document.body.removeChild(ta);
+    }
+
+    (function injectShareButtons() {
+      document.querySelectorAll('.product-card').forEach(function (card) {
+        if (card.querySelector('.share-btn')) return;
+        var btn = document.createElement('button');
+        btn.className = 'share-btn';
+        btn.type = 'button';
+        btn.innerHTML = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg> Share';
+        btn.setAttribute('onclick', 'shareProduct(this)');
+        card.appendChild(btn);
+      });
+    })();
+
+    (function highlightFromUrl() {
+      var params = new URLSearchParams(location.search);
+      var name   = params.get('product');
+      if (!name) return;
+      var target = null;
+      document.querySelectorAll('.product-card').forEach(function (card) {
+        if (card.getAttribute('data-name') === name) target = card;
+      });
+      if (!target) return;
+      setTimeout(function () {
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        target.classList.add('product-highlighted');
+        setTimeout(function () { target.classList.remove('product-highlighted'); }, 4200);
+      }, 600);
+    })();
+
+    /* ─── Account state sync ─── */
+    var ma = document.getElementById('accountBtn');
+    var pa = document.getElementById('pillAccount');
+    if (ma && pa) {
+      if (ma.href) pa.href = ma.href;
+      if (ma.classList.contains('signed-in')) pa.classList.add('signed-in');
+    }
+
+  })();
+  </script>
+
+<!-- ── Cookie Consent Popup ── -->
+<div id="cookiePopup" role="dialog" aria-label="Cookie consent">
+  <div class="cookie-icon">🍪</div>
+  <div class="cookie-body">
+    <h4>We Use Cookies</h4>
+    <p>
+      RedTrex Technologies uses cookies to enhance your browsing experience, remember your preferences, and analyse site traffic.
+      By clicking <strong style="color:#fff">Accept All</strong>, you consent to our use of cookies.
+      See our <a href="privacy.html">Privacy Policy</a> for details.
+    </p>
+    <div class="cookie-btns">
+      <button class="cookie-btn-accept" onclick="cookieConsent('accept')">Accept All</button>
+      <button class="cookie-btn-decline" onclick="cookieConsent('decline')">Continue Without Accepting</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var KEY = 'redtrex_cookie_choice';
+  if (localStorage.getItem(KEY)) return;
+  var popup = document.getElementById('cookiePopup');
+  setTimeout(function () { popup.classList.add('popup-visible'); }, 900);
+
+  window.cookieConsent = function (choice) {
+    localStorage.setItem(KEY, choice);
+    popup.classList.remove('popup-visible');
+    popup.classList.add('popup-hiding');
+    popup.addEventListener('animationend', function () { popup.style.display = 'none'; }, { once: true });
+  };
+})();
+</script>
 
 </body>
 </html>
